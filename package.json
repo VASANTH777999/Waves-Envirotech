@@ -1,0 +1,9 @@
+{
+  "name": "waves-envirotech-website",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Corporate website for Waves Envirotech Pvt. Ltd. — static frontend with Vercel serverless API functions.",
+  "dependencies": {
+    "nodemailer": "^6.9.4"
+  }
+}
