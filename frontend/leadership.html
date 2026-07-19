@@ -1,0 +1,1125 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Leadership | Waves Envirotech Pvt. Ltd.</title>
+  <link rel="icon" type="image/png" href="favicon.png">
+  
+  
+  
+  
+  
+  
+  <meta name="description" content="Meet the leadership of Waves Envirotech Pvt. Ltd. — 28+ years of water and wastewater engineering expertise spanning WTP, STP, ETP, Desalination and international projects." />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="css/style.css" />
+  <style>
+    /* ── Leadership-specific styles ── */
+    .leader-hero {
+      background: var(--grad-hero);
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      padding: 140px 0 80px;
+      position: relative;
+      overflow: hidden;
+    }
+    .leader-hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: url('https://images.unsplash.com/photo-1541888946425-d81bb19240f5?w=1600&auto=format&fit=crop&q=60') center/cover no-repeat;
+      opacity: 0.08;
+    }
+    .leader-hero-grid {
+      display: grid;
+      grid-template-columns: 360px 1fr;
+      gap: 60px;
+      align-items: center;
+      position: relative;
+      z-index: 2;
+    }
+    .leader-card {
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.12);
+      border-radius: var(--radius-xl);
+      padding: 40px 32px;
+      text-align: center;
+      backdrop-filter: blur(12px);
+    }
+    .leader-avatar {
+      width: 160px;
+      height: 160px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--secondary), var(--accent));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 24px;
+      font-size: 3rem;
+      font-weight: 700;
+      color: white;
+      font-family: 'Montserrat', sans-serif;
+      border: 4px solid rgba(255,255,255,0.2);
+      box-shadow: 0 0 40px rgba(0,188,212,0.3);
+      overflow: hidden;
+    }
+    .leader-avatar img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 50%;
+    }
+    .leader-card-name {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: white;
+      margin-bottom: 4px;
+    }
+    .leader-card-title {
+      color: var(--accent);
+      font-size: 0.95rem;
+      margin-bottom: 20px;
+      font-weight: 500;
+      letter-spacing: 0.5px;
+    }
+    .leader-badges {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      justify-content: center;
+    }
+    .leader-badge {
+      background: rgba(0,188,212,0.15);
+      border: 1px solid rgba(0,188,212,0.35);
+      color: var(--accent);
+      padding: 6px 14px;
+      border-radius: 100px;
+      font-size: 0.8rem;
+      font-weight: 600;
+    }
+    .leader-hero-content h1 {
+      font-size: clamp(2rem, 4vw, 3.2rem);
+      font-weight: 800;
+      color: white;
+      line-height: 1.15;
+      margin-bottom: 20px;
+    }
+    .leader-hero-content h1 span { color: var(--accent); }
+    .leader-hero-content p {
+      font-size: 1.1rem;
+      color: rgba(255,255,255,0.8);
+      line-height: 1.8;
+      margin-bottom: 32px;
+    }
+    .leader-hero-stats {
+      display: flex;
+      gap: 40px;
+      flex-wrap: wrap;
+    }
+    .leader-stat { text-align: center; }
+    .leader-stat-num {
+      font-size: 2.2rem;
+      font-weight: 800;
+      color: var(--accent);
+      display: block;
+      line-height: 1;
+    }
+    .leader-stat-label {
+      font-size: 0.82rem;
+      color: rgba(255,255,255,0.65);
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      margin-top: 4px;
+    }
+
+    /* Executive Summary Card */
+    .exec-summary-card {
+      background: white;
+      border-radius: var(--radius-xl);
+      padding: 48px;
+      box-shadow: var(--shadow-card);
+      border-left: 6px solid var(--secondary);
+      position: relative;
+      overflow: hidden;
+    }
+    .exec-summary-card::before {
+      content: '\f10d';
+      font-family: 'Font Awesome 6 Free';
+      font-weight: 900;
+      position: absolute;
+      top: 24px;
+      right: 32px;
+      font-size: 5rem;
+      color: var(--light);
+      line-height: 1;
+    }
+    .exec-summary-card p {
+      font-size: 1.1rem;
+      line-height: 1.9;
+      color: var(--text);
+    }
+
+    /* Previous Orgs */
+    .org-cards-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 24px;
+    }
+    .org-card {
+      background: white;
+      border-radius: var(--radius-lg);
+      padding: 28px;
+      box-shadow: var(--shadow-card);
+      transition: box-shadow 0.3s, transform 0.3s;
+      display: flex;
+      align-items: flex-start;
+      gap: 16px;
+      border-top: 3px solid var(--secondary);
+    }
+    .org-card:hover {
+      box-shadow: var(--shadow-hover);
+      transform: translateY(-4px);
+    }
+    .org-icon {
+      width: 48px;
+      height: 48px;
+      background: var(--grad-teal);
+      border-radius: var(--radius);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-size: 1.2rem;
+      flex-shrink: 0;
+    }
+    .org-info h4 {
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--dark);
+      margin-bottom: 4px;
+    }
+    .org-info p {
+      font-size: 0.85rem;
+      color: var(--text);
+      opacity: 0.75;
+      margin: 0;
+    }
+
+    /* Expertise Cards */
+    .expertise-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+      gap: 24px;
+    }
+    .expertise-card {
+      background: white;
+      border-radius: var(--radius-lg);
+      padding: 32px 24px;
+      text-align: center;
+      box-shadow: var(--shadow-card);
+      transition: box-shadow 0.3s, transform 0.3s;
+    }
+    .expertise-card:hover {
+      box-shadow: var(--shadow-hover);
+      transform: translateY(-4px);
+    }
+    .expertise-icon {
+      width: 64px;
+      height: 64px;
+      background: var(--grad-teal);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 20px;
+      color: white;
+      font-size: 1.5rem;
+    }
+    .expertise-card h4 {
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--dark);
+      line-height: 1.4;
+    }
+
+    /* International Exposure */
+    .intl-cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 28px;
+    }
+    .intl-card {
+      background: white;
+      border-radius: var(--radius-xl);
+      overflow: hidden;
+      box-shadow: var(--shadow-card);
+      transition: box-shadow 0.3s, transform 0.3s;
+    }
+    .intl-card:hover {
+      box-shadow: var(--shadow-hover);
+      transform: translateY(-4px);
+    }
+    .intl-card-header {
+      background: var(--grad-hero);
+      padding: 28px;
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+    .intl-flag {
+      font-size: 3rem;
+      line-height: 1;
+    }
+    .intl-card-header h4 {
+      color: white;
+      font-size: 1.1rem;
+      font-weight: 700;
+      margin: 0;
+    }
+    .intl-card-header p {
+      color: var(--accent);
+      font-size: 0.85rem;
+      margin: 4px 0 0;
+    }
+    .intl-card-body {
+      padding: 24px 28px;
+    }
+    .intl-card-body p {
+      color: var(--text);
+      font-size: 0.95rem;
+      line-height: 1.7;
+      margin: 0;
+    }
+
+    /* Key Projects Timeline */
+    .projects-timeline {
+      position: relative;
+      padding-left: 32px;
+    }
+    .projects-timeline::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0;
+      bottom: 0;
+      width: 3px;
+      background: linear-gradient(to bottom, var(--secondary), var(--accent));
+      border-radius: 2px;
+    }
+    .timeline-item {
+      position: relative;
+      padding: 0 0 32px 32px;
+    }
+    .timeline-item::before {
+      content: '';
+      position: absolute;
+      left: -7px;
+      top: 6px;
+      width: 17px;
+      height: 17px;
+      border-radius: 50%;
+      background: var(--secondary);
+      border: 3px solid white;
+      box-shadow: 0 0 0 3px rgba(0,137,123,0.25);
+    }
+    .timeline-card {
+      background: white;
+      border-radius: var(--radius-lg);
+      padding: 20px 24px;
+      box-shadow: var(--shadow-card);
+      transition: box-shadow 0.3s;
+    }
+    .timeline-card:hover { box-shadow: var(--shadow-hover); }
+    .timeline-card h4 {
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--dark);
+      margin-bottom: 8px;
+    }
+    .timeline-tags {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+    .timeline-tag {
+      background: var(--light);
+      color: var(--secondary);
+      padding: 3px 10px;
+      border-radius: 100px;
+      font-size: 0.78rem;
+      font-weight: 600;
+    }
+
+    /* Training */
+    .training-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
+      gap: 20px;
+    }
+    .training-list li {
+      background: white;
+      border-radius: var(--radius-lg);
+      padding: 24px;
+      box-shadow: var(--shadow-card);
+      display: flex;
+      gap: 16px;
+      align-items: flex-start;
+      border-left: 4px solid var(--accent);
+    }
+    .training-list li i {
+      color: var(--accent);
+      font-size: 1.2rem;
+      margin-top: 2px;
+      flex-shrink: 0;
+    }
+    .training-list li span {
+      font-size: 0.95rem;
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    @media (max-width: 900px) {
+      .leader-hero-grid { grid-template-columns: 1fr; }
+      .leader-hero { padding: 120px 0 60px; }
+      .leader-hero-stats { gap: 24px; }
+    }
+    .page-hero-ncc::before { background:url('https://www.entrepreneur.com/wp-content/uploads/sites/2/2019/08/20190821133726-GettyImages-927720230.jpeg') center/cover no-repeat; opacity:.16; }
+    .org-icon { background:#fff; border:1px solid var(--border-light); overflow:hidden; }
+    .org-icon img { width:100%; height:100%; object-fit:contain; padding:6px; }
+    .intl-flag { width:64px; height:44px; border-radius:6px; overflow:hidden; box-shadow:0 2px 8px rgba(0,0,0,.25); flex-shrink:0; }
+    .intl-flag img { width:100%; height:100%; object-fit:cover; display:block; }
+  </style>
+</head>
+<body>
+
+<!-- WHITE HEADER TOP BAR -->
+<div class="header-top" id="header-top">
+  <div class="container header-top-inner">
+    <a href="index.html" class="ht-logo">
+      <img src="images/logo.png" alt="Waves Envirotech Pvt. Ltd." class="ht-logo-img">
+      <div class="ht-logo-text"><strong>Waves Envirotech</strong><span>Pvt. Ltd.</span></div>
+    </a>
+    <div class="ht-right">
+      <a href="tel:+919030605226" class="ht-contact-item">
+        <div class="ht-ci-icon"><i class="fa-solid fa-phone"></i></div>
+        <div class="ht-ci-text"><span>Call Us</span><strong>+91 9030605226</strong><strong>+91 8374391966</strong></div>
+      </a>
+      <div class="ht-sep"></div>
+      <a href="mailto:syreddy@wavesenviro.com" class="ht-contact-item">
+        <div class="ht-ci-icon"><i class="fa-solid fa-envelope"></i></div>
+        <div class="ht-ci-text"><span>Email Us</span><strong>syreddy@wavesenviro.com</strong></div>
+      </a>
+      <div class="ht-sep"></div>
+      <a href="careers.html" class="ht-contact-item ht-careers">
+        <div class="ht-ci-icon"><i class="fa-solid fa-briefcase"></i></div>
+        <div class="ht-ci-text"><span>Join Our Team</span><strong>Careers</strong></div>
+      </a>
+    </div>
+  </div>
+</div>
+<nav id="navbar">
+  <div class="container nav-inner">
+    <a href="index.html" class="nav-logo nav-logo-scroll">
+      <img src="images/logo.png" alt="Waves Envirotech" class="nav-logo-img">
+      <div class="nav-logo-text"><strong>Waves Envirotech</strong><span>Pvt. Ltd.</span></div>
+    </a>
+    <div class="nav-links">
+      <div class="nav-item"><a href="index.html" class="nav-link">HOME</a></div>
+      <div class="nav-item">
+        <a href="about.html" class="nav-link">ABOUT US <i class="fa-solid fa-chevron-down"></i></a>
+        <div class="nav-dropdown">
+          <a href="about.html#company"><i class="fa-solid fa-building"></i> Company Profile</a>
+          <a href="about.html#vision"><i class="fa-solid fa-eye"></i> Vision &amp; Mission</a>
+          <a href="about.html#values"><i class="fa-solid fa-gem"></i> Core Values</a>
+          <a href="leadership.html"><i class="fa-solid fa-user-tie"></i> Leadership</a>
+          <a href="about.html#certifications"><i class="fa-solid fa-certificate"></i> Certifications</a>
+        </div>
+      </div>
+      <div class="nav-item">
+        <a href="services.html" class="nav-link">EXPERTISE <i class="fa-solid fa-chevron-down"></i></a>
+        <div class="nav-dropdown">
+          <a href="services.html#wtp"><i class="fa-solid fa-droplet"></i> Water Treatment (WTP)</a>
+          <a href="services.html#stp"><i class="fa-solid fa-water"></i> Sewage Treatment (STP)</a>
+          <a href="services.html#etp"><i class="fa-solid fa-industry"></i> Effluent Treatment (ETP)</a>
+          <a href="services.html#desalination"><i class="fa-solid fa-wave-square"></i> Desalination Plants</a>
+          <a href="services.html#consultancy"><i class="fa-solid fa-file-contract"></i> Pre-bid Consultancy</a>
+          <a href="services.html#membrane"><i class="fa-solid fa-filter"></i> Membrane Technologies</a>
+        </div>
+      </div>
+      <div class="nav-item">
+        <a href="projects.html" class="nav-link">LANDMARKS <i class="fa-solid fa-chevron-down"></i></a>
+        <div class="nav-dropdown">
+          <a href="projects.html"><i class="fa-solid fa-diagram-project"></i> All Projects</a>
+          <a href="clientele.html"><i class="fa-solid fa-users"></i> Our Clientele</a>
+        </div>
+      </div>
+      <div class="nav-item"><a href="sustainability.html" class="nav-link">COMMITMENT</a></div>
+      <div class="nav-item"><a href="leadership.html" class="nav-link active">LEADERSHIP</a></div>
+      <div class="nav-item">
+        <a href="news.html" class="nav-link">MEDIA <i class="fa-solid fa-chevron-down"></i></a>
+        <div class="nav-dropdown">
+          <a href="news.html"><i class="fa-solid fa-newspaper"></i> News &amp; Updates</a>
+          <a href="gallery.html"><i class="fa-solid fa-images"></i> Gallery</a>
+        </div>
+      </div>
+      <div class="nav-item"><a href="contact.html" class="nav-link">CONTACT</a></div>
+    </div>
+    <a href="contact.html" class="nav-cta-btn"><i class="fa-solid fa-phone"></i> Get in Touch</a>
+    <div class="hamburger" role="button" tabindex="0" aria-label="Toggle menu"><span></span><span></span><span></span></div>
+  </div>
+</nav>
+<div class="mobile-menu">
+  <a href="index.html"><i class="fa-solid fa-house"></i> Home</a>
+  <div class="mob-section">Company</div>
+  <a href="about.html">About Us</a>
+  <a href="leadership.html">Leadership</a>
+  <a href="sustainability.html">Commitment</a>
+  <div class="mob-section">Expertise</div>
+  <a href="services.html">All Services</a>
+  <div class="mob-section">Projects</div>
+  <a href="projects.html">All Projects</a>
+  <a href="clientele.html">Clientele</a>
+  <div class="mob-section">Media</div>
+  <a href="news.html">News &amp; Updates</a>
+  <a href="gallery.html">Gallery</a>
+  <a href="careers.html">Careers</a>
+  <a href="contact.html">Contact Us</a>
+</div>
+
+<!-- HERO -->
+<section class="page-hero-ncc" style="min-height:auto;padding:120px 0 60px;">
+  <div class="container">
+    <div class="phn-breadcrumb"><a href="index.html">Home</a><i class="fa-solid fa-chevron-right"></i><span>Leadership</span></div>
+    <span class="phn-tag">OUR LEADERSHIP</span>
+    <h1 class="phn-title">Three Decades of Water Engineering Excellence</h1>
+    <p class="phn-sub">With over 28 years of expertise in water and wastewater engineering, our Managing Director has led India's and the world's most complex water infrastructure projects — from 400 MLD STPs in Singapore to iconic WTPs across India's major cities.</p>
+  </div>
+</section>
+
+<!-- LEADER STATS + PROFILE -->
+<div class="ncc-stat-row">
+  <div class="container">
+    <div class="nsr-grid">
+      <div data-aos="fade-up" data-aos-delay="0">
+        <div class="nsr-num">28<sup>+</sup></div>
+        <div class="nsr-label">Years Experience</div>
+      </div>
+      <div data-aos="fade-up" data-aos-delay="80">
+        <div class="nsr-num">150<sup>+</sup></div>
+        <div class="nsr-label">Projects Delivered</div>
+      </div>
+      <div data-aos="fade-up" data-aos-delay="160">
+        <div class="nsr-num">8<sup>+</sup></div>
+        <div class="nsr-label">Countries</div>
+      </div>
+      <div data-aos="fade-up" data-aos-delay="240">
+        <div class="nsr-num">7</div>
+        <div class="nsr-label">Organisations Led</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- LEADER PROFILE CARD -->
+<section style="padding:64px 0;background:#F4F6F9;">
+  <div class="container">
+    <div style="max-width:700px;margin:0 auto;background:#fff;border-radius:var(--radius-xl);box-shadow:var(--shadow-card);overflow:hidden;" data-aos="fade-up">
+      <div style="background:#0E2558;padding:48px 40px;display:flex;gap:32px;align-items:center;flex-wrap:wrap;">
+        <div style="width:160px;height:160px;border-radius:50%;border:4px solid rgba(245,158,11,0.6);overflow:hidden;flex-shrink:0;background:#1565c0;display:flex;align-items:center;justify-content:center;">
+          <img src="images/person_logo.png" alt="Managing Director" style="width:100%;height:100%;object-fit:cover;object-position:top center;border-radius:50%;">
+        </div>
+        <div>
+          <h2 style="color:#fff;font-family:var(--font-display);font-size:1.6rem;font-weight:700;margin-bottom:4px;">Managing Director</h2>
+          <p style="color:#F59E0B;font-weight:600;margin-bottom:16px;">Founder &amp; Chief Executive</p>
+          <div style="display:flex;flex-wrap:wrap;gap:8px;">
+            <span style="background:rgba(255,255,255,0.1);border:1px solid rgba(255,255,255,0.2);color:#fff;padding:5px 12px;border-radius:20px;font-size:.75rem;font-weight:600;"><i class="fa-solid fa-clock" style="margin-right:5px;color:#F59E0B;"></i>28+ Years</span>
+            <span style="background:rgba(255,255,255,0.1);border:1px solid rgba(255,255,255,0.2);color:#fff;padding:5px 12px;border-radius:20px;font-size:.75rem;font-weight:600;"><i class="fa-solid fa-globe" style="margin-right:5px;color:#F59E0B;"></i>Global Expert</span>
+            <span style="background:rgba(255,255,255,0.1);border:1px solid rgba(255,255,255,0.2);color:#fff;padding:5px 12px;border-radius:20px;font-size:.75rem;font-weight:600;"><i class="fa-solid fa-droplet" style="margin-right:5px;color:#F59E0B;"></i>Water &amp; Wastewater</span>
+            <span style="background:rgba(255,255,255,0.1);border:1px solid rgba(255,255,255,0.2);color:#fff;padding:5px 12px;border-radius:20px;font-size:.75rem;font-weight:600;"><i class="fa-solid fa-filter" style="margin-right:5px;color:#F59E0B;"></i>Membrane Technologies</span>
+            <span style="background:rgba(255,255,255,0.1);border:1px solid rgba(255,255,255,0.2);color:#fff;padding:5px 12px;border-radius:20px;font-size:.75rem;font-weight:600;"><i class="fa-solid fa-industry" style="margin-right:5px;color:#F59E0B;"></i>ZLD Specialist</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== EXECUTIVE SUMMARY ===== -->
+<section class="section-navy">
+  <div class="container">
+    <div style="text-align:center;margin-bottom:48px;" data-aos="fade-up">
+      <div style="display:inline-flex;align-items:center;gap:8px;background:rgba(245,158,11,0.12);border:1px solid rgba(245,158,11,0.3);border-radius:50px;padding:6px 18px;margin-bottom:16px;">
+        <i class="fa-solid fa-user-tie" style="color:#F59E0B;font-size:13px;"></i>
+        <span style="color:#F59E0B;font-size:13px;font-weight:600;letter-spacing:1px;">EXECUTIVE SUMMARY</span>
+      </div>
+      <h2 style="font-family:var(--font-display);font-size:2.2rem;font-weight:700;color:#fff;margin-bottom:14px;">A Career Built on Water</h2>
+      <div style="width:56px;height:3px;background:#F59E0B;margin:0 auto;border-radius:2px;"></div>
+    </div>
+
+    <div class="ncc-dark-card" data-aos="fade-up" data-aos-delay="100" style="max-width:900px;margin:0 auto;position:relative;overflow:hidden;">
+      <div style="position:absolute;top:20px;right:28px;font-family:'Font Awesome 6 Free';font-weight:900;font-size:5rem;color:rgba(245,158,11,0.08);line-height:1;">&#xf10d;</div>
+      <p style="color:rgba(255,255,255,0.85);font-size:1rem;line-height:1.9;position:relative;z-index:1;">
+        Having <strong style="color:#F59E0B;">28 years of experience in water and wastewater engineering</strong>, engaged in various Feasibility Reports, DPRs, and projects related to Sewage Treatment Plants, Water Treatment Plants, Effluent Treatment Plants, Tertiary Treatment Plants, Desalination Plants, ZLDs etc.
+      </p>
+      <p style="margin-top:20px;color:rgba(255,255,255,0.85);font-size:1rem;line-height:1.9;position:relative;z-index:1;">
+        Deeply involved in <strong style="color:#F59E0B;">Conceptualization, Design, Detailed Engineering and Implementation</strong> of Water Treatment Plants, Sewage Treatment Plants, Effluent Treatment Plants, Desalination Plants, and Zero Liquid Discharge (ZLD) systems across India and internationally.
+      </p>
+      <p style="margin-top:20px;color:rgba(255,255,255,0.85);font-size:1rem;line-height:1.9;position:relative;z-index:1;">
+        A seasoned professional in <strong style="color:#F59E0B;">Business Development, Techno-Commercial Negotiations, Team Building</strong>, and system building, with a strong track record of EPC, PPP/BOOT, BOO, and BOT project models.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== KEY EXPERTISE ===== -->
+<section class="section-navy">
+  <div class="container">
+    <div style="text-align:center;margin-bottom:48px;" data-aos="fade-up">
+      <div style="display:inline-flex;align-items:center;gap:8px;background:rgba(245,158,11,0.12);border:1px solid rgba(245,158,11,0.3);border-radius:50px;padding:6px 18px;margin-bottom:16px;">
+        <i class="fa-solid fa-star" style="color:#F59E0B;font-size:13px;"></i>
+        <span style="color:#F59E0B;font-size:13px;font-weight:600;letter-spacing:1px;">CORE EXPERTISE</span>
+      </div>
+      <h2 style="font-family:var(--font-display);font-size:2.2rem;font-weight:700;color:#fff;margin-bottom:14px;">Key Responsibilities &amp; Specialisations</h2>
+      <div style="width:56px;height:3px;background:#F59E0B;margin:0 auto 16px;border-radius:2px;"></div>
+      <p style="color:rgba(255,255,255,0.7);max-width:620px;margin:0 auto;">A multi-disciplinary skill set built over nearly three decades, spanning engineering, technology, business, and leadership.</p>
+    </div>
+
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:20px;">
+      <div class="ncc-dark-card" data-aos="fade-up" style="text-align:center;">
+        <div class="ndc-icon"><i class="fa-solid fa-chart-line"></i></div>
+        <h4 style="color:#fff;font-size:1rem;font-weight:700;">Business &amp; Technology Development</h4>
+      </div>
+      <div class="ncc-dark-card" data-aos="fade-up" data-aos-delay="50" style="text-align:center;">
+        <div class="ndc-icon"><i class="fa-solid fa-file-lines"></i></div>
+        <h4 style="color:#fff;font-size:1rem;font-weight:700;">Feasibility Reports &amp; DPR Preparation</h4>
+      </div>
+      <div class="ncc-dark-card" data-aos="fade-up" data-aos-delay="100" style="text-align:center;">
+        <div class="ndc-icon"><i class="fa-solid fa-drafting-compass"></i></div>
+        <h4 style="color:#fff;font-size:1rem;font-weight:700;">Design &amp; Engineering — WTP / STP / ETP / Desalination</h4>
+      </div>
+      <div class="ncc-dark-card" data-aos="fade-up" data-aos-delay="150" style="text-align:center;">
+        <div class="ndc-icon"><i class="fa-solid fa-filter"></i></div>
+        <h4 style="color:#fff;font-size:1rem;font-weight:700;">Membrane Technologies (MF, UF, NF, RO)</h4>
+      </div>
+      <div class="ncc-dark-card" data-aos="fade-up" style="text-align:center;">
+        <div class="ndc-icon"><i class="fa-solid fa-recycle"></i></div>
+        <h4 style="color:#fff;font-size:1rem;font-weight:700;">Zero Liquid Discharge &amp; Water Recycling</h4>
+      </div>
+      <div class="ncc-dark-card" data-aos="fade-up" data-aos-delay="50" style="text-align:center;">
+        <div class="ndc-icon"><i class="fa-solid fa-handshake"></i></div>
+        <h4 style="color:#fff;font-size:1rem;font-weight:700;">EPC, PPP / BOOT, BOO, BOT Project Models</h4>
+      </div>
+      <div class="ncc-dark-card" data-aos="fade-up" data-aos-delay="100" style="text-align:center;">
+        <div class="ndc-icon"><i class="fa-solid fa-comments-dollar"></i></div>
+        <h4 style="color:#fff;font-size:1rem;font-weight:700;">Techno-Commercial Negotiations</h4>
+      </div>
+      <div class="ncc-dark-card" data-aos="fade-up" data-aos-delay="150" style="text-align:center;">
+        <div class="ndc-icon"><i class="fa-solid fa-people-group"></i></div>
+        <h4 style="color:#fff;font-size:1rem;font-weight:700;">Team Building &amp; System Building</h4>
+      </div>
+      <div class="ncc-dark-card" data-aos="fade-up" style="text-align:center;">
+        <div class="ndc-icon"><i class="fa-solid fa-leaf"></i></div>
+        <h4 style="color:#fff;font-size:1rem;font-weight:700;">MSW Bio-Methanation, RDF, Incineration &amp; Composting</h4>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== PREVIOUS ORGANISATIONS ===== -->
+<section class="section" style="padding: 80px 0; background: var(--light);">
+  <div class="container">
+    <div class="section-header" data-aos="fade-up">
+      <div class="section-badge">Career Journey</div>
+      <h2 class="section-title">Previous Organisations</h2>
+      <p class="section-subtitle">A career shaped by India's most reputed engineering and infrastructure conglomerates, building cross-sector depth across water, energy, and industrial domains.</p>
+    </div>
+
+    <div class="org-cards-grid" style="margin-top: 48px;">
+
+      <div class="org-card" data-aos="fade-up">
+        <div class="org-icon"><img src="https://simg.nicepng.com/png/small/417-4170999_essel-infraprojects-limited-essel-infra-projects-ltd.png" alt="Essel Infraprojects Ltd. logo"></div>
+        <div class="org-info">
+          <h4>Essel Infraprojects Ltd.</h4>
+          <p>Essel Group, Mumbai — Water &amp; Wastewater Infrastructure</p>
+        </div>
+      </div>
+
+      <div class="org-card" data-aos="fade-up" data-aos-delay="50">
+        <div class="org-icon"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQQSI8BxenFy_14WbzpwQcANezGtLZz5uPj3v4Ywl012k_HgY_7hz2ln62L&s=10" alt="Pratibha Industries Ltd. logo"></div>
+        <div class="org-info">
+          <h4>Pratibha Industries Ltd.</h4>
+          <p>Pratibha Group, Mumbai — Large-scale Water Infrastructure EPC</p>
+        </div>
+      </div>
+
+      <div class="org-card" data-aos="fade-up" data-aos-delay="100">
+        <div class="org-icon"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQIWn50-gjshhozEZvyOwgNwBBX5wTv1lcrAp580njldQ&s=10" alt="TATA Group logo"></div>
+        <div class="org-info">
+          <h4>TATA Group</h4>
+          <p>Voltas Ltd. &amp; TATA Projects Ltd., Mumbai / Hyderabad — Industrial &amp; Municipal Water Projects</p>
+        </div>
+      </div>
+
+      <div class="org-card" data-aos="fade-up" data-aos-delay="150">
+        <div class="org-icon"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQSi1YB_jn2BWHG7lWDE-zpco4JU8fox7sc6xLtB1H8patYfbOJ-AqPDUk&s=10" alt="DANIDA / MoWH / MoUD logo"></div>
+        <div class="org-info">
+          <h4>DANIDA / MoWH / MoUD</h4>
+          <p>Thimphu, Royal Government of Bhutan — International Development &amp; Water Sector Reform</p>
+        </div>
+      </div>
+
+      <div class="org-card" data-aos="fade-up">
+        <div class="org-icon"><img src="https://mms.businesswire.com/media/20260426996426/en/2785882/22/ION_exhange_1.jpg" alt="Ion Exchange India Ltd. logo"></div>
+        <div class="org-info">
+          <h4>Ion Exchange India Ltd.</h4>
+          <p>Mumbai — Water Treatment Technologies &amp; Industrial Wastewater Solutions</p>
+        </div>
+      </div>
+
+      <div class="org-card" data-aos="fade-up" data-aos-delay="50">
+        <div class="org-icon"><img src="https://www.epcworld.in/wp-content/uploads/2025/05/1476794687shriram-epc-logo.png" alt="Shriram EPC Ltd. logo"></div>
+        <div class="org-info">
+          <h4>Shriram EPC Ltd.</h4>
+          <p>Shriram Group, Chennai — Environmental Engineering &amp; EPC Projects</p>
+        </div>
+      </div>
+
+      <div class="org-card" data-aos="fade-up" data-aos-delay="100">
+        <div class="org-icon"><img src="https://geomiller.com/wp-content/uploads/2025/01/finallogo.png" alt="Geo Miller & Co Ltd. logo"></div>
+        <div class="org-info">
+          <h4>Geo Miller &amp; Co Ltd.</h4>
+          <p>Simplex Infra Group, New Delhi — Infrastructure &amp; Water Sector Consultancy</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ===== INTERNATIONAL EXPOSURE ===== -->
+<section class="section" style="padding: 80px 0; background: var(--grad-hero);">
+  <div class="container">
+    <div class="section-header" data-aos="fade-up">
+      <div class="section-badge" style="background: rgba(0,188,212,0.15); border-color: rgba(0,188,212,0.3); color: var(--accent);">Global Exposure</div>
+      <h2 class="section-title" style="color: white;">International Training &amp; Exposure</h2>
+      <p class="section-subtitle" style="color: rgba(255,255,255,0.75);">Firsthand exposure to the world's most advanced water and wastewater technologies — bringing global best practices back to India.</p>
+    </div>
+
+    <div class="intl-cards" style="margin-top: 48px;">
+
+      <div class="intl-card" data-aos="fade-up">
+        <div class="intl-card-header">
+          <div class="intl-flag"><img src="https://flagcdn.com/w160/nl.png" alt="Netherlands flag"></div>
+          <div>
+            <h4>Netherlands</h4>
+            <p>UF Membrane Technology Training</p>
+          </div>
+        </div>
+        <div class="intl-card-body">
+          <p>Underwent specialized training on <strong>Ultrafiltration (UF) Membrane Technology</strong> at NORIT Technologies, Hengelo, Netherlands — one of the world's leading membrane filtration companies. This technical immersion formed the foundation for implementing advanced membrane-based water treatment solutions across Indian projects.</p>
+        </div>
+      </div>
+
+      <div class="intl-card" data-aos="fade-up" data-aos-delay="100">
+        <div class="intl-card-header">
+          <div class="intl-flag"><img src="https://flagcdn.com/w160/at.png" alt="Austria flag"></div>
+          <div>
+            <h4>Austria</h4>
+            <p>C-Tech Cyclic Activated Sludge Process</p>
+          </div>
+        </div>
+        <div class="intl-card-body">
+          <p>Completed intensive training on <strong>Cyclic Activated Sludge (C-Tech) Process</strong> at SFCU Technologies, Salzburg, Austria — an Austrian-developed advanced biological wastewater treatment technology. This expertise was directly applied in delivering the 12.5 MLD STP (C-Tech) for PWD Goa using this specialized technology.</p>
+        </div>
+      </div>
+
+      <div class="intl-card" data-aos="fade-up" data-aos-delay="200">
+        <div class="intl-card-header">
+          <div class="intl-flag"><img src="https://flagcdn.com/w160/gb.png" alt="United Kingdom flag"></div>
+          <div>
+            <h4>United Kingdom</h4>
+            <p>Business Development &amp; HYBACS Technology</p>
+          </div>
+        </div>
+        <div class="intl-card-body">
+          <p>Business development visits to the United Kingdom studying <strong>HYBACS (Hybrid Bioreactor Activated Carbon System)</strong> plants, with in-depth discussions with Blue Water Bio and Tech Universal, Cardiff. These engagements brought cutting-edge biological treatment insights that have shaped Waves Envirotech's technology selection approach.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ===== KEY PROJECTS ===== -->
+<section class="section" style="padding: 80px 0; background: var(--light);">
+  <div class="container">
+    <div class="section-header" data-aos="fade-up">
+      <div class="section-badge">Landmark Projects</div>
+      <h2 class="section-title">Key Projects Personally Handled</h2>
+      <p class="section-subtitle">A selection of flagship projects that define a career of engineering excellence — from Singapore to Hyderabad, from industrial ETPs to mega-scale municipal WTPs.</p>
+    </div>
+
+    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 40px; margin-top: 48px;">
+
+      <!-- Column 1 -->
+      <div class="projects-timeline" data-aos="fade-right">
+
+        <div class="timeline-item">
+          <div class="timeline-card">
+            <h4>400 MLD STP — Changi Water Reclamation Plant</h4>
+            <div class="timeline-tags">
+              <span class="timeline-tag">Singapore</span>
+              <span class="timeline-tag">PUB</span>
+              <span class="timeline-tag">CH2M Hill</span>
+              <span class="timeline-tag">International</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-card">
+            <h4>60 MGD (275 MLD) WTP — PUB Singapore</h4>
+            <div class="timeline-tags">
+              <span class="timeline-tag">Singapore</span>
+              <span class="timeline-tag">PUB</span>
+              <span class="timeline-tag">Black &amp; Veatch</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-card">
+            <h4>15 MGD STP (MBR) — Jurong, PUB Singapore</h4>
+            <div class="timeline-tags">
+              <span class="timeline-tag">Singapore</span>
+              <span class="timeline-tag">MBR Technology</span>
+              <span class="timeline-tag">International</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-card">
+            <h4>410 MLD WTP — HMWSSB, Hyderabad</h4>
+            <div class="timeline-tags">
+              <span class="timeline-tag">Hyderabad</span>
+              <span class="timeline-tag">HMWSSB</span>
+              <span class="timeline-tag">State Govt.</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-card">
+            <h4>550 MLD WTP — BWSSB, Bengaluru</h4>
+            <div class="timeline-tags">
+              <span class="timeline-tag">Bengaluru</span>
+              <span class="timeline-tag">BWSSB</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-card">
+            <h4>192 MLD WTP — Aurangabad Municipal Corporation</h4>
+            <div class="timeline-tags">
+              <span class="timeline-tag">Aurangabad</span>
+              <span class="timeline-tag">Municipal</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-card">
+            <h4>85 MLD WTP — Sri Lanka (ADB/AFD)</h4>
+            <div class="timeline-tags">
+              <span class="timeline-tag">Sri Lanka</span>
+              <span class="timeline-tag">ADB / AFD</span>
+              <span class="timeline-tag">International</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-card">
+            <h4>130 MLD Primary Treatment — Desalination Plant, REL Krishnapatnam</h4>
+            <div class="timeline-tags">
+              <span class="timeline-tag">Krishnapatnam</span>
+              <span class="timeline-tag">Desalination</span>
+              <span class="timeline-tag">Industrial</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Column 2 -->
+      <div class="projects-timeline" data-aos="fade-left">
+
+        <div class="timeline-item">
+          <div class="timeline-card">
+            <h4>130 MLD STP (ASP/SBR/MBR) — MAHAGENCO, Nagpur</h4>
+            <div class="timeline-tags">
+              <span class="timeline-tag">Nagpur</span>
+              <span class="timeline-tag">MAHAGENCO</span>
+              <span class="timeline-tag">Multi-tech</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-card">
+            <h4>108 MLD STP — Vizag Urban Development Authority</h4>
+            <div class="timeline-tags">
+              <span class="timeline-tag">Vizag</span>
+              <span class="timeline-tag">GVMC</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-card">
+            <h4>76 MLD STP (SBR DBOOT) — Kolhapur Municipal Corporation</h4>
+            <div class="timeline-tags">
+              <span class="timeline-tag">Kolhapur</span>
+              <span class="timeline-tag">SBR</span>
+              <span class="timeline-tag">DBOOT</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-card">
+            <h4>40 MLD, 60 MLD &amp; 110 MLD STPs — CMWSSB Chennai</h4>
+            <div class="timeline-tags">
+              <span class="timeline-tag">Chennai</span>
+              <span class="timeline-tag">CMWSSB</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-card">
+            <h4>3x30 MLD Seawater Desalination — Vallur, Tamil Nadu</h4>
+            <div class="timeline-tags">
+              <span class="timeline-tag">Tamil Nadu</span>
+              <span class="timeline-tag">Desalination</span>
+              <span class="timeline-tag">Seawater</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-card">
+            <h4>FR / DPR for 7 ULBs — TUFIDC, Govt. of Telangana</h4>
+            <div class="timeline-tags">
+              <span class="timeline-tag">Telangana</span>
+              <span class="timeline-tag">TUFIDC</span>
+              <span class="timeline-tag">Consultancy</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-card">
+            <h4>12 STPs + 9 PTs + 9 ROs — Tirupur Noyyal SPVs, Tamil Nadu</h4>
+            <div class="timeline-tags">
+              <span class="timeline-tag">Tirupur</span>
+              <span class="timeline-tag">Textile ETP</span>
+              <span class="timeline-tag">TWICL</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-card">
+            <h4>21 MLD TTP (UF + RO) — IOCL Panipat</h4>
+            <div class="timeline-tags">
+              <span class="timeline-tag">Panipat</span>
+              <span class="timeline-tag">IOCL</span>
+              <span class="timeline-tag">EIL</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-card">
+            <h4>6000 TPD MSW Processing — Deonar Dumping Yard, Mumbai</h4>
+            <div class="timeline-tags">
+              <span class="timeline-tag">Mumbai</span>
+              <span class="timeline-tag">MSW</span>
+              <span class="timeline-tag">Bio-Methanation</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ===== TRAINING & CERTIFICATIONS ===== -->
+<section class="section" style="padding: 80px 0; background: white;">
+  <div class="container">
+    <div class="section-header" data-aos="fade-up">
+      <div class="section-badge">Professional Development</div>
+      <h2 class="section-title">Training, Certifications &amp; Knowledge Sharing</h2>
+      <p class="section-subtitle">Continuously investing in learning and contributing to the professional community as a faculty, trainer, and speaker.</p>
+    </div>
+
+    <ul class="training-list" style="margin-top: 48px;">
+
+      <li data-aos="fade-up">
+        <i class="fa-solid fa-certificate"></i>
+        <span><strong>TBEM — TATA Business Excellence Model</strong><br>Voltas HRD Center, Thane — Leadership &amp; business excellence framework built on TATA Group values.</span>
+      </li>
+
+      <li data-aos="fade-up" data-aos-delay="50">
+        <i class="fa-solid fa-users-gear"></i>
+        <span><strong>Leadership Development Program</strong><br>Center for Organization Development (COD), Hyderabad — Structured leadership &amp; organizational management training.</span>
+      </li>
+
+      <li data-aos="fade-up" data-aos-delay="100">
+        <i class="fa-solid fa-chalkboard-user"></i>
+        <span><strong>Visiting Faculty — ESCI Hyderabad</strong><br>Engineering Staff College of India (ESCI), Hyderabad — Delivered expert lectures on advanced water &amp; wastewater technologies to practicing engineers.</span>
+      </li>
+
+      <li data-aos="fade-up" data-aos-delay="150">
+        <i class="fa-solid fa-microphone"></i>
+        <span><strong>Trainer — WATER DIGEST, New Delhi</strong><br>Delivered specialized training sessions on Advanced Water &amp; Wastewater Treatment Technologies for practicing professionals across India.</span>
+      </li>
+
+      <li data-aos="fade-up">
+        <i class="fa-solid fa-handshake-angle"></i>
+        <span><strong>Relationship Management &amp; Managerial Grids</strong><br>Workshop conducted by Mr. Homi Mulla at Fariyaz Resorts, Lonavala — Advanced interpersonal and managerial effectiveness training.</span>
+      </li>
+
+      <li data-aos="fade-up" data-aos-delay="50">
+        <i class="fa-solid fa-location-dot"></i>
+        <span><strong>National Speaker — Advanced Treatment Technologies</strong><br>Delivered technical lectures across multiple cities in India on Advanced Treatment Technologies — promoting knowledge exchange in the water engineering community.</span>
+      </li>
+
+    </ul>
+  </div>
+</section>
+
+<!-- ===== PHILOSOPHY SECTION ===== -->
+<section class="section" style="padding: 80px 0; background: var(--light);">
+  <div class="container">
+    <div class="section-header" data-aos="fade-up">
+      <div class="section-badge">Leadership Philosophy</div>
+      <h2 class="section-title">Principles That Drive Us</h2>
+    </div>
+    <div class="features-grid" style="margin-top: 48px;">
+      <div class="feature-item" data-aos="fade-up">
+        <div class="feature-icon"><i class="fa-solid fa-lightbulb"></i></div>
+        <h4>Technology First</h4>
+        <p>Every project begins with selecting the right technology for the specific need — not a one-size-fits-all approach. International exposure informs every recommendation.</p>
+      </div>
+      <div class="feature-item" data-aos="fade-up" data-aos-delay="100">
+        <div class="feature-icon"><i class="fa-solid fa-shield-halved"></i></div>
+        <h4>Client Accountability</h4>
+        <p>Deep commitment to client outcomes means never compromising on quality, timeline, or technical accuracy — even in complex multi-stakeholder environments.</p>
+      </div>
+      <div class="feature-item" data-aos="fade-up" data-aos-delay="200">
+        <div class="feature-icon"><i class="fa-solid fa-seedling"></i></div>
+        <h4>Sustainability as Default</h4>
+        <p>Water is a finite resource. Every design decision considers long-term environmental impact, resource recovery, and community benefit — not just engineering compliance.</p>
+      </div>
+      <div class="feature-item" data-aos="fade-up" data-aos-delay="300">
+        <div class="feature-icon"><i class="fa-solid fa-users"></i></div>
+        <h4>People &amp; Knowledge</h4>
+        <p>Building capable teams and sharing technical knowledge through training, lectures, and mentorship — because the water sector's growth depends on its people.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== CTA ===== -->
+<section class="section cta-section" style="padding: 80px 0; background: var(--grad-hero); text-align: center;">
+  <div class="container" data-aos="fade-up">
+    <div class="section-badge" style="background: rgba(0,188,212,0.15); border-color: rgba(0,188,212,0.3); color: var(--accent); display: inline-block; margin-bottom: 24px;">Work With Us</div>
+    <h2 style="color: white; font-size: clamp(1.8rem, 3.5vw, 2.8rem); margin-bottom: 20px;">Ready to Start Your<br>Next Water Project?</h2>
+    <p style="color: rgba(255,255,255,0.8); max-width: 600px; margin: 0 auto 40px; font-size: 1.1rem; line-height: 1.7;">
+      Bring 28+ years of water and wastewater engineering expertise to your project. From feasibility studies and DPRs to full EPC delivery — Waves Envirotech delivers.
+    </p>
+    <div style="display: flex; gap: 16px; justify-content: center; flex-wrap: wrap;">
+      <a href="contact.html" class="btn btn-secondary btn-lg"><i class="fa-solid fa-envelope"></i> Get in Touch</a>
+      <a href="projects.html" class="btn btn-outline-light btn-lg"><i class="fa-solid fa-diagram-project"></i> View All Projects</a>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="footer-logo">
+          <img src="favicon.png" alt="Waves Envirotech Pvt. Ltd." class="footer-logo-img">
+          <div class="footer-logo-text"><strong>Waves Envirotech</strong><span>Pvt. Ltd.</span></div>
+        </div>
+        <p>A leading environmental engineering consultancy specializing in water treatment, sewage treatment, effluent treatment, desalination, and pre-bid consultancy services — with 28+ years of proven excellence across India and internationally.</p>
+        <div class="footer-social">
+          <a href="https://www.linkedin.com/company/wavesenvirotech/" target="_blank" rel="noopener"><i class="fa-brands fa-linkedin-in"></i></a>
+          <a href="https://www.linkedin.com/company/wavesenvirotech/" target="_blank" rel="noopener"><i class="fa-brands fa-x-twitter"></i></a>
+          <a href="https://www.linkedin.com/company/wavesenvirotech/" target="_blank" rel="noopener"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="https://www.linkedin.com/company/wavesenvirotech/" target="_blank" rel="noopener"><i class="fa-brands fa-youtube"></i></a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h5>Quick Links</h5>
+        <ul>
+          <li><a href="index.html"><i class="fa-solid fa-chevron-right"></i> Home</a></li>
+          <li><a href="about.html"><i class="fa-solid fa-chevron-right"></i> About Us</a></li>
+          <li><a href="leadership.html"><i class="fa-solid fa-chevron-right"></i> Leadership</a></li>
+          <li><a href="projects.html"><i class="fa-solid fa-chevron-right"></i> Projects</a></li>
+          <li><a href="clientele.html"><i class="fa-solid fa-chevron-right"></i> Clientele</a></li>
+          <li><a href="sustainability.html"><i class="fa-solid fa-chevron-right"></i> Sustainability</a></li>
+          <li><a href="careers.html"><i class="fa-solid fa-chevron-right"></i> Careers</a></li>
+          <li><a href="contact.html"><i class="fa-solid fa-chevron-right"></i> Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Our Services</h5>
+        <ul>
+          <li><a href="services.html#wtp"><i class="fa-solid fa-chevron-right"></i> Water Treatment Plants</a></li>
+          <li><a href="services.html#stp"><i class="fa-solid fa-chevron-right"></i> Sewage Treatment Plants</a></li>
+          <li><a href="services.html#etp"><i class="fa-solid fa-chevron-right"></i> Effluent Treatment Plants</a></li>
+          <li><a href="services.html#desalination"><i class="fa-solid fa-chevron-right"></i> Desalination Plants</a></li>
+          <li><a href="services.html#membrane"><i class="fa-solid fa-chevron-right"></i> Membrane Technologies</a></li>
+          <li><a href="services.html#consultancy"><i class="fa-solid fa-chevron-right"></i> Pre-bid Consultancy</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Contact Us</h5>
+        <div class="footer-contact">
+          <div class="footer-contact-item"><i class="fa-solid fa-location-dot"></i><span>Waves Envirotech Pvt. Ltd., Hyderabad, Telangana, India</span></div>
+          <div class="footer-contact-item"><i class="fa-solid fa-phone"></i><span>+91 9030605226<br>+91 8374391966</span></div>
+          <div class="footer-contact-item"><i class="fa-solid fa-envelope"></i><span>syreddy@wavesenviro.com</span></div>
+        </div>
+        <div class="footer-newsletter" style="margin-top:24px;">
+          <p>Subscribe for updates:</p>
+          <form class="newsletter-form">
+            <input type="email" placeholder="Your email" required>
+            <button type="submit">Subscribe</button>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2024 Waves Envirotech Pvt. Ltd. All rights reserved.</p>
+      <div class="footer-bottom-links"><a href="#">Privacy Policy</a><a href="#">Terms of Service</a></div>
+    </div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>

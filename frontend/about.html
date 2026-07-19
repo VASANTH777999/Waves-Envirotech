@@ -1,0 +1,453 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="About Waves Envirotech Pvt. Ltd. — Our company profile, vision, mission, core values, and 28+ years of environmental engineering excellence.">
+  <title>About Us | Waves Envirotech Pvt. Ltd.</title>
+  <link rel="icon" type="image/png" href="favicon.png">
+  
+  
+  
+  
+  
+  
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    .vision-mission-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; }
+    .vm-card { border-radius: var(--radius-xl); padding: 48px 40px; position: relative; overflow: hidden; }
+    .vm-card.vision { background: var(--grad-primary); color: var(--white); }
+    .vm-card.mission { background: var(--grad-teal); color: var(--white); }
+    .vm-card h2 { color: var(--white); margin-bottom: 16px; font-size: 1.8rem; }
+    .vm-card p { color: rgba(255,255,255,.85); line-height: 1.9; font-size: 1.05rem; }
+    .vm-card .vm-icon { font-size: 3rem; margin-bottom: 20px; opacity: .8; }
+    .vm-card::after { content:''; position:absolute; bottom:-40px; right:-40px; width:160px; height:160px; border-radius:50%; background:rgba(255,255,255,.05); }
+    .vm-card::before { content:''; position:absolute; top:-20px; left:-20px; width:100px; height:100px; border-radius:50%; background:rgba(255,255,255,.03); }
+    .cert-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
+    .global-map { background: var(--dark); border-radius: var(--radius-xl); padding: 48px; color: var(--white); }
+    .global-map h2 { color: var(--white); margin-bottom: 8px; }
+    .global-map p { color: rgba(255,255,255,.65); margin-bottom: 36px; }
+    .presence-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
+    .presence-item { background: rgba(255,255,255,.05); border: 1px solid rgba(255,255,255,.1); border-radius: var(--radius); padding: 20px; text-align: center; transition: var(--transition); }
+    .presence-item:hover { background: rgba(0,137,123,.15); border-color: var(--secondary); transform: translateY(-4px); }
+    .presence-item .flag { font-size: 2rem; margin-bottom: 8px; }
+    .presence-item strong { display: block; color: var(--white); font-size: .9rem; margin-bottom: 4px; }
+    .presence-item span { font-size: .75rem; color: rgba(255,255,255,.5); }
+    @media (max-width: 768px) {
+      .vision-mission-grid { grid-template-columns: 1fr; }
+      .cert-grid { grid-template-columns: repeat(2, 1fr); }
+      .presence-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (max-width: 480px) {
+      .cert-grid { grid-template-columns: 1fr; }
+      .presence-grid { grid-template-columns: 1fr; }
+    }
+    .page-hero-ncc::before { background:url('images/logo.png') center/contain no-repeat; opacity:.06; }
+  </style>
+</head>
+<body>
+
+<button id="back-to-top" aria-label="Back to top"><i class="fa-solid fa-arrow-up"></i></button>
+
+<!-- WHITE HEADER TOP BAR -->
+<div class="header-top" id="header-top">
+  <div class="container header-top-inner">
+    <a href="index.html" class="ht-logo">
+      <img src="images/logo.png" alt="Waves Envirotech Pvt. Ltd." class="ht-logo-img">
+      <div class="ht-logo-text"><strong>Waves Envirotech</strong><span>Pvt. Ltd.</span></div>
+    </a>
+    <div class="ht-right">
+      <a href="tel:+919030605226" class="ht-contact-item">
+        <div class="ht-ci-icon"><i class="fa-solid fa-phone"></i></div>
+        <div class="ht-ci-text"><span>Call Us</span><strong>+91 9030605226</strong><strong>+91 8374391966</strong></div>
+      </a>
+      <div class="ht-sep"></div>
+      <a href="mailto:syreddy@wavesenviro.com" class="ht-contact-item">
+        <div class="ht-ci-icon"><i class="fa-solid fa-envelope"></i></div>
+        <div class="ht-ci-text"><span>Email Us</span><strong>syreddy@wavesenviro.com</strong></div>
+      </a>
+      <div class="ht-sep"></div>
+      <a href="careers.html" class="ht-contact-item ht-careers">
+        <div class="ht-ci-icon"><i class="fa-solid fa-briefcase"></i></div>
+        <div class="ht-ci-text"><span>Join Our Team</span><strong>Careers</strong></div>
+      </a>
+    </div>
+  </div>
+</div>
+
+<!-- DARK NAVY NAVBAR -->
+<nav id="navbar">
+  <div class="container nav-inner">
+    <a href="index.html" class="nav-logo nav-logo-scroll">
+      <img src="images/logo.png" alt="Waves Envirotech" class="nav-logo-img">
+      <div class="nav-logo-text"><strong>Waves Envirotech</strong><span>Pvt. Ltd.</span></div>
+    </a>
+    <div class="nav-links">
+      <div class="nav-item"><a href="index.html" class="nav-link">HOME</a></div>
+      <div class="nav-item">
+        <a href="about.html" class="nav-link active">ABOUT US <i class="fa-solid fa-chevron-down"></i></a>
+        <div class="nav-dropdown">
+          <a href="about.html#company"><i class="fa-solid fa-building"></i> Company Profile</a>
+          <a href="about.html#vision"><i class="fa-solid fa-eye"></i> Vision &amp; Mission</a>
+          <a href="about.html#values"><i class="fa-solid fa-gem"></i> Core Values</a>
+          <a href="leadership.html"><i class="fa-solid fa-user-tie"></i> Leadership</a>
+          <a href="about.html#certifications"><i class="fa-solid fa-certificate"></i> Certifications</a>
+        </div>
+      </div>
+      <div class="nav-item">
+        <a href="services.html" class="nav-link">EXPERTISE <i class="fa-solid fa-chevron-down"></i></a>
+        <div class="nav-dropdown">
+          <a href="services.html#wtp"><i class="fa-solid fa-droplet"></i> Water Treatment (WTP)</a>
+          <a href="services.html#stp"><i class="fa-solid fa-water"></i> Sewage Treatment (STP)</a>
+          <a href="services.html#etp"><i class="fa-solid fa-industry"></i> Effluent Treatment (ETP)</a>
+          <a href="services.html#desalination"><i class="fa-solid fa-wave-square"></i> Desalination Plants</a>
+          <a href="services.html#consultancy"><i class="fa-solid fa-file-contract"></i> Pre-bid Consultancy</a>
+          <a href="services.html#membrane"><i class="fa-solid fa-filter"></i> Membrane Technologies</a>
+        </div>
+      </div>
+      <div class="nav-item">
+        <a href="projects.html" class="nav-link">LANDMARKS <i class="fa-solid fa-chevron-down"></i></a>
+        <div class="nav-dropdown">
+          <a href="projects.html"><i class="fa-solid fa-diagram-project"></i> All Projects</a>
+          <a href="clientele.html"><i class="fa-solid fa-users"></i> Our Clientele</a>
+        </div>
+      </div>
+      <div class="nav-item"><a href="sustainability.html" class="nav-link">COMMITMENT</a></div>
+      <div class="nav-item"><a href="leadership.html" class="nav-link">LEADERSHIP</a></div>
+      <div class="nav-item">
+        <a href="news.html" class="nav-link">MEDIA <i class="fa-solid fa-chevron-down"></i></a>
+        <div class="nav-dropdown">
+          <a href="news.html"><i class="fa-solid fa-newspaper"></i> News &amp; Updates</a>
+          <a href="gallery.html"><i class="fa-solid fa-images"></i> Gallery</a>
+        </div>
+      </div>
+      <div class="nav-item"><a href="contact.html" class="nav-link">CONTACT</a></div>
+    </div>
+    <a href="contact.html" class="nav-cta-btn"><i class="fa-solid fa-phone"></i> Get in Touch</a>
+    <div class="hamburger" role="button" tabindex="0" aria-label="Toggle menu"><span></span><span></span><span></span></div>
+  </div>
+</nav>
+<div class="mobile-menu">
+  <a href="index.html"><i class="fa-solid fa-house"></i> Home</a>
+  <div class="mob-section">Company</div>
+  <a href="about.html">About Us</a>
+  <a href="leadership.html">Leadership</a>
+  <a href="sustainability.html">Commitment</a>
+  <div class="mob-section">Expertise</div>
+  <a href="services.html">All Services</a>
+  <div class="mob-section">Projects</div>
+  <a href="projects.html">All Projects</a>
+  <a href="clientele.html">Clientele</a>
+  <div class="mob-section">Media</div>
+  <a href="news.html">News &amp; Updates</a>
+  <a href="gallery.html">Gallery</a>
+  <a href="careers.html">Careers</a>
+  <a href="contact.html">Contact Us</a>
+</div>
+
+<!-- Page Hero NCC -->
+<section class="page-hero-ncc">
+  <div class="container">
+    <div class="phn-breadcrumb"><a href="index.html">Home</a><i class="fa-solid fa-chevron-right"></i><span>About Us</span></div>
+    <span class="phn-tag">SINCE 1996</span>
+    <h1 class="phn-title">About Waves Envirotech</h1>
+    <p class="phn-sub">28+ years of pioneering environmental engineering — shaping a sustainable water future for India and the world.</p>
+  </div>
+</section>
+
+<!-- ═══════════════════ COMPANY PROFILE ═══════════════════ -->
+<section class="section" id="company">
+  <div class="container">
+    <div class="about-story">
+      <div class="about-img-wrap" data-aos="fade-right">
+        <div class="about-img-main">
+          <img src="images/logo.png" alt="Waves Envirotech Engineering">
+        </div>
+        <div class="about-img-badge">
+          <span class="big">28<sup style="font-size:.4em">+</sup></span>
+          <small>Years of<br>Excellence</small>
+        </div>
+      </div>
+      <div class="about-text" data-aos="fade-left">
+        <div class="section-tag"><i class="fa-solid fa-building"></i> Who We Are</div>
+        <h2 class="section-title">A Legacy of <span>Environmental</span> Engineering</h2>
+        <div class="section-divider"></div>
+        <p>Waves Envirotech Pvt. Ltd. is a premier environmental engineering and consultancy company headquartered in Hyderabad, India. Founded with a mission to deliver world-class water and wastewater engineering solutions, we have grown into a nationally recognized and internationally respected organization with a presence across India and multiple countries.</p>
+        <p style="margin-top:14px;">Our core strength lies in the seamless integration of deep technical expertise, cutting-edge technology, and a thorough understanding of regulatory and institutional frameworks. We specialize in conceptualization, design, detailed engineering, pre-bid consultancy, and DPR preparation for Water Treatment Plants (WTP), Sewage Treatment Plants (STP), Effluent Treatment Plants (ETP), Desalination Plants, Tertiary Treatment Plants, and Zero Liquid Discharge (ZLD) systems.</p>
+        <ul class="check-list" style="margin:24px 0;">
+          <li><i class="fa-solid fa-circle-check"></i> ISO-certified quality management processes</li>
+          <li><i class="fa-solid fa-circle-check"></i> Trusted by 30+ major municipal bodies and government agencies</li>
+          <li><i class="fa-solid fa-circle-check"></i> International project experience across 8+ countries</li>
+          <li><i class="fa-solid fa-circle-check"></i> 150+ projects completed across municipal, industrial, and institutional sectors</li>
+          <li><i class="fa-solid fa-circle-check"></i> Expertise in 15+ advanced treatment technologies</li>
+          <li><i class="fa-solid fa-circle-check"></i> Leadership team trained internationally in Netherlands, Austria & UK</li>
+        </ul>
+        <div style="display:flex;gap:16px;flex-wrap:wrap;">
+          <a href="leadership.html" class="btn btn-primary"><i class="fa-solid fa-user-tie"></i> Meet Our Leader</a>
+          <a href="projects.html" class="btn btn-outline-primary"><i class="fa-solid fa-folder-open"></i> View Projects</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════ STATS BANNER ═══════════════════ -->
+<div class="ncc-stat-row">
+  <div class="container">
+    <div class="nsr-grid">
+      <div data-aos="fade-up"><div class="nsr-num" data-counter data-target="28" data-suffix="+">28+</div><div class="nsr-label">Years Experience</div></div>
+      <div data-aos="fade-up" data-aos-delay="100"><div class="nsr-num" data-counter data-target="150" data-suffix="+">150+</div><div class="nsr-label">Projects Completed</div></div>
+      <div data-aos="fade-up" data-aos-delay="200"><div class="nsr-num" data-counter data-target="8" data-suffix="+">8+</div><div class="nsr-label">Countries Served</div></div>
+      <div data-aos="fade-up" data-aos-delay="300"><div class="nsr-num" data-counter data-target="30" data-suffix="+">30+</div><div class="nsr-label">Major Clients</div></div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════ VISION & MISSION ═══════════════════ -->
+<section class="section section-light" id="vision">
+  <div class="container">
+    <div class="section-header text-center" data-aos="fade-up">
+      <div class="section-tag"><i class="fa-solid fa-eye"></i> Our Direction</div>
+      <h2 class="section-title">Vision, <span>Mission</span> & Purpose</h2>
+      <div class="section-divider"></div>
+      <p class="section-subtitle">Guided by a clear purpose — to protect water resources and build resilient infrastructure for future generations.</p>
+    </div>
+    <div class="vision-mission-grid" data-aos="fade-up" data-aos-delay="100">
+      <div class="vm-card vision">
+        <div class="vm-icon"><i class="fa-solid fa-eye"></i></div>
+        <h2>Our Vision</h2>
+        <p>To be the most trusted and innovative environmental engineering consultancy in Asia, recognized globally for our technical excellence, sustainable solutions, and commitment to creating a world where every community has access to clean, safe, and sustainable water.</p>
+      </div>
+      <div class="vm-card mission">
+        <div class="vm-icon"><i class="fa-solid fa-bullseye"></i></div>
+        <h2>Our Mission</h2>
+        <p>To deliver world-class water and wastewater engineering solutions through cutting-edge technology, deep domain expertise, and collaborative partnerships — enabling governments, municipalities, and industries to achieve their water sustainability goals efficiently and effectively.</p>
+      </div>
+    </div>
+    <div style="background:var(--white);border-radius:var(--radius-xl);padding:48px;margin-top:32px;box-shadow:var(--shadow-card);border:1px solid var(--border-light);" data-aos="fade-up" data-aos-delay="200">
+      <div style="text-align:center;margin-bottom:36px;">
+        <div class="section-tag"><i class="fa-solid fa-lightbulb"></i> Our Purpose</div>
+        <h3 style="font-size:1.6rem;margin-top:12px;">Engineering Solutions for <span style="color:var(--secondary);">a Water-Secure Future</span></h3>
+      </div>
+      <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:24px;">
+        <div style="text-align:center;padding:24px;">
+          <div style="font-size:2.5rem;margin-bottom:12px;">🌊</div>
+          <h4 style="margin-bottom:8px;font-size:1rem;">Protect Water Resources</h4>
+          <p style="font-size:.875rem;">Designing treatment systems that ensure safe, clean water reaches every community while protecting natural water bodies.</p>
+        </div>
+        <div style="text-align:center;padding:24px;">
+          <div style="font-size:2.5rem;margin-bottom:12px;">🌱</div>
+          <h4 style="margin-bottom:8px;font-size:1rem;">Promote Sustainability</h4>
+          <p style="font-size:.875rem;">Championing ZLD, recycling, and resource recovery to ensure our engineering leaves a positive environmental legacy.</p>
+        </div>
+        <div style="text-align:center;padding:24px;">
+          <div style="font-size:2.5rem;margin-bottom:12px;">🤝</div>
+          <h4 style="margin-bottom:8px;font-size:1rem;">Empower Communities</h4>
+          <p style="font-size:.875rem;">Partnering with governments and institutions to build infrastructure that transforms public health and quality of life.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════ CORE VALUES ═══════════════════ -->
+<section class="section-navy" id="values">
+  <div class="container">
+    <div class="section-header text-center" data-aos="fade-up">
+      <div class="section-tag"><i class="fa-solid fa-gem"></i> What We Stand For</div>
+      <h2 class="section-title">Our <span>Core Values</span></h2>
+      <div class="section-divider"></div>
+      <p class="section-subtitle">The principles that guide every project, every decision, and every relationship we build.</p>
+    </div>
+    <div class="values-grid" style="grid-template-columns:repeat(3,1fr);gap:20px;">
+      <div class="ncc-dark-card" data-aos="fade-up" data-aos-delay="0">
+        <div class="ndc-icon"><i class="fa-solid fa-star"></i></div>
+        <h3>Excellence</h3>
+        <p>We pursue the highest standards of engineering quality in every feasibility study, design document, and project we undertake.</p>
+      </div>
+      <div class="ncc-dark-card" data-aos="fade-up" data-aos-delay="80">
+        <div class="ndc-icon"><i class="fa-solid fa-handshake"></i></div>
+        <h3>Integrity</h3>
+        <p>Absolute transparency and ethical conduct in all dealings — with clients, partners, regulators, and communities. Trust is our foundation.</p>
+      </div>
+      <div class="ncc-dark-card" data-aos="fade-up" data-aos-delay="160">
+        <div class="ndc-icon"><i class="fa-solid fa-lightbulb"></i></div>
+        <h3>Innovation</h3>
+        <p>Continuously adopting latest technologies — MBR, MBBR, ZLD, membrane systems — ensuring solutions always at the forefront.</p>
+      </div>
+      <div class="ncc-dark-card" data-aos="fade-up" data-aos-delay="0">
+        <div class="ndc-icon"><i class="fa-solid fa-leaf"></i></div>
+        <h3>Sustainability</h3>
+        <p>Environmental stewardship at the heart of everything — systems that minimize ecological impact and maximize resource recovery.</p>
+      </div>
+      <div class="ncc-dark-card" data-aos="fade-up" data-aos-delay="80">
+        <div class="ndc-icon"><i class="fa-solid fa-users"></i></div>
+        <h3>Client Focus</h3>
+        <p>Clients' success is our success. We invest in understanding each client's unique requirements and long-term goals for tailored solutions.</p>
+      </div>
+      <div class="ncc-dark-card" data-aos="fade-up" data-aos-delay="160">
+        <div class="ndc-icon"><i class="fa-solid fa-globe"></i></div>
+        <h3>Global Mindset</h3>
+        <p>International experience spanning Singapore, UK, Sri Lanka, Nepal, and Bhutan — a global perspective for local challenges.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════ COMPANY HISTORY ═══════════════════ -->
+<section class="section section-light">
+  <div class="container">
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:start;">
+      <div data-aos="fade-right">
+        <div class="section-tag"><i class="fa-solid fa-clock-rotate-left"></i> Our Journey</div>
+        <h2 class="section-title">Building a <span>Legacy</span> Over Decades</h2>
+        <div class="section-divider"></div>
+        <p>Waves Envirotech's journey is one of continuous growth, technical mastery, and expanding impact — from early domestic projects to landmark international assignments.</p>
+        <div style="margin-top:32px;" class="timeline">
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-year">Early Years</div>
+            <h4>Foundation & Early Projects</h4>
+            <p>Established with a vision to address India's growing water and wastewater infrastructure challenges. Initiated with municipal STP and WTP design and consultancy projects across Andhra Pradesh and Telangana.</p>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-year">Growth Phase</div>
+            <h4>National Expansion</h4>
+            <p>Expanded consultancy footprint across multiple Indian states. Executed landmark projects for HMWSSB (410 MLD WTP), GVMC Vizag, and multiple ULBs under JNNURM funding. Established reputation as a leading pre-bid consultancy firm.</p>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-year">International Milestones</div>
+            <h4>Global Recognition</h4>
+            <p>Won international assignments — 400 MLD STP Changi Singapore, 85 MLD WTP Sri Lanka (ADB/AFD). International training in Netherlands and Austria.</p>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-year">Today</div>
+            <h4>28+ Years of Excellence</h4>
+            <p>Over 150 projects completed. Trusted partner for Delhi Jal Board, BWSSB, AMC, GNIDA, KMC, KWA, and dozens of institutions. Recognized leader in SBR, MBBR, MBR, ZLD, and advanced membrane technologies.</p>
+          </div>
+        </div>
+      </div>
+      <div data-aos="fade-left">
+        <div style="border-radius:var(--radius-xl);overflow:hidden;box-shadow:var(--shadow-xl);margin-bottom:24px;">
+          <img src="https://www.envirogengroup.com/wp-content/uploads/2020/03/manufacturing.jpg" alt="Water Infrastructure" style="width:100%;height:300px;object-fit:cover;">
+        </div>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;">
+          <div style="background:var(--grad-primary);border-radius:var(--radius-lg);padding:24px;color:var(--white);text-align:center;">
+            <div style="font-size:2rem;font-weight:800;" data-counter data-target="5000" data-suffix="+">5000+</div>
+            <div style="font-size:.8rem;opacity:.8;margin-top:4px;">MLD WTP Capacity<br>Designed</div>
+          </div>
+          <div style="background:var(--grad-teal);border-radius:var(--radius-lg);padding:24px;color:var(--white);text-align:center;">
+            <div style="font-size:2rem;font-weight:800;" data-counter data-target="3000" data-suffix="+">3000+</div>
+            <div style="font-size:.8rem;opacity:.8;margin-top:4px;">MLD STP Capacity<br>Designed</div>
+          </div>
+          <div style="background:linear-gradient(135deg,#0D47A1,#1976D2);border-radius:var(--radius-lg);padding:24px;color:var(--white);text-align:center;">
+            <div style="font-size:2rem;font-weight:800;" data-counter data-target="8" data-suffix="+">8+</div>
+            <div style="font-size:.8rem;opacity:.8;margin-top:4px;">Countries with<br>Project Experience</div>
+          </div>
+          <div style="background:linear-gradient(135deg,#E65100,#F57C00);border-radius:var(--radius-lg);padding:24px;color:var(--white);text-align:center;">
+            <div style="font-size:2rem;font-weight:800;" data-counter data-target="15" data-suffix="+">15+</div>
+            <div style="font-size:.8rem;opacity:.8;margin-top:4px;">Treatment<br>Technologies</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════ CERTIFICATIONS ═══════════════════ -->
+<section class="section-navy" id="certifications">
+  <div class="container">
+    <div class="section-header text-center" data-aos="fade-up">
+      <div class="section-tag"><i class="fa-solid fa-certificate"></i> Quality Assurance</div>
+      <h2 class="section-title">Certifications & <span>Accreditations</span></h2>
+      <div class="section-divider"></div>
+      <p class="section-subtitle">Our commitment to quality, safety, and environmental responsibility is backed by recognized certifications.</p>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:20px;" data-aos="fade-up" data-aos-delay="100">
+      <div class="ncc-dark-card" style="text-align:center;">
+        <div class="ndc-icon"><i class="fa-solid fa-award"></i></div>
+        <h4>ISO 9001:2015</h4>
+        <p>Quality Management System — consistent delivery of high-quality engineering services across all projects.</p>
+      </div>
+      <div class="ncc-dark-card" style="text-align:center;">
+        <div class="ndc-icon"><i class="fa-solid fa-leaf"></i></div>
+        <h4>ISO 14001:2015</h4>
+        <p>Environmental Management System — demonstrating environmental stewardship in all operations.</p>
+      </div>
+      <div class="ncc-dark-card" style="text-align:center;">
+        <div class="ndc-icon"><i class="fa-solid fa-shield-halved"></i></div>
+        <h4>ISO 45001:2018</h4>
+        <p>Occupational Health & Safety Management — safe work environments for all project teams.</p>
+      </div>
+      <div class="ncc-dark-card" style="text-align:center;">
+        <div class="ndc-icon"><i class="fa-solid fa-graduation-cap"></i></div>
+        <h4>IEI Membership</h4>
+        <p>Institution of Engineers India — professional membership with India's premier engineering body.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════ GLOBAL PRESENCE ═══════════════════ -->
+<section class="section section-light">
+  <div class="container">
+    <div class="section-header text-center" data-aos="fade-up">
+      <div class="section-tag"><i class="fa-solid fa-globe"></i> Global Reach</div>
+      <h2 class="section-title">Our <span>International</span> Presence</h2>
+      <div class="section-divider"></div>
+      <p class="section-subtitle">From Indian metros to international capitals — Waves Envirotech's engineering expertise reaches across borders.</p>
+    </div>
+    <div class="global-map" data-aos="fade-up" data-aos-delay="100">
+      <div class="presence-grid">
+        <div class="presence-item"><div class="flag">🇮🇳</div><strong>India</strong><span>Hyderabad (HQ), Mumbai, Delhi, Bengaluru, Chennai, Kolkata, Vizag, Ahmedabad, Noida, Kerala, Goa, Rajasthan, Bihar, UP, Assam</span></div>
+        <div class="presence-item"><div class="flag">🇸🇬</div><strong>Singapore</strong><span>PUB Water Reclamation, Jurong STP, Seletar WTP — with Black & Veatch, CH2M Hill, Meinhardt</span></div>
+        <div class="presence-item"><div class="flag">🇱🇰</div><strong>Sri Lanka</strong><span>85 MLD WTP and ADB/AFD-funded Greater Colombo Water & Wastewater Management Program</span></div>
+        <div class="presence-item"><div class="flag">🇳🇵</div><strong>Nepal</strong><span>Pre-bid consultancy for Guheshwori WWTP Rehabilitation, Kathmandu (Khanepani Ltd)</span></div>
+        <div class="presence-item"><div class="flag">🇧🇹</div><strong>Bhutan</strong><span>DANIDA, MoWH/MoUD, Thimphu — Royal Government of Bhutan engagement</span></div>
+        <div class="presence-item"><div class="flag">🇳🇱</div><strong>Netherlands</strong><span>Training at NORIT Technologies, Hengelo — UF Membrane Technology</span></div>
+        <div class="presence-item"><div class="flag">🇦🇹</div><strong>Austria</strong><span>Training at SFCU Technologies, Salzburg — Cyclic Activated Sludge Process (C-Tech)</span></div>
+        <div class="presence-item"><div class="flag">🇬🇧</div><strong>United Kingdom</strong><span>Business & Technology Development — HYBACS plants, Blue Water Bio & Tech Universal, Cardiff</span></div>
+        <div class="presence-item"><div class="flag">🇮🇷</div><strong>Iran</strong><span>2 MLD ETP for Gelatin Effluent — Transgel, Iran</span></div>
+        <div class="presence-item"><div class="flag">🇮🇱</div><strong>Israel</strong><span>Technology partnerships — Arrow Ecology and Mapal Green Energy</span></div>
+        <div class="presence-item"><div class="flag">🌏</div><strong>And More…</strong><span>Ongoing expansion across South Asia, Southeast Asia, and the Middle East</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════ CTA ═══════════════════ -->
+<section class="cta-section blue-cta" data-aos="fade-up">
+  <div class="container" style="position:relative;z-index:1;">
+    <h2>Partner with <span style="color:var(--accent);">Waves Envirotech</span></h2>
+    <p>Whether you need pre-bid consultancy, DPR preparation, or complete engineering design — our team is ready to deliver excellence.</p>
+    <div class="cta-actions">
+      <a href="contact.html" class="btn btn-gold btn-lg"><i class="fa-solid fa-phone"></i> Contact Our Team</a>
+      <a href="services.html" class="btn btn-outline btn-lg"><i class="fa-solid fa-gears"></i> Explore Services</a>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="footer-logo"><img src="favicon.png" alt="Waves Envirotech Pvt. Ltd." class="footer-logo-img"><div class="footer-logo-text"><strong>Waves Envirotech</strong><span>Pvt. Ltd.</span></div></div>
+        <p>A leading environmental engineering consultancy specializing in water treatment, sewage treatment, effluent treatment, desalination, and pre-bid consultancy services — with 28+ years of proven excellence.</p>
+        <div class="footer-social"><a href="https://www.linkedin.com/company/wavesenvirotech/" target="_blank" rel="noopener"><i class="fa-brands fa-linkedin-in"></i></a><a href="https://www.linkedin.com/company/wavesenvirotech/" target="_blank" rel="noopener"><i class="fa-brands fa-x-twitter"></i></a><a href="https://www.linkedin.com/company/wavesenvirotech/" target="_blank" rel="noopener"><i class="fa-brands fa-facebook-f"></i></a><a href="https://www.linkedin.com/company/wavesenvirotech/" target="_blank" rel="noopener"><i class="fa-brands fa-youtube"></i></a></div>
+      </div>
+      <div class="footer-col"><h5>Quick Links</h5><ul><li><a href="index.html"><i class="fa-solid fa-chevron-right"></i> Home</a></li><li><a href="about.html"><i class="fa-solid fa-chevron-right"></i> About Us</a></li><li><a href="leadership.html"><i class="fa-solid fa-chevron-right"></i> Leadership</a></li><li><a href="projects.html"><i class="fa-solid fa-chevron-right"></i> Projects</a></li><li><a href="clientele.html"><i class="fa-solid fa-chevron-right"></i> Clientele</a></li><li><a href="careers.html"><i class="fa-solid fa-chevron-right"></i> Careers</a></li><li><a href="contact.html"><i class="fa-solid fa-chevron-right"></i> Contact</a></li></ul></div>
+      <div class="footer-col"><h5>Our Services</h5><ul><li><a href="services.html#wtp"><i class="fa-solid fa-chevron-right"></i> Water Treatment Plants</a></li><li><a href="services.html#stp"><i class="fa-solid fa-chevron-right"></i> Sewage Treatment Plants</a></li><li><a href="services.html#etp"><i class="fa-solid fa-chevron-right"></i> Effluent Treatment Plants</a></li><li><a href="services.html#desalination"><i class="fa-solid fa-chevron-right"></i> Desalination Plants</a></li><li><a href="services.html#membrane"><i class="fa-solid fa-chevron-right"></i> Membrane Technologies</a></li><li><a href="services.html#consultancy"><i class="fa-solid fa-chevron-right"></i> Pre-bid Consultancy</a></li></ul></div>
+      <div class="footer-col"><h5>Contact Us</h5><div class="footer-contact"><div class="footer-contact-item"><i class="fa-solid fa-location-dot"></i><span>Waves Envirotech Pvt. Ltd., Hyderabad, Telangana, India</span></div><div class="footer-contact-item"><i class="fa-solid fa-phone"></i><span>+91 9030605226<br>+91 8374391966</span></div><div class="footer-contact-item"><i class="fa-solid fa-envelope"></i><span>syreddy@wavesenviro.com</span></div></div><div class="footer-newsletter" style="margin-top:24px;"><p>Subscribe for updates:</p><form class="newsletter-form"><input type="email" placeholder="Your email" required><button type="submit">Subscribe</button></form></div></div>
+    </div>
+    <div class="footer-bottom"><p>© 2024 Waves Envirotech Pvt. Ltd. All rights reserved.</p><div class="footer-bottom-links"><a href="#">Privacy Policy</a><a href="#">Terms of Service</a></div></div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>

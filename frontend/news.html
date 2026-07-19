@@ -1,0 +1,392 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>News & Updates | Waves Envirotech Pvt. Ltd.</title>
+  <link rel="icon" type="image/png" href="favicon.png">
+  
+  
+  
+  
+  
+  
+  <meta name="description" content="Latest news, project updates, and industry insights from Waves Envirotech — India's leading environmental engineering consultancy." />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="css/style.css" />
+  <style>
+    .news-card { background:#fff; border-radius:16px; overflow:hidden; box-shadow:var(--shadow-card); transition:transform 0.3s, box-shadow 0.3s; display:flex; flex-direction:column; }
+    .news-card:hover { transform:translateY(-6px); box-shadow:var(--shadow-hover); }
+    .news-card img { width:100%; height:200px; object-fit:cover; transition:transform 0.4s; }
+    .news-card:hover img { transform:scale(1.04); }
+    .news-card-img { overflow:hidden; }
+    .news-card-body { padding:24px; flex:1; display:flex; flex-direction:column; }
+    .news-card-meta { display:flex; gap:12px; align-items:center; flex-wrap:wrap; margin-bottom:12px; }
+    .news-tag { background:#dbeafe; color:#1d4ed8; font-size:11px; font-weight:700; padding:3px 10px; border-radius:20px; text-transform:uppercase; letter-spacing:0.5px; }
+    .news-date { font-size:12px; color:#94a3b8; display:flex; align-items:center; gap:5px; }
+    .news-card-body h3 { font-family:var(--font-display); font-size:1.05rem; font-weight:700; color:var(--dark); margin-bottom:10px; line-height:1.5; }
+    .news-card-body p { color:#64748b; font-size:0.88rem; line-height:1.7; flex:1; }
+    .news-card-footer { padding:16px 24px; border-top:1px solid #f1f5f9; display:flex; justify-content:space-between; align-items:center; }
+    .news-author { font-size:12px; color:#94a3b8; display:flex; align-items:center; gap:6px; }
+    .read-more { font-size:13px; font-weight:600; color:var(--primary); text-decoration:none; display:flex; align-items:center; gap:5px; transition:color 0.2s; }
+    .page-hero-ncc::before { background:url('https://thumbs.dreamstime.com/b/blue-p-309584187.jpg') center/cover no-repeat; opacity:.16; }
+    .read-more:hover { color:var(--accent); }
+  </style>
+</head>
+<body>
+
+<!-- WHITE HEADER TOP BAR -->
+<div class="header-top" id="header-top">
+  <div class="container header-top-inner">
+    <a href="index.html" class="ht-logo">
+      <img src="images/logo.png" alt="Waves Envirotech Pvt. Ltd." class="ht-logo-img">
+      <div class="ht-logo-text"><strong>Waves Envirotech</strong><span>Pvt. Ltd.</span></div>
+    </a>
+    <div class="ht-right">
+      <a href="tel:+919030605226" class="ht-contact-item">
+        <div class="ht-ci-icon"><i class="fa-solid fa-phone"></i></div>
+        <div class="ht-ci-text"><span>Call Us</span><strong>+91 9030605226</strong><strong>+91 8374391966</strong></div>
+      </a>
+      <div class="ht-sep"></div>
+      <a href="mailto:syreddy@wavesenviro.com" class="ht-contact-item">
+        <div class="ht-ci-icon"><i class="fa-solid fa-envelope"></i></div>
+        <div class="ht-ci-text"><span>Email Us</span><strong>syreddy@wavesenviro.com</strong></div>
+      </a>
+      <div class="ht-sep"></div>
+      <a href="careers.html" class="ht-contact-item ht-careers">
+        <div class="ht-ci-icon"><i class="fa-solid fa-briefcase"></i></div>
+        <div class="ht-ci-text"><span>Join Our Team</span><strong>Careers</strong></div>
+      </a>
+    </div>
+  </div>
+</div>
+<nav id="navbar">
+  <div class="container nav-inner">
+    <a href="index.html" class="nav-logo nav-logo-scroll">
+      <img src="images/logo.png" alt="Waves Envirotech" class="nav-logo-img">
+      <div class="nav-logo-text"><strong>Waves Envirotech</strong><span>Pvt. Ltd.</span></div>
+    </a>
+    <div class="nav-links">
+      <div class="nav-item"><a href="index.html" class="nav-link">HOME</a></div>
+      <div class="nav-item">
+        <a href="about.html" class="nav-link">ABOUT US <i class="fa-solid fa-chevron-down"></i></a>
+        <div class="nav-dropdown">
+          <a href="about.html#company"><i class="fa-solid fa-building"></i> Company Profile</a>
+          <a href="about.html#vision"><i class="fa-solid fa-eye"></i> Vision &amp; Mission</a>
+          <a href="about.html#values"><i class="fa-solid fa-gem"></i> Core Values</a>
+          <a href="leadership.html"><i class="fa-solid fa-user-tie"></i> Leadership</a>
+          <a href="about.html#certifications"><i class="fa-solid fa-certificate"></i> Certifications</a>
+        </div>
+      </div>
+      <div class="nav-item">
+        <a href="services.html" class="nav-link">EXPERTISE <i class="fa-solid fa-chevron-down"></i></a>
+        <div class="nav-dropdown">
+          <a href="services.html#wtp"><i class="fa-solid fa-droplet"></i> Water Treatment (WTP)</a>
+          <a href="services.html#stp"><i class="fa-solid fa-water"></i> Sewage Treatment (STP)</a>
+          <a href="services.html#etp"><i class="fa-solid fa-industry"></i> Effluent Treatment (ETP)</a>
+          <a href="services.html#desalination"><i class="fa-solid fa-wave-square"></i> Desalination Plants</a>
+          <a href="services.html#consultancy"><i class="fa-solid fa-file-contract"></i> Pre-bid Consultancy</a>
+          <a href="services.html#membrane"><i class="fa-solid fa-filter"></i> Membrane Technologies</a>
+        </div>
+      </div>
+      <div class="nav-item">
+        <a href="projects.html" class="nav-link">LANDMARKS <i class="fa-solid fa-chevron-down"></i></a>
+        <div class="nav-dropdown">
+          <a href="projects.html"><i class="fa-solid fa-diagram-project"></i> All Projects</a>
+          <a href="clientele.html"><i class="fa-solid fa-users"></i> Our Clientele</a>
+        </div>
+      </div>
+      <div class="nav-item"><a href="sustainability.html" class="nav-link">COMMITMENT</a></div>
+      <div class="nav-item"><a href="leadership.html" class="nav-link">LEADERSHIP</a></div>
+      <div class="nav-item">
+        <a href="news.html" class="nav-link active">MEDIA <i class="fa-solid fa-chevron-down"></i></a>
+        <div class="nav-dropdown">
+          <a href="news.html"><i class="fa-solid fa-newspaper"></i> News &amp; Updates</a>
+          <a href="gallery.html"><i class="fa-solid fa-images"></i> Gallery</a>
+        </div>
+      </div>
+      <div class="nav-item"><a href="contact.html" class="nav-link">CONTACT</a></div>
+    </div>
+    <a href="contact.html" class="nav-cta-btn"><i class="fa-solid fa-phone"></i> Get in Touch</a>
+    <div class="hamburger" role="button" tabindex="0" aria-label="Toggle menu"><span></span><span></span><span></span></div>
+  </div>
+</nav>
+<div class="mobile-menu">
+  <a href="index.html"><i class="fa-solid fa-house"></i> Home</a>
+  <div class="mob-section">Company</div>
+  <a href="about.html">About Us</a>
+  <a href="leadership.html">Leadership</a>
+  <a href="sustainability.html">Commitment</a>
+  <div class="mob-section">Expertise</div>
+  <a href="services.html">All Services</a>
+  <div class="mob-section">Projects</div>
+  <a href="projects.html">All Projects</a>
+  <a href="clientele.html">Clientele</a>
+  <div class="mob-section">Media</div>
+  <a href="news.html">News &amp; Updates</a>
+  <a href="gallery.html">Gallery</a>
+  <a href="careers.html">Careers</a>
+  <a href="contact.html">Contact Us</a>
+</div>
+
+<!-- Page Hero NCC -->
+<section class="page-hero-ncc">
+  <div class="container">
+    <div class="phn-breadcrumb"><a href="index.html">Home</a><i class="fa-solid fa-chevron-right"></i><span>News</span></div>
+    <span class="phn-tag">MEDIA &amp; UPDATES</span>
+    <h1 class="phn-title">Latest News &amp; Updates</h1>
+    <p class="phn-sub">Stay updated with our latest project achievements, industry insights, and corporate milestones from across India and the world.</p>
+  </div>
+</section>
+
+<!-- STATS ROW -->
+<div class="ncc-stat-row">
+  <div class="container">
+    <div class="nsr-grid">
+      <div data-aos="fade-up"><div class="nsr-num">150<sup>+</sup></div><div class="nsr-label">Projects Delivered</div></div>
+      <div data-aos="fade-up" data-aos-delay="100"><div class="nsr-num">28<sup>+</sup></div><div class="nsr-label">Years of Excellence</div></div>
+      <div data-aos="fade-up" data-aos-delay="200"><div class="nsr-num">8<sup>+</sup></div><div class="nsr-label">Countries Served</div></div>
+      <div data-aos="fade-up" data-aos-delay="300"><div class="nsr-num">30<sup>+</sup></div><div class="nsr-label">Major Clients</div></div>
+    </div>
+  </div>
+</div>
+
+<!-- FEATURED ARTICLE -->
+<section style="padding:80px 0;background:#F4F6F9;">
+  <div class="container">
+    <div data-aos="fade-up" style="margin-bottom:60px;">
+      <div style="display:inline-flex;align-items:center;gap:8px;background:rgba(245,158,11,0.1);border:1px solid rgba(245,158,11,0.3);border-radius:50px;padding:5px 16px;margin-bottom:24px;">
+        <i class="fa-solid fa-star" style="color:#F59E0B;font-size:12px;"></i>
+        <span style="color:#F59E0B;font-size:13px;font-weight:600;letter-spacing:1px;">FEATURED</span>
+      </div>
+      <div style="background:#fff;border-radius:20px;overflow:hidden;box-shadow:var(--shadow-hover);display:grid;grid-template-columns:1.2fr 1fr;" class="featured-article-grid">
+        <div style="overflow:hidden;">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQAyxDmLozG0FijqKFNumdGLK4ohq1xxiqV90CJMTqlHDPE1kUNlZN46CJX&s=10" alt="Delhi STP Pre-bid Consultancy" style="width:100%;height:100%;object-fit:cover;min-height:380px;display:block;transition:transform 0.4s;" onmouseover="this.style.transform='scale(1.03)'" onmouseout="this.style.transform=''" />
+        </div>
+        <div style="padding:44px;">
+          <div style="display:flex;gap:10px;flex-wrap:wrap;margin-bottom:20px;">
+            <span class="news-tag" style="background:#dbeafe;color:#1d4ed8;">Pre-bid Consultancy</span>
+            <span class="news-tag" style="background:#fef3c7;color:#92400e;">Municipal</span>
+          </div>
+          <h2 style="font-family:var(--font-display);font-size:1.8rem;font-weight:700;color:var(--dark);margin-bottom:16px;line-height:1.4;">Waves Envirotech Completes Pre-bid Consultancy for Major Delhi STP Projects</h2>
+          <p style="color:#64748b;line-height:1.8;margin-bottom:24px;">Waves Envirotech Pvt. Ltd. has successfully completed its pre-bid consultancy assignment for multiple Sewage Treatment Plants (STPs) under Delhi Jal Board (DJB). The consultancy scope included preparation of Detailed Project Reports (DPRs), techno-economic feasibility studies, and complete tender documentation for four STPs with a combined capacity of over 300 MLD. The projects are to be funded under JNNURM and will significantly boost Delhi's sewage treatment infrastructure.</p>
+          <div style="display:flex;align-items:center;gap:20px;flex-wrap:wrap;margin-bottom:24px;">
+            <div class="news-date"><i class="fa-regular fa-calendar"></i> November 18, 2024</div>
+            <div class="news-author"><i class="fa-solid fa-user" style="color:#94a3b8;"></i> Editorial Team</div>
+          </div>
+          <a href="#" class="btn btn-primary" style="display:inline-flex;align-items:center;gap:8px;padding:12px 28px;border-radius:10px;text-decoration:none;font-size:0.9rem;">Read Full Article <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+      </div>
+    </div>
+
+    <!-- NEWS GRID -->
+    <div data-aos="fade-up" style="margin-bottom:32px;">
+      <h2 style="font-family:var(--font-display);font-size:2rem;font-weight:700;color:#0E2558;margin-bottom:4px;">More Updates</h2>
+      <div style="width:56px;height:4px;background:#F59E0B;border-radius:2px;"></div>
+    </div>
+
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:28px;" class="news-grid-responsive">
+
+      <div data-aos="fade-up" data-aos-delay="0" class="news-card">
+        <div class="news-card-img"><img src="https://www.adb.org/sites/default/files/page/501956/images/thumb-sri-results.jpg" alt="Sri Lanka ADB-Funded WTP Project" loading="lazy" /></div>
+        <div class="news-card-body">
+          <div class="news-card-meta">
+            <span class="news-tag" style="background:#f3e8ff;color:#7e22ce;">International</span>
+            <span class="news-date"><i class="fa-regular fa-calendar"></i> October 5, 2024</span>
+          </div>
+          <h3>Company Expands International Portfolio with Sri Lanka ADB-Funded WTP Project</h3>
+          <p>Waves Envirotech has secured a prestigious assignment to provide pre-bid consultancy for a major Water Treatment Plant project in Sri Lanka, funded by the Asian Development Bank (ADB). The project covers design consultancy for a 50 MLD WTP serving the Colombo metropolitan region.</p>
+        </div>
+        <div class="news-card-footer">
+          <span class="news-author"><i class="fa-solid fa-user"></i> Editorial Team</span>
+          <a href="#" class="read-more">Read More <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+      </div>
+
+      <div data-aos="fade-up" data-aos-delay="80" class="news-card">
+        <div class="news-card-img"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR-QosL1C14xdZN7vxCEwcQWzYg2y9lvp1KFRLSSaWBin495_qidgE1YeY&s=10" alt="Telangana Urban Local Bodies DPR" loading="lazy" /></div>
+        <div class="news-card-body">
+          <div class="news-card-meta">
+            <span class="news-tag">DPR</span>
+            <span class="news-date"><i class="fa-regular fa-calendar"></i> September 12, 2024</span>
+          </div>
+          <h3>Waves Envirotech Awarded DPR Contract for 7 Urban Local Bodies in Telangana</h3>
+          <p>Under the Telangana Urban Finance and Infrastructure Development Corporation (TUFIDC), Waves Envirotech has been entrusted with preparing Detailed Project Reports (DPRs) for water supply and sanitation infrastructure across 7 Urban Local Bodies in Telangana State.</p>
+        </div>
+        <div class="news-card-footer">
+          <span class="news-author"><i class="fa-solid fa-user"></i> Editorial Team</span>
+          <a href="#" class="read-more">Read More <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+      </div>
+
+      <div data-aos="fade-up" data-aos-delay="160" class="news-card">
+        <div class="news-card-img"><img src="https://hecs.in/storage/projects/iit.jpeg" alt="MBBR-Based STP Hyderabad" loading="lazy" /></div>
+        <div class="news-card-body">
+          <div class="news-card-meta">
+            <span class="news-tag" style="background:#dcfce7;color:#15803d;">Technology</span>
+            <span class="news-date"><i class="fa-regular fa-calendar"></i> August 28, 2024</span>
+          </div>
+          <h3>Advanced MBBR Technology Implementation at Hyderabad Sewage Treatment Plants</h3>
+          <p>Waves Envirotech has completed detailed engineering design for two Sewage Treatment Plants in Hyderabad utilizing the Moving Bed Biofilm Reactor (MBBR) technology for HMWSSB. The innovative process design ensures high-quality treated effluent meeting CPCB discharge standards.</p>
+        </div>
+        <div class="news-card-footer">
+          <span class="news-author"><i class="fa-solid fa-user"></i> Editorial Team</span>
+          <a href="#" class="read-more">Read More <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+      </div>
+
+      <div data-aos="fade-up" data-aos-delay="0" class="news-card">
+        <div class="news-card-img"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRn1IgcVRLXvSue7ctBDCRb5X70kXkLQtxwG2jMkwg3LwFAmSuwebPdxBDu&s=10" alt="MD Lecture at ESCI Hyderabad" loading="lazy" /></div>
+        <div class="news-card-body">
+          <div class="news-card-meta">
+            <span class="news-tag" style="background:#fef3c7;color:#92400e;">Corporate</span>
+            <span class="news-date"><i class="fa-regular fa-calendar"></i> July 15, 2024</span>
+          </div>
+          <h3>Managing Director Delivers Lecture on Advanced Water Treatment at ESCI Hyderabad</h3>
+          <p>Our Managing Director was invited as a guest lecturer at the Engineering Staff College of India (ESCI), Hyderabad, where he delivered an insightful session on advanced water treatment technologies, membrane systems, and sustainable sewage management practices for senior government engineers.</p>
+        </div>
+        <div class="news-card-footer">
+          <span class="news-author"><i class="fa-solid fa-user"></i> Editorial Team</span>
+          <a href="#" class="read-more">Read More <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+      </div>
+
+      <div data-aos="fade-up" data-aos-delay="80" class="news-card">
+        <div class="news-card-img"><img src="https://www.siww.com.sg/qql/slot/happenings/ie01/04c7ca26e_33.jpg" alt="International Water Summit Singapore" loading="lazy" /></div>
+        <div class="news-card-body">
+          <div class="news-card-meta">
+            <span class="news-tag" style="background:#f3e8ff;color:#7e22ce;">International</span>
+            <span class="news-date"><i class="fa-regular fa-calendar"></i> June 10, 2024</span>
+          </div>
+          <h3>Company Participates in International Water Summit, Singapore</h3>
+          <p>A delegation from Waves Envirotech Pvt. Ltd. participated in the Singapore International Water Week (SIWW), one of the world's premier platforms for water solutions. The company networked with global leaders in water technology and explored opportunities for international project collaborations.</p>
+        </div>
+        <div class="news-card-footer">
+          <span class="news-author"><i class="fa-solid fa-user"></i> Editorial Team</span>
+          <a href="#" class="read-more">Read More <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+      </div>
+
+      <div data-aos="fade-up" data-aos-delay="160" class="news-card">
+        <div class="news-card-img"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSOQTRXkc3oQiubPUT2CbLoQrgoeVEiFzmOmjyMGIsjJIfQxXsYElsIpxXP&s=10" alt="Greater Noida STP - KFW Funded" loading="lazy" /></div>
+        <div class="news-card-body">
+          <div class="news-card-meta">
+            <span class="news-tag" style="background:#dcfce7;color:#15803d;">Project Win</span>
+            <span class="news-date"><i class="fa-regular fa-calendar"></i> April 22, 2024</span>
+          </div>
+          <h3>Waves Envirotech Bags Consultancy for Greater Noida KFW-Funded STP Projects</h3>
+          <p>Waves Envirotech has been appointed as technical consultants for the KfW (German Development Bank) funded Sewage Treatment Plant projects under the Greater Noida Industrial Development Authority (GNIDA). The assignment covers pre-bid services, DPR preparation, and construction supervision for two STPs with combined capacity of 120 MLD.</p>
+        </div>
+        <div class="news-card-footer">
+          <span class="news-author"><i class="fa-solid fa-user"></i> Editorial Team</span>
+          <a href="#" class="read-more">Read More <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+      </div>
+
+      <div data-aos="fade-up" data-aos-delay="0" class="news-card">
+        <div class="news-card-img"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTp0fVfdICyPQEKLWdOhfLc6NdY3N-JQhr_6D9TLUnuEgFsXGCuFgXAtow&s=10" alt="Phytorid Green STP Tirupati Smart City" loading="lazy" /></div>
+        <div class="news-card-body">
+          <div class="news-card-meta">
+            <span class="news-tag" style="background:#d1fae5;color:#065f46;">Sustainability</span>
+            <span class="news-date"><i class="fa-regular fa-calendar"></i> February 14, 2024</span>
+          </div>
+          <h3>New Phytorid-based STP Technology Adopted for Smart City Projects in Tirupati</h3>
+          <p>In a pioneering step for natural wastewater treatment, Waves Envirotech has designed and commissioned a Phytorid-based Sewage Treatment Plant for the Municipal Corporation of Tirupati under the Smart Cities Mission. The eco-friendly system treats sewage using constructed wetlands, producing high-quality treated water for irrigation.</p>
+        </div>
+        <div class="news-card-footer">
+          <span class="news-author"><i class="fa-solid fa-user"></i> Editorial Team</span>
+          <a href="#" class="read-more">Read More <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+      </div>
+
+      <div data-aos="fade-up" data-aos-delay="80" class="news-card">
+        <div class="news-card-img"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSvwvC_B6WcqYyuqYE-c99aFoeChew_X9GIm5Fqy_J94ononV1vHbOAQ-Q&s=10" alt="Waves Envirotech 150 Projects Milestone" loading="lazy" /></div>
+        <div class="news-card-body">
+          <div class="news-card-meta">
+            <span class="news-tag" style="background:#fce7f3;color:#be185d;">Milestone</span>
+            <span class="news-date"><i class="fa-regular fa-calendar"></i> January 1, 2024</span>
+          </div>
+          <h3>Company Achieves Milestone: 150+ Environmental Engineering Projects Completed</h3>
+          <p>Waves Envirotech Pvt. Ltd. rings in 2024 by crossing a landmark of 150+ successfully completed environmental engineering projects spanning 8+ countries. This achievement reflects the company's sustained commitment to excellence, innovation, and environmental stewardship over 28+ years of operation.</p>
+        </div>
+        <div class="news-card-footer">
+          <span class="news-author"><i class="fa-solid fa-user"></i> Editorial Team</span>
+          <a href="#" class="read-more">Read More <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+      </div>
+
+      <div data-aos="fade-up" data-aos-delay="160" class="news-card">
+        <div class="news-card-img"><img src="https://www.goorui.com/wp-content/uploads/2025/02/MBR-systems.jpg" alt="Advanced Membrane Technology" loading="lazy" /></div>
+        <div class="news-card-body">
+          <div class="news-card-meta">
+            <span class="news-tag" style="background:#dbeafe;color:#1d4ed8;">Technology</span>
+            <span class="news-date"><i class="fa-regular fa-calendar"></i> December 5, 2023</span>
+          </div>
+          <h3>Waves Envirotech Adopts Advanced Membrane Bioreactor (MBR) for Industrial ETP Designs</h3>
+          <p>Waves Envirotech has expanded its technology portfolio by incorporating Membrane Bioreactor (MBR) systems in industrial Effluent Treatment Plant designs. The MBR technology enables compact, high-efficiency treatment with superior effluent quality, making it ideal for ZLD applications in the textile, pharmaceutical, and food processing industries.</p>
+        </div>
+        <div class="news-card-footer">
+          <span class="news-author"><i class="fa-solid fa-user"></i> Editorial Team</span>
+          <a href="#" class="read-more">Read More <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- NEWSLETTER SIGNUP -->
+<section style="padding:80px 0;background:linear-gradient(135deg,var(--primary),#0d5299);">
+  <div class="container">
+    <div data-aos="fade-up" style="max-width:640px;margin:0 auto;text-align:center;">
+      <div style="width:64px;height:64px;background:rgba(0,188,212,0.2);border-radius:16px;display:flex;align-items:center;justify-content:center;margin:0 auto 24px;">
+        <i class="fa-solid fa-bell" style="font-size:28px;color:var(--accent);"></i>
+      </div>
+      <h2 style="font-family:var(--font-display);font-size:2rem;font-weight:700;color:#fff;margin-bottom:14px;">Stay Updated</h2>
+      <p style="color:rgba(255,255,255,0.75);margin-bottom:36px;line-height:1.7;">Subscribe to receive the latest project updates, industry insights, and news from Waves Envirotech directly in your inbox. No spam — just valuable environmental engineering content.</p>
+      <form id="newsletterForm" style="display:flex;gap:12px;max-width:480px;margin:0 auto;" onsubmit="submitNewsletter(event)">
+        <input type="email" placeholder="Enter your email address" required style="flex:1;padding:14px 20px;border:2px solid rgba(255,255,255,0.2);border-radius:12px;background:rgba(255,255,255,0.1);color:#fff;font-size:0.95rem;outline:none;font-family:var(--font-sans);" onfocus="this.style.borderColor='var(--accent)'" onblur="this.style.borderColor='rgba(255,255,255,0.2)'" />
+        <button type="submit" style="padding:14px 28px;background:var(--accent);border:none;border-radius:12px;color:#fff;font-weight:700;font-size:0.9rem;cursor:pointer;white-space:nowrap;transition:background 0.2s;font-family:var(--font-sans);" onmouseover="this.style.background='#00acc1'" onmouseout="this.style.background='var(--accent)'">Subscribe</button>
+      </form>
+      <div id="newsletterFeedback" style="display:none;margin-top:16px;color:#a7f3d0;font-size:0.9rem;"><i class="fa-solid fa-circle-check" style="margin-right:6px;"></i>Thank you for subscribing! You'll receive our next update soon.</div>
+      <p style="color:rgba(255,255,255,0.4);font-size:12px;margin-top:16px;">We respect your privacy. Unsubscribe at any time.</p>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="footer-logo"><img src="favicon.png" alt="Waves Envirotech Pvt. Ltd." class="footer-logo-img"><div class="footer-logo-text"><strong>Waves Envirotech</strong><span>Pvt. Ltd.</span></div></div>
+        <p>A leading environmental engineering consultancy specializing in water treatment, sewage treatment, effluent treatment, desalination, and pre-bid consultancy services — with 28+ years of proven excellence.</p>
+        <div class="footer-social"><a href="https://www.linkedin.com/company/wavesenvirotech/" target="_blank" rel="noopener"><i class="fa-brands fa-linkedin-in"></i></a><a href="https://www.linkedin.com/company/wavesenvirotech/" target="_blank" rel="noopener"><i class="fa-brands fa-x-twitter"></i></a><a href="https://www.linkedin.com/company/wavesenvirotech/" target="_blank" rel="noopener"><i class="fa-brands fa-facebook-f"></i></a><a href="https://www.linkedin.com/company/wavesenvirotech/" target="_blank" rel="noopener"><i class="fa-brands fa-youtube"></i></a></div>
+      </div>
+      <div class="footer-col"><h5>Quick Links</h5><ul><li><a href="index.html"><i class="fa-solid fa-chevron-right"></i> Home</a></li><li><a href="about.html"><i class="fa-solid fa-chevron-right"></i> About Us</a></li><li><a href="leadership.html"><i class="fa-solid fa-chevron-right"></i> Leadership</a></li><li><a href="projects.html"><i class="fa-solid fa-chevron-right"></i> Projects</a></li><li><a href="careers.html"><i class="fa-solid fa-chevron-right"></i> Careers</a></li><li><a href="contact.html"><i class="fa-solid fa-chevron-right"></i> Contact</a></li></ul></div>
+      <div class="footer-col"><h5>Our Services</h5><ul><li><a href="services.html#wtp"><i class="fa-solid fa-chevron-right"></i> Water Treatment Plants</a></li><li><a href="services.html#stp"><i class="fa-solid fa-chevron-right"></i> Sewage Treatment Plants</a></li><li><a href="services.html#etp"><i class="fa-solid fa-chevron-right"></i> Effluent Treatment Plants</a></li><li><a href="services.html#desalination"><i class="fa-solid fa-chevron-right"></i> Desalination Plants</a></li><li><a href="services.html#membrane"><i class="fa-solid fa-chevron-right"></i> Membrane Technologies</a></li><li><a href="services.html#consultancy"><i class="fa-solid fa-chevron-right"></i> Pre-bid Consultancy</a></li></ul></div>
+      <div class="footer-col"><h5>Contact</h5><div class="footer-contact"><div class="footer-contact-item"><i class="fa-solid fa-location-dot"></i><span>Hyderabad, Telangana, India</span></div><div class="footer-contact-item"><i class="fa-solid fa-envelope"></i><span>syreddy@wavesenviro.com</span></div></div><div class="footer-newsletter" style="margin-top:20px;"><p>Subscribe for updates:</p><form class="newsletter-form"><input type="email" placeholder="Your email" required><button type="submit">Subscribe</button></form></div></div>
+    </div>
+    <div class="footer-bottom"><p>© 2024 Waves Envirotech Pvt. Ltd. All rights reserved.</p><div class="footer-bottom-links"><a href="#">Privacy Policy</a><a href="#">Terms of Service</a></div></div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+<script>
+function submitNewsletter(e) {
+  e.preventDefault();
+  document.getElementById('newsletterFeedback').style.display = 'block';
+  e.target.reset();
+}
+</script>
+<style>
+@media (max-width: 900px) {
+  .news-grid-responsive { grid-template-columns: repeat(2,1fr) !important; }
+  .featured-article-grid { grid-template-columns: 1fr !important; }
+}
+@media (max-width: 580px) {
+  .news-grid-responsive { grid-template-columns: 1fr !important; }
+}
+</style>
+</body>
+</html>

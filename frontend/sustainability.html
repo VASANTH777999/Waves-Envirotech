@@ -1,0 +1,596 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Waves Envirotech Sustainability — Our commitment to environmental stewardship, green engineering, and sustainable water management for a better tomorrow.">
+  <title>Sustainability | Waves Envirotech Pvt. Ltd.</title>
+  <link rel="icon" type="image/png" href="favicon.png">
+  
+  
+  
+  
+  
+  
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    /* Sustainability page specific */
+    .sustain-hero { background: linear-gradient(135deg, #0F2D1F 0%, #1B5E20 40%, #00897B 100%); padding: 152px 0 80px; position: relative; overflow: hidden; min-height: 70vh; display: flex; align-items: center; }
+    .sustain-hero::before { content:''; position:absolute; inset:0; background:radial-gradient(ellipse at 30% 60%, rgba(85,239,196,.22) 0%, transparent 65%); }
+    .sustain-hero h1 { color: #fff; }
+    .sustain-hero .highlight { color: #55EFC4; }
+
+    .sdg-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
+    .sdg-card { border-radius: var(--radius-lg); padding: 24px 18px; text-align: center; color: #fff; transition: var(--transition); position: relative; overflow: hidden; }
+    .sdg-card::after { content:''; position:absolute; inset:0; background:rgba(0,0,0,.15); opacity:0; transition:var(--transition); }
+    .sdg-card:hover { transform: translateY(-5px) scale(1.02); box-shadow: 0 16px 48px rgba(0,0,0,.25); }
+    .sdg-card:hover::after { opacity:1; }
+    .sdg-number { font-size: 2.8rem; font-weight: 900; font-family: var(--font-display); line-height: 1; position: relative; z-index: 1; }
+    .sdg-icon { font-size: 2rem; margin: 10px 0; position: relative; z-index: 1; }
+    .sdg-card h4 { font-size: .85rem; font-weight: 700; position: relative; z-index: 1; }
+
+    .pillar-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; }
+    .pillar-card { background: #fff; border-radius: var(--radius-xl); padding: 36px 28px; border: 1.5px solid var(--border-light); box-shadow: var(--shadow-card); transition: var(--transition); text-align: center; position: relative; overflow: hidden; }
+    .pillar-card::before { content:''; position:absolute; top:0; left:0; right:0; height:4px; }
+    .pillar-card.env::before   { background: var(--grad-green); }
+    .pillar-card.social::before{ background: var(--grad-sky); }
+    .pillar-card.econ::before  { background: var(--grad-gold); }
+    .pillar-card.tech::before  { background: var(--grad-teal); }
+    .pillar-card.gov::before   { background: var(--grad-primary); }
+    .pillar-card.innov::before { background: var(--grad-purple); }
+    .pillar-card:hover { transform: translateY(-6px); box-shadow: var(--shadow-hover); }
+    .pillar-icon-wrap { width: 76px; height: 76px; border-radius: 50%; margin: 0 auto 20px; display: flex; align-items: center; justify-content: center; font-size: 1.8rem; }
+    .pw-green  { background: linear-gradient(135deg,rgba(0,184,148,.15),rgba(85,239,196,.08)); color: var(--secondary); }
+    .pw-blue   { background: linear-gradient(135deg,rgba(0,82,204,.12),rgba(116,185,255,.08)); color: var(--primary); }
+    .pw-gold   { background: linear-gradient(135deg,rgba(253,203,110,.2),rgba(243,156,18,.1)); color: #E67E22; }
+    .pw-teal   { background: linear-gradient(135deg,rgba(0,206,201,.15),rgba(0,184,148,.08)); color: var(--accent); }
+    .pw-purple { background: linear-gradient(135deg,rgba(108,92,231,.15),rgba(162,155,254,.08)); color: #6C5CE7; }
+    .pw-coral  { background: linear-gradient(135deg,rgba(225,112,85,.12),rgba(255,107,107,.06)); color: #E17055; }
+    .pillar-card h3 { font-size: 1.1rem; margin-bottom: 10px; }
+
+    .initiative-row { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: center; margin-bottom: 64px; }
+    .initiative-row.rev { direction: rtl; }
+    .initiative-row.rev > * { direction: ltr; }
+    .initiative-img { border-radius: var(--radius-xl); overflow: hidden; box-shadow: var(--shadow-xl); }
+    .initiative-img img { width: 100%; height: 320px; object-fit: cover; }
+    .initiative-content h3 { font-size: 1.55rem; margin-bottom: 14px; }
+    .initiative-content p { margin-bottom: 18px; }
+    .green-stat { display: inline-flex; align-items: center; gap: 8px; padding: 8px 16px; border-radius: var(--radius); background: rgba(0,184,148,.08); border: 1px solid rgba(0,184,148,.2); font-size: .875rem; font-weight: 600; color: var(--secondary-dark); }
+
+    .green-tech-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
+    .green-tech-card { background: #fff; border: 1.5px solid var(--border-light); border-radius: var(--radius-lg); padding: 26px 20px; text-align: center; transition: var(--transition); }
+    .green-tech-card:hover { border-color: var(--secondary); box-shadow: var(--shadow-teal); transform: translateY(-4px); }
+    .green-tech-icon { width: 64px; height: 64px; border-radius: 50%; margin: 0 auto 16px; display: flex; align-items: center; justify-content: center; font-size: 1.6rem; }
+    .pw-emerald { background: linear-gradient(135deg,rgba(46,204,113,.18),rgba(129,236,177,.08)); color: #27AE60; }
+    .pw-sky     { background: linear-gradient(135deg,rgba(0,168,204,.15),rgba(126,238,255,.08)); color: #0098C7; }
+    .green-tech-card h4 { font-size: .95rem; margin-bottom: 8px; }
+    .green-tech-card p { font-size: .82rem; }
+
+    .impact-band { background: linear-gradient(135deg, #0F2D1F 0%, #1B5E20 100%); padding: 80px 0; }
+    .impact-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; text-align: center; }
+    .impact-val { font-size: 2.8rem; font-weight: 900; color: #55EFC4; font-family: var(--font-display); line-height: 1; margin-bottom: 8px; }
+    .impact-label { font-size: .78rem; color: rgba(255,255,255,.7); text-transform: uppercase; letter-spacing: 1px; }
+
+    .commitment-list { display: flex; flex-direction: column; gap: 16px; }
+    .commitment-item { display: flex; gap: 16px; align-items: flex-start; padding: 20px; border-radius: var(--radius); background: #fff; border: 1.5px solid var(--border-light); transition: var(--transition); }
+    .commitment-item:hover { border-color: var(--secondary); box-shadow: var(--shadow); }
+    .commit-icon { width: 44px; height: 44px; border-radius: 10px; background: rgba(0,184,148,.1); color: var(--secondary); display: flex; align-items: center; justify-content: center; font-size: 1.1rem; flex-shrink: 0; }
+    .commitment-item h4 { font-size: .97rem; margin-bottom: 5px; }
+    .commitment-item p { font-size: .855rem; margin: 0; }
+
+    @media (max-width:1024px) { .sdg-grid { grid-template-columns: repeat(2,1fr); } .pillar-grid { grid-template-columns: repeat(2,1fr); } .green-tech-grid { grid-template-columns: repeat(2,1fr); } .initiative-row { grid-template-columns:1fr; } .initiative-row.rev { direction:ltr; } .impact-grid { grid-template-columns: repeat(2,1fr); } }
+    @media (max-width:768px) { .sdg-grid { grid-template-columns: repeat(2,1fr); } .pillar-grid { grid-template-columns:1fr; } .green-tech-grid { grid-template-columns: repeat(2,1fr); } .impact-grid { grid-template-columns: repeat(2,1fr); } }
+    @media (max-width:480px) { .green-tech-grid { grid-template-columns:1fr; } .sdg-grid { grid-template-columns: repeat(2,1fr); } .impact-grid { grid-template-columns:1fr; } }
+    .page-hero-ncc::before { background:url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT-JjK20-QUY7eN6zz0T064L6F9SbKUDmVTk6nQVoDOL9ccbLpmxzSKSMV3&s=10') center/cover no-repeat; opacity:.16; }
+  </style>
+</head>
+<body>
+
+<!-- WHITE HEADER TOP BAR -->
+<div class="header-top" id="header-top">
+  <div class="container header-top-inner">
+    <a href="index.html" class="ht-logo">
+      <img src="images/logo.png" alt="Waves Envirotech Pvt. Ltd." class="ht-logo-img">
+      <div class="ht-logo-text"><strong>Waves Envirotech</strong><span>Pvt. Ltd.</span></div>
+    </a>
+    <div class="ht-right">
+      <a href="tel:+919030605226" class="ht-contact-item">
+        <div class="ht-ci-icon"><i class="fa-solid fa-phone"></i></div>
+        <div class="ht-ci-text"><span>Call Us</span><strong>+91 9030605226</strong><strong>+91 8374391966</strong></div>
+      </a>
+      <div class="ht-sep"></div>
+      <a href="mailto:syreddy@wavesenviro.com" class="ht-contact-item">
+        <div class="ht-ci-icon"><i class="fa-solid fa-envelope"></i></div>
+        <div class="ht-ci-text"><span>Email Us</span><strong>syreddy@wavesenviro.com</strong></div>
+      </a>
+      <div class="ht-sep"></div>
+      <a href="careers.html" class="ht-contact-item ht-careers">
+        <div class="ht-ci-icon"><i class="fa-solid fa-briefcase"></i></div>
+        <div class="ht-ci-text"><span>Join Our Team</span><strong>Careers</strong></div>
+      </a>
+    </div>
+  </div>
+</div>
+<nav id="navbar">
+  <div class="container nav-inner">
+    <a href="index.html" class="nav-logo nav-logo-scroll">
+      <img src="images/logo.png" alt="Waves Envirotech" class="nav-logo-img">
+      <div class="nav-logo-text"><strong>Waves Envirotech</strong><span>Pvt. Ltd.</span></div>
+    </a>
+    <div class="nav-links">
+      <div class="nav-item"><a href="index.html" class="nav-link">HOME</a></div>
+      <div class="nav-item">
+        <a href="about.html" class="nav-link">ABOUT US <i class="fa-solid fa-chevron-down"></i></a>
+        <div class="nav-dropdown">
+          <a href="about.html#company"><i class="fa-solid fa-building"></i> Company Profile</a>
+          <a href="about.html#vision"><i class="fa-solid fa-eye"></i> Vision &amp; Mission</a>
+          <a href="about.html#values"><i class="fa-solid fa-gem"></i> Core Values</a>
+          <a href="leadership.html"><i class="fa-solid fa-user-tie"></i> Leadership</a>
+          <a href="about.html#certifications"><i class="fa-solid fa-certificate"></i> Certifications</a>
+        </div>
+      </div>
+      <div class="nav-item">
+        <a href="services.html" class="nav-link">EXPERTISE <i class="fa-solid fa-chevron-down"></i></a>
+        <div class="nav-dropdown">
+          <a href="services.html#wtp"><i class="fa-solid fa-droplet"></i> Water Treatment (WTP)</a>
+          <a href="services.html#stp"><i class="fa-solid fa-water"></i> Sewage Treatment (STP)</a>
+          <a href="services.html#etp"><i class="fa-solid fa-industry"></i> Effluent Treatment (ETP)</a>
+          <a href="services.html#desalination"><i class="fa-solid fa-wave-square"></i> Desalination Plants</a>
+          <a href="services.html#consultancy"><i class="fa-solid fa-file-contract"></i> Pre-bid Consultancy</a>
+          <a href="services.html#membrane"><i class="fa-solid fa-filter"></i> Membrane Technologies</a>
+        </div>
+      </div>
+      <div class="nav-item">
+        <a href="projects.html" class="nav-link">LANDMARKS <i class="fa-solid fa-chevron-down"></i></a>
+        <div class="nav-dropdown">
+          <a href="projects.html"><i class="fa-solid fa-diagram-project"></i> All Projects</a>
+          <a href="clientele.html"><i class="fa-solid fa-users"></i> Our Clientele</a>
+        </div>
+      </div>
+      <div class="nav-item"><a href="sustainability.html" class="nav-link active">COMMITMENT</a></div>
+      <div class="nav-item"><a href="leadership.html" class="nav-link">LEADERSHIP</a></div>
+      <div class="nav-item">
+        <a href="news.html" class="nav-link">MEDIA <i class="fa-solid fa-chevron-down"></i></a>
+        <div class="nav-dropdown">
+          <a href="news.html"><i class="fa-solid fa-newspaper"></i> News &amp; Updates</a>
+          <a href="gallery.html"><i class="fa-solid fa-images"></i> Gallery</a>
+        </div>
+      </div>
+      <div class="nav-item"><a href="contact.html" class="nav-link">CONTACT</a></div>
+    </div>
+    <a href="contact.html" class="nav-cta-btn"><i class="fa-solid fa-phone"></i> Get in Touch</a>
+    <div class="hamburger" aria-label="Toggle menu" role="button" tabindex="0"><span></span><span></span><span></span></div>
+  </div>
+</nav>
+<div class="mobile-menu">
+  <a href="index.html"><i class="fa-solid fa-house"></i> Home</a>
+  <div class="mob-section">Company</div>
+  <a href="about.html">About Us</a>
+  <a href="leadership.html">Leadership</a>
+  <a href="sustainability.html">Commitment</a>
+  <div class="mob-section">Expertise</div>
+  <a href="services.html">All Services</a>
+  <div class="mob-section">Projects</div>
+  <a href="projects.html">All Projects</a>
+  <a href="clientele.html">Clientele</a>
+  <div class="mob-section">Media</div>
+  <a href="news.html">News &amp; Updates</a>
+  <a href="gallery.html">Gallery</a>
+  <a href="careers.html">Careers</a>
+  <a href="contact.html">Contact Us</a>
+</div>
+
+<!-- Back to Top -->
+<button id="back-to-top" aria-label="Back to top"><i class="fa-solid fa-arrow-up"></i></button>
+
+<!-- ═══════════════════ HERO ═══════════════════ -->
+<section class="page-hero-ncc">
+  <div class="container">
+    <div class="phn-breadcrumb"><a href="index.html">Home</a><i class="fa-solid fa-chevron-right"></i><span>Sustainability</span></div>
+    <span class="phn-tag">OUR COMMITMENT</span>
+    <h1 class="phn-title">Engineering a Greener, Cleaner Future</h1>
+    <p class="phn-sub">At Waves Envirotech, sustainability is embedded in every project we design, every system we build, and every partnership we form. Our work ensures water resources are protected for generations to come.</p>
+    <div style="display:flex;gap:14px;margin-top:32px;flex-wrap:wrap;">
+      <a href="#sdg" class="btn btn-gold"><i class="fa-solid fa-globe"></i> UN SDG Alignment</a>
+      <a href="#pillars" style="display:inline-flex;align-items:center;gap:8px;padding:13px 28px;border:2px solid rgba(255,255,255,0.4);border-radius:6px;color:#fff;font-weight:700;font-size:.9rem;text-decoration:none;transition:all .3s;" onmouseover="this.style.background='rgba(255,255,255,0.1)'" onmouseout="this.style.background='transparent'"><i class="fa-solid fa-leaf"></i> Our Pillars</a>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════ IMPACT NUMBERS ═══════════════════ -->
+<section class="impact-band">
+  <div class="container">
+    <div class="impact-grid">
+      <div data-aos="zoom-in">
+        <div class="impact-val" data-counter data-target="5000" data-suffix="+ MLD">0</div>
+        <div class="impact-label">Clean Water Produced Daily</div>
+      </div>
+      <div data-aos="zoom-in" data-aos-delay="100">
+        <div class="impact-val" data-counter data-target="50" data-suffix="M+">0</div>
+        <div class="impact-label">People Served with Clean Water</div>
+      </div>
+      <div data-aos="zoom-in" data-aos-delay="200">
+        <div class="impact-val" data-counter data-target="150" data-suffix="+">0</div>
+        <div class="impact-label">Green Infrastructure Projects</div>
+      </div>
+      <div data-aos="zoom-in" data-aos-delay="300">
+        <div class="impact-val" data-counter data-target="28" data-suffix="+ Yrs">0</div>
+        <div class="impact-label">Committed to Environment</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════ SUSTAINABILITY PILLARS ═══════════════════ -->
+<section class="section-navy" id="pillars">
+  <div class="container">
+    <div class="section-header text-center" data-aos="fade-up" style="margin-bottom:48px;">
+      <div style="display:inline-flex;align-items:center;gap:8px;background:rgba(245,158,11,0.12);border:1px solid rgba(245,158,11,0.3);border-radius:50px;padding:6px 18px;margin-bottom:16px;">
+        <i class="fa-solid fa-seedling" style="color:#F59E0B;font-size:13px;"></i>
+        <span style="color:#F59E0B;font-size:13px;font-weight:600;letter-spacing:1px;">OUR FRAMEWORK</span>
+      </div>
+      <h2 style="font-family:var(--font-display);font-size:2.3rem;font-weight:700;color:#fff;margin-bottom:14px;">Six Pillars of Sustainable Engineering</h2>
+      <div style="width:56px;height:3px;background:#F59E0B;margin:0 auto 20px;border-radius:2px;"></div>
+      <p style="color:rgba(255,255,255,0.7);max-width:620px;margin:0 auto;">Our sustainability framework ensures every project we undertake contributes positively to environmental, social and economic outcomes.</p>
+    </div>
+    <div class="ncc-pillar-grid">
+      <div class="ncc-pillar-card pc-navy" data-aos="fade-up">
+        <div class="nplc-icon"><i class="fa-solid fa-earth-americas"></i></div>
+        <h3>Environmental Protection</h3>
+        <p>We design all water treatment systems to exceed environmental regulations — protecting rivers, groundwater and ecosystems from pollution and contamination.</p>
+      </div>
+      <div class="ncc-pillar-card pc-gold" data-aos="fade-up" data-aos-delay="80">
+        <div class="nplc-icon"><i class="fa-solid fa-people-group"></i></div>
+        <h3>Social Impact</h3>
+        <p>Our projects bring safe drinking water to millions of people across India and developing nations — improving public health, quality of life and economic opportunity.</p>
+      </div>
+      <div class="ncc-pillar-card pc-teal" data-aos="fade-up" data-aos-delay="160">
+        <div class="nplc-icon"><i class="fa-solid fa-chart-line"></i></div>
+        <h3>Economic Sustainability</h3>
+        <p>We optimise life-cycle costs through energy-efficient design, reduced chemical usage and long-lasting infrastructure — ensuring projects remain viable for decades.</p>
+      </div>
+      <div class="ncc-pillar-card pc-navy" data-aos="fade-up" data-aos-delay="240">
+        <div class="nplc-icon"><i class="fa-solid fa-microchip"></i></div>
+        <h3>Green Technology</h3>
+        <p>We deploy eco-friendly technologies — including solar-powered systems, energy recovery, advanced membranes and biological treatment — to minimise environmental footprints.</p>
+      </div>
+      <div class="ncc-pillar-card pc-gold" data-aos="fade-up" data-aos-delay="80">
+        <div class="nplc-icon"><i class="fa-solid fa-scale-balanced"></i></div>
+        <h3>Responsible Governance</h3>
+        <p>ISO 9001, ISO 14001 and ISO 45001 certified — we maintain transparent governance, ethical business practices and rigorous quality systems across every project.</p>
+      </div>
+      <div class="ncc-pillar-card pc-teal" data-aos="fade-up" data-aos-delay="160">
+        <div class="nplc-icon"><i class="fa-solid fa-flask"></i></div>
+        <h3>Innovation &amp; R&amp;D</h3>
+        <p>We continuously invest in research and development to improve treatment efficiency, reduce energy consumption and pioneer new solutions for global water challenges.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════ UN SDGs ═══════════════════ -->
+<section class="section bg-dark" id="sdg">
+  <div class="container">
+    <div class="section-header text-center" data-aos="fade-up">
+      <span class="section-tag light"><i class="fa-solid fa-globe"></i> UN SDGs</span>
+      <h2 class="section-title" style="color:#fff;">Aligned with the <span>UN Sustainable</span><br>Development Goals</h2>
+      <div class="divider divider-teal"></div>
+      <p class="section-subtitle" style="color:rgba(255,255,255,.68);">Every project we deliver contributes to the United Nations Sustainable Development Goals — our work is deeply aligned with global frameworks for sustainable development.</p>
+    </div>
+    <div class="sdg-grid">
+      <div class="sdg-card" style="background:linear-gradient(135deg,#26BDE2,#1594BE);" data-aos="zoom-in">
+        <div class="sdg-number">6</div>
+        <div class="sdg-icon"><i class="fa-solid fa-droplet"></i></div>
+        <h4>Clean Water &amp; Sanitation</h4>
+      </div>
+      <div class="sdg-card" style="background:linear-gradient(135deg,#FCC30B,#E5A007);" data-aos="zoom-in" data-aos-delay="100">
+        <div class="sdg-number">7</div>
+        <div class="sdg-icon"><i class="fa-solid fa-bolt"></i></div>
+        <h4>Affordable &amp; Clean Energy</h4>
+      </div>
+      <div class="sdg-card" style="background:linear-gradient(135deg,#A21942,#8B0040);" data-aos="zoom-in" data-aos-delay="200">
+        <div class="sdg-number">9</div>
+        <div class="sdg-icon"><i class="fa-solid fa-industry"></i></div>
+        <h4>Industry, Innovation &amp; Infrastructure</h4>
+      </div>
+      <div class="sdg-card" style="background:linear-gradient(135deg,#4C9F38,#3C8A2A);" data-aos="zoom-in" data-aos-delay="300">
+        <div class="sdg-number">11</div>
+        <div class="sdg-icon"><i class="fa-solid fa-city"></i></div>
+        <h4>Sustainable Cities &amp; Communities</h4>
+      </div>
+      <div class="sdg-card" style="background:linear-gradient(135deg,#BF8B2E,#A57828);" data-aos="zoom-in">
+        <div class="sdg-number">12</div>
+        <div class="sdg-icon"><i class="fa-solid fa-recycle"></i></div>
+        <h4>Responsible Consumption &amp; Production</h4>
+      </div>
+      <div class="sdg-card" style="background:linear-gradient(135deg,#3F7E44,#2D6B32);" data-aos="zoom-in" data-aos-delay="100">
+        <div class="sdg-number">13</div>
+        <div class="sdg-icon"><i class="fa-solid fa-temperature-high"></i></div>
+        <h4>Climate Action</h4>
+      </div>
+      <div class="sdg-card" style="background:linear-gradient(135deg,#0A97D9,#0880C0);" data-aos="zoom-in" data-aos-delay="200">
+        <div class="sdg-number">14</div>
+        <div class="sdg-icon"><i class="fa-solid fa-fish"></i></div>
+        <h4>Life Below Water</h4>
+      </div>
+      <div class="sdg-card" style="background:linear-gradient(135deg,#56C02B,#42A921);" data-aos="zoom-in" data-aos-delay="300">
+        <div class="sdg-number">15</div>
+        <div class="sdg-icon"><i class="fa-solid fa-tree"></i></div>
+        <h4>Life on Land</h4>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════ KEY INITIATIVES ═══════════════════ -->
+<section class="section bg-white">
+  <div class="container">
+    <div class="section-header text-center" data-aos="fade-up">
+      <span class="section-tag green"><i class="fa-solid fa-rocket"></i> Key Initiatives</span>
+      <h2 class="section-title">Our Sustainability <span>Initiatives</span></h2>
+      <div class="divider divider-teal"></div>
+    </div>
+
+    <div class="initiative-row" data-aos="fade-up">
+      <div class="initiative-img">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSMOqJRkpjdJJ5zw3LFGGPStBG95NjEVg0XGJ_20EtDOrW5mopOaL99GRDI&s=10" alt="Zero Liquid Discharge">
+      </div>
+      <div class="initiative-content">
+        <span class="section-tag green" style="margin-bottom:14px;"><i class="fa-solid fa-droplet-slash"></i> ZLD Technology</span>
+        <h3>Zero Liquid Discharge — Eliminating Wastewater</h3>
+        <p>Waves Envirotech is a pioneer in Zero Liquid Discharge (ZLD) technology in India. Our ZLD systems ensure that industrial effluents are treated and recycled to the point where there is absolutely no liquid waste discharged into the environment.</p>
+        <p>We have successfully implemented ZLD solutions for major industries including TATA Steel, Reliance Industries and CPCL, helping them achieve full regulatory compliance and contribute to water conservation.</p>
+        <div style="display:flex;gap:12px;flex-wrap:wrap;margin-top:16px;">
+          <span class="green-stat"><i class="fa-solid fa-check"></i> 100% Water Recovery</span>
+          <span class="green-stat"><i class="fa-solid fa-check"></i> Zero Environmental Discharge</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="initiative-row rev" data-aos="fade-up">
+      <div class="initiative-img">
+        <img src="https://etimg.etb2bimg.com/photo/109718943.cms" alt="Solar Powered Water Treatment">
+      </div>
+      <div class="initiative-content">
+        <span class="section-tag blue" style="margin-bottom:14px;"><i class="fa-solid fa-solar-panel"></i> Renewable Energy</span>
+        <h3>Solar-Powered Water Treatment Plants</h3>
+        <p>We integrate solar energy systems with water treatment plants to significantly reduce carbon footprints and operating costs. Our solar-augmented WTP designs can reduce energy consumption by up to 60% compared to conventional plants.</p>
+        <p>By combining renewable energy with advanced treatment technologies, we help municipalities and industries achieve both environmental and economic sustainability targets.</p>
+        <div style="display:flex;gap:12px;flex-wrap:wrap;margin-top:16px;">
+          <span class="green-stat"><i class="fa-solid fa-check"></i> Up to 60% Energy Savings</span>
+          <span class="green-stat"><i class="fa-solid fa-check"></i> Carbon Footprint Reduction</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="initiative-row" data-aos="fade-up">
+      <div class="initiative-img">
+        <img src="https://cdn.cseindia.org/large/2025-06-21/0.63688200_1750478970_jwaste.jpg" alt="Water Recycling">
+      </div>
+      <div class="initiative-content">
+        <span class="section-tag coral" style="margin-bottom:14px;"><i class="fa-solid fa-recycle"></i> Water Reuse</span>
+        <h3>Treated Water Reuse &amp; Recycling Programmes</h3>
+        <p>We design tertiary treatment and water recycling systems that enable treated effluent to be reused for irrigation, industrial cooling, groundwater recharge and non-potable municipal applications — reducing freshwater demand significantly.</p>
+        <p>Our reuse programmes help bridge the water demand-supply gap in water-stressed regions, contributing directly to national water security goals.</p>
+        <div style="display:flex;gap:12px;flex-wrap:wrap;margin-top:16px;">
+          <span class="green-stat"><i class="fa-solid fa-check"></i> Reduce Freshwater Demand</span>
+          <span class="green-stat"><i class="fa-solid fa-check"></i> Groundwater Recharge</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ═══════════════════ GREEN TECHNOLOGIES ═══════════════════ -->
+<section class="section bg-light-teal">
+  <div class="container">
+    <div class="section-header text-center" data-aos="fade-up">
+      <span class="section-tag green"><i class="fa-solid fa-microchip"></i> Green Tech</span>
+      <h2 class="section-title">Eco-Friendly <span>Technologies We Deploy</span></h2>
+      <div class="divider divider-teal"></div>
+      <p class="section-subtitle">Our technology portfolio focuses on minimising environmental impact while maximising treatment efficiency and sustainability.</p>
+    </div>
+    <div class="green-tech-grid">
+      <div class="green-tech-card" data-aos="fade-up">
+        <div class="green-tech-icon pw-emerald"><i class="fa-solid fa-bacterium"></i></div>
+        <h4>Membrane Bio-Reactor (MBR)</h4>
+        <p>High-quality effluent suitable for direct reuse, compact footprint, minimal sludge generation.</p>
+      </div>
+      <div class="green-tech-card" data-aos="fade-up" data-aos-delay="100">
+        <div class="green-tech-icon pw-blue"><i class="fa-solid fa-flask-vial"></i></div>
+        <h4>Sequential Batch Reactor (SBR)</h4>
+        <p>Energy-efficient biological treatment with no moving parts, ideal for variable flows.</p>
+      </div>
+      <div class="green-tech-card" data-aos="fade-up" data-aos-delay="200">
+        <div class="green-tech-icon pw-purple"><i class="fa-solid fa-microscope"></i></div>
+        <h4>Moving Bed Biofilm Reactor (MBBR)</h4>
+        <p>High biomass density, compact design, energy savings of up to 40% vs conventional processes.</p>
+      </div>
+      <div class="green-tech-card" data-aos="fade-up" data-aos-delay="300">
+        <div class="green-tech-icon pw-gold"><i class="fa-solid fa-lightbulb"></i></div>
+        <h4>UV Disinfection</h4>
+        <p>Chemical-free disinfection eliminating chlorination by-products and harmful DBPs.</p>
+      </div>
+      <div class="green-tech-card" data-aos="fade-up">
+        <div class="green-tech-icon pw-sky"><i class="fa-solid fa-filter"></i></div>
+        <h4>Reverse Osmosis (RO)</h4>
+        <p>Energy-efficient membranes for desalination and water purification with full water recovery.</p>
+      </div>
+      <div class="green-tech-card" data-aos="fade-up" data-aos-delay="100">
+        <div class="green-tech-icon pw-green"><i class="fa-solid fa-recycle"></i></div>
+        <h4>Biogas Recovery</h4>
+        <p>Methane capture from sludge digestion — converts waste to renewable energy on-site.</p>
+      </div>
+      <div class="green-tech-card" data-aos="fade-up" data-aos-delay="200">
+        <div class="green-tech-icon pw-coral"><i class="fa-solid fa-battery-full"></i></div>
+        <h4>Energy Recovery Devices</h4>
+        <p>Pressure exchangers and turbines in desalination plants reduce energy by 50-60%.</p>
+      </div>
+      <div class="green-tech-card" data-aos="fade-up" data-aos-delay="300">
+        <div class="green-tech-icon pw-teal"><i class="fa-solid fa-seedling"></i></div>
+        <h4>Natural Treatment Systems</h4>
+        <p>Constructed wetlands, reed beds and soil aquifer treatment for decentralised applications.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════ CERTIFICATIONS & COMMITMENTS ═══════════════════ -->
+<section class="section bg-white">
+  <div class="container">
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:start;">
+      <div data-aos="fade-right">
+        <span class="section-tag blue"><i class="fa-solid fa-certificate"></i> Certifications</span>
+        <h2 class="section-title" style="margin-top:14px;">ISO Certified for <span>Environmental Excellence</span></h2>
+        <div class="divider divider-teal"></div>
+        <p style="margin-bottom:32px;">Waves Envirotech holds internationally recognised ISO certifications that validate our commitment to quality management, environmental responsibility and occupational health &amp; safety.</p>
+        <div style="display:flex;flex-direction:column;gap:18px;">
+          <div style="display:flex;align-items:center;gap:18px;padding:20px;background:var(--light);border-radius:var(--radius-lg);border:1.5px solid var(--border-light);">
+            <div style="width:52px;height:52px;background:var(--grad-primary);border-radius:12px;display:flex;align-items:center;justify-content:center;color:#fff;font-size:1.1rem;flex-shrink:0;"><i class="fa-solid fa-medal"></i></div>
+            <div><strong style="display:block;font-size:.97rem;">ISO 9001:2015</strong><span style="font-size:.84rem;color:var(--text-muted);">Quality Management System — Ensures consistent, high-quality deliverables across all projects.</span></div>
+          </div>
+          <div style="display:flex;align-items:center;gap:18px;padding:20px;background:var(--light-2);border-radius:var(--radius-lg);border:1.5px solid var(--border-light);">
+            <div style="width:52px;height:52px;background:var(--grad-teal);border-radius:12px;display:flex;align-items:center;justify-content:center;color:#fff;font-size:1.1rem;flex-shrink:0;"><i class="fa-solid fa-leaf"></i></div>
+            <div><strong style="display:block;font-size:.97rem;">ISO 14001:2015</strong><span style="font-size:.84rem;color:var(--text-muted);">Environmental Management System — Systematic approach to managing environmental impact.</span></div>
+          </div>
+          <div style="display:flex;align-items:center;gap:18px;padding:20px;background:var(--light-3);border-radius:var(--radius-lg);border:1.5px solid var(--border-light);">
+            <div style="width:52px;height:52px;background:var(--grad-coral);border-radius:12px;display:flex;align-items:center;justify-content:center;color:#fff;font-size:1.1rem;flex-shrink:0;"><i class="fa-solid fa-shield-halved"></i></div>
+            <div><strong style="display:block;font-size:.97rem;">ISO 45001:2018</strong><span style="font-size:.84rem;color:var(--text-muted);">Occupational Health &amp; Safety — Zero-harm workplace culture across all site activities.</span></div>
+          </div>
+          <div style="display:flex;align-items:center;gap:18px;padding:20px;background:var(--light);border-radius:var(--radius-lg);border:1.5px solid var(--border-light);">
+            <div style="width:52px;height:52px;background:var(--grad-gold);border-radius:12px;display:flex;align-items:center;justify-content:center;color:#fff;font-size:1.1rem;flex-shrink:0;"><i class="fa-solid fa-user-gear"></i></div>
+            <div><strong style="display:block;font-size:.97rem;">IEI Membership</strong><span style="font-size:.84rem;color:var(--text-muted);">Institution of Engineers India — Professional accreditation confirming engineering excellence.</span></div>
+          </div>
+        </div>
+      </div>
+      <div data-aos="fade-left">
+        <span class="section-tag green"><i class="fa-solid fa-handshake"></i> Commitments</span>
+        <h2 class="section-title" style="margin-top:14px;">Our Environmental <span>Commitments</span></h2>
+        <div class="divider divider-teal"></div>
+        <p style="margin-bottom:28px;">Beyond certifications, we make concrete commitments that guide how we work every day:</p>
+        <div class="commitment-list">
+          <div class="commitment-item">
+            <div class="commit-icon"><i class="fa-solid fa-water"></i></div>
+            <div>
+              <h4>Water Conservation First</h4>
+              <p>All designs prioritise water reuse and recycling, minimising fresh water extraction from natural sources.</p>
+            </div>
+          </div>
+          <div class="commitment-item">
+            <div class="commit-icon"><i class="fa-solid fa-solar-panel"></i></div>
+            <div>
+              <h4>Energy-Efficient Design</h4>
+              <p>We set energy reduction targets for every project and achieve them through smart engineering and technology selection.</p>
+            </div>
+          </div>
+          <div class="commitment-item">
+            <div class="commit-icon"><i class="fa-solid fa-trash-can-arrow-up"></i></div>
+            <div>
+              <h4>Minimise Sludge Generation</h4>
+              <p>Advanced treatment processes are selected to minimise sludge, and where generated, it is converted to useful biogas or compost.</p>
+            </div>
+          </div>
+          <div class="commitment-item">
+            <div class="commit-icon"><i class="fa-solid fa-cloud"></i></div>
+            <div>
+              <h4>Carbon Footprint Reduction</h4>
+              <p>We measure, report, and continuously reduce the carbon footprint of all projects we design and manage.</p>
+            </div>
+          </div>
+          <div class="commitment-item">
+            <div class="commit-icon"><i class="fa-solid fa-graduation-cap"></i></div>
+            <div>
+              <h4>Stakeholder Education</h4>
+              <p>We actively train client personnel, operators and communities in sustainable water management practices.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════ CTA ═══════════════════ -->
+<section class="cta-section" style="background:linear-gradient(135deg,#1B5E20 0%,#00897B 100%);">
+  <div class="container">
+    <h2 style="color:#fff;">Let's Build a Sustainable Future Together</h2>
+    <p>Partner with Waves Envirotech for water infrastructure solutions that are good for people, good for business, and good for the planet.</p>
+    <div class="cta-actions">
+      <a href="contact.html" class="btn btn-gold btn-lg"><i class="fa-solid fa-envelope"></i> Start a Conversation</a>
+      <a href="services.html" class="btn btn-outline btn-lg"><i class="fa-solid fa-droplet"></i> Explore Services</a>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════ FOOTER ═══════════════════ -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="footer-logo">
+          <img src="images/logo.png" alt="Waves Envirotech" class="footer-logo-img">
+          <div class="footer-logo-text"><strong>Waves Envirotech</strong><span>Pvt. Ltd.</span></div>
+        </div>
+        <p>Leading environmental engineering consultancy delivering innovative water treatment, sewage treatment, effluent treatment and desalination solutions across India and internationally since 1996.</p>
+        <div class="footer-social">
+          <a href="https://www.linkedin.com/company/wavesenvirotech/" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+          <a href="https://www.linkedin.com/company/wavesenvirotech/" target="_blank" rel="noopener" aria-label="Twitter"><i class="fa-brands fa-twitter"></i></a>
+          <a href="https://www.linkedin.com/company/wavesenvirotech/" target="_blank" rel="noopener" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="https://www.linkedin.com/company/wavesenvirotech/" target="_blank" rel="noopener" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h5>Services</h5>
+        <ul>
+          <li><a href="services.html#wtp"><i class="fa-solid fa-chevron-right"></i> Water Treatment (WTP)</a></li>
+          <li><a href="services.html#stp"><i class="fa-solid fa-chevron-right"></i> Sewage Treatment (STP)</a></li>
+          <li><a href="services.html#etp"><i class="fa-solid fa-chevron-right"></i> Effluent Treatment (ETP)</a></li>
+          <li><a href="services.html#desalination"><i class="fa-solid fa-chevron-right"></i> Desalination</a></li>
+          <li><a href="services.html#membrane"><i class="fa-solid fa-chevron-right"></i> Membrane Technologies</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Quick Links</h5>
+        <ul>
+          <li><a href="about.html"><i class="fa-solid fa-chevron-right"></i> About Us</a></li>
+          <li><a href="projects.html"><i class="fa-solid fa-chevron-right"></i> Projects</a></li>
+          <li><a href="clientele.html"><i class="fa-solid fa-chevron-right"></i> Clientele</a></li>
+          <li><a href="leadership.html"><i class="fa-solid fa-chevron-right"></i> Leadership</a></li>
+          <li><a href="sustainability.html"><i class="fa-solid fa-chevron-right"></i> Sustainability</a></li>
+          <li><a href="careers.html"><i class="fa-solid fa-chevron-right"></i> Careers</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Contact Us</h5>
+        <div class="footer-contact">
+          <div class="footer-contact-item"><i class="fa-solid fa-location-dot"></i><span>Waves Envirotech Pvt. Ltd., Hyderabad, Telangana — 500 081, India</span></div>
+          <div class="footer-contact-item"><i class="fa-solid fa-phone"></i><span>+91 40 2323 XXXX</span></div>
+          <div class="footer-contact-item"><i class="fa-solid fa-envelope"></i><span>syreddy@wavesenviro.com</span></div>
+        </div>
+        <div style="margin-top:20px;">
+          <h5 style="margin-bottom:10px;">Newsletter</h5>
+          <form class="newsletter-form">
+            <input type="email" placeholder="Your email" required>
+            <button type="submit">Subscribe</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="container" style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:14px;">
+      <p>&copy; 2024 Waves Envirotech Pvt. Ltd. All rights reserved.</p>
+      <div class="footer-bottom-links">
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms of Use</a>
+        <a href="contact.html#location">Sitemap</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>

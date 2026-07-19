@@ -1,0 +1,406 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gallery | Waves Envirotech Pvt. Ltd.</title>
+  <link rel="icon" type="image/png" href="favicon.png">
+  
+  
+  
+  
+  
+  
+  <meta name="description" content="Explore Waves Envirotech's project gallery — water treatment plants, sewage treatment facilities, engineering teams, and international project sites." />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="css/style.css" />
+  <style>
+    .gallery-filter-tabs { display:flex; gap:12px; justify-content:center; flex-wrap:wrap; margin-bottom:44px; }
+    .filter-btn { padding:10px 24px; border:2px solid rgba(14,37,88,.2); border-radius:50px; background:#fff; color:#0E2558; font-size:0.9rem; font-weight:600; cursor:pointer; transition:all 0.25s; font-family:var(--font-sans); }
+    .filter-btn.active, .filter-btn:hover { background:#F59E0B; color:#0E2558; border-color:#F59E0B; }
+    .gallery-grid { columns: 3; column-gap: 20px; }
+    .gallery-item { break-inside: avoid; margin-bottom: 20px; border-radius: 14px; overflow: hidden; position: relative; cursor: pointer; }
+    .gallery-item img { width:100%; display:block; transition: transform 0.4s ease; }
+    .gallery-item:hover img { transform: scale(1.06); }
+    .gallery-overlay { position:absolute; inset:0; background:linear-gradient(to top,rgba(7,22,41,0.85) 0%,transparent 55%); opacity:0; transition:opacity 0.3s; display:flex; flex-direction:column; justify-content:flex-end; padding:20px; }
+    .gallery-item:hover .gallery-overlay { opacity:1; }
+    .gallery-overlay h4 { color:#fff; font-size:0.95rem; font-weight:700; margin-bottom:4px; font-family:var(--font-display); }
+    .gallery-overlay p { color:rgba(255,255,255,0.75); font-size:0.8rem; margin:0; }
+    .gallery-overlay .tag { display:inline-block; background:var(--accent); color:#fff; font-size:11px; font-weight:600; padding:2px 8px; border-radius:20px; margin-bottom:8px; }
+    .gallery-item.tall img { height: 440px; object-fit:cover; }
+    .gallery-item.wide { break-inside: avoid; }
+    .gallery-item.wide img { height: 260px; object-fit:cover; }
+    .gallery-item:not(.tall):not(.wide) img { height: 200px; object-fit:cover; }
+    @media (max-width: 900px) { .gallery-grid { columns: 2; } }
+    @media (max-width: 580px) { .gallery-grid { columns: 1; } }
+
+    /* Lightbox */
+    .lightbox { display:none; position:fixed; inset:0; background:rgba(0,0,0,0.92); z-index:9999; align-items:center; justify-content:center; padding:20px; }
+    .lightbox.open { display:flex; }
+    .lightbox img { max-width:90vw; max-height:85vh; border-radius:12px; object-fit:contain; }
+    .lightbox-close { position:fixed; top:20px; right:28px; color:#fff; font-size:32px; cursor:pointer; z-index:10000; background:rgba(255,255,255,0.1); width:46px; height:46px; border-radius:50%; display:flex; align-items:center; justify-content:center; transition:background 0.2s; }
+    .lightbox-close:hover { background:rgba(255,255,255,0.2); }
+    .lightbox-caption { position:fixed; bottom:30px; left:50%; transform:translateX(-50%); color:#fff; background:rgba(0,0,0,0.6); padding:10px 24px; border-radius:30px; font-size:0.9rem; text-align:center; }
+  </style>
+</head>
+<body>
+
+<!-- WHITE HEADER TOP BAR -->
+<div class="header-top" id="header-top">
+  <div class="container header-top-inner">
+    <a href="index.html" class="ht-logo">
+      <img src="images/logo.png" alt="Waves Envirotech Pvt. Ltd." class="ht-logo-img">
+      <div class="ht-logo-text"><strong>Waves Envirotech</strong><span>Pvt. Ltd.</span></div>
+    </a>
+    <div class="ht-right">
+      <a href="tel:+919030605226" class="ht-contact-item">
+        <div class="ht-ci-icon"><i class="fa-solid fa-phone"></i></div>
+        <div class="ht-ci-text"><span>Call Us</span><strong>+91 9030605226</strong><strong>+91 8374391966</strong></div>
+      </a>
+      <div class="ht-sep"></div>
+      <a href="mailto:syreddy@wavesenviro.com" class="ht-contact-item">
+        <div class="ht-ci-icon"><i class="fa-solid fa-envelope"></i></div>
+        <div class="ht-ci-text"><span>Email Us</span><strong>syreddy@wavesenviro.com</strong></div>
+      </a>
+      <div class="ht-sep"></div>
+      <a href="careers.html" class="ht-contact-item ht-careers">
+        <div class="ht-ci-icon"><i class="fa-solid fa-briefcase"></i></div>
+        <div class="ht-ci-text"><span>Join Our Team</span><strong>Careers</strong></div>
+      </a>
+    </div>
+  </div>
+</div>
+<nav id="navbar">
+  <div class="container nav-inner">
+    <a href="index.html" class="nav-logo nav-logo-scroll">
+      <img src="images/logo.png" alt="Waves Envirotech" class="nav-logo-img">
+      <div class="nav-logo-text"><strong>Waves Envirotech</strong><span>Pvt. Ltd.</span></div>
+    </a>
+    <div class="nav-links">
+      <div class="nav-item"><a href="index.html" class="nav-link">HOME</a></div>
+      <div class="nav-item">
+        <a href="about.html" class="nav-link">ABOUT US <i class="fa-solid fa-chevron-down"></i></a>
+        <div class="nav-dropdown">
+          <a href="about.html#company"><i class="fa-solid fa-building"></i> Company Profile</a>
+          <a href="about.html#vision"><i class="fa-solid fa-eye"></i> Vision &amp; Mission</a>
+          <a href="about.html#values"><i class="fa-solid fa-gem"></i> Core Values</a>
+          <a href="leadership.html"><i class="fa-solid fa-user-tie"></i> Leadership</a>
+          <a href="about.html#certifications"><i class="fa-solid fa-certificate"></i> Certifications</a>
+        </div>
+      </div>
+      <div class="nav-item">
+        <a href="services.html" class="nav-link">EXPERTISE <i class="fa-solid fa-chevron-down"></i></a>
+        <div class="nav-dropdown">
+          <a href="services.html#wtp"><i class="fa-solid fa-droplet"></i> Water Treatment (WTP)</a>
+          <a href="services.html#stp"><i class="fa-solid fa-water"></i> Sewage Treatment (STP)</a>
+          <a href="services.html#etp"><i class="fa-solid fa-industry"></i> Effluent Treatment (ETP)</a>
+          <a href="services.html#desalination"><i class="fa-solid fa-wave-square"></i> Desalination Plants</a>
+          <a href="services.html#consultancy"><i class="fa-solid fa-file-contract"></i> Pre-bid Consultancy</a>
+          <a href="services.html#membrane"><i class="fa-solid fa-filter"></i> Membrane Technologies</a>
+        </div>
+      </div>
+      <div class="nav-item">
+        <a href="projects.html" class="nav-link">LANDMARKS <i class="fa-solid fa-chevron-down"></i></a>
+        <div class="nav-dropdown">
+          <a href="projects.html"><i class="fa-solid fa-diagram-project"></i> All Projects</a>
+          <a href="clientele.html"><i class="fa-solid fa-users"></i> Our Clientele</a>
+        </div>
+      </div>
+      <div class="nav-item"><a href="sustainability.html" class="nav-link">COMMITMENT</a></div>
+      <div class="nav-item"><a href="leadership.html" class="nav-link">LEADERSHIP</a></div>
+      <div class="nav-item">
+        <a href="news.html" class="nav-link active">MEDIA <i class="fa-solid fa-chevron-down"></i></a>
+        <div class="nav-dropdown">
+          <a href="news.html"><i class="fa-solid fa-newspaper"></i> News &amp; Updates</a>
+          <a href="gallery.html"><i class="fa-solid fa-images"></i> Gallery</a>
+        </div>
+      </div>
+      <div class="nav-item"><a href="contact.html" class="nav-link">CONTACT</a></div>
+    </div>
+    <a href="contact.html" class="nav-cta-btn"><i class="fa-solid fa-phone"></i> Get in Touch</a>
+    <div class="hamburger" role="button" tabindex="0" aria-label="Toggle menu"><span></span><span></span><span></span></div>
+  </div>
+</nav>
+<div class="mobile-menu">
+  <a href="index.html"><i class="fa-solid fa-house"></i> Home</a>
+  <div class="mob-section">Company</div>
+  <a href="about.html">About Us</a>
+  <a href="leadership.html">Leadership</a>
+  <a href="sustainability.html">Commitment</a>
+  <div class="mob-section">Expertise</div>
+  <a href="services.html">All Services</a>
+  <div class="mob-section">Projects</div>
+  <a href="projects.html">All Projects</a>
+  <a href="clientele.html">Clientele</a>
+  <div class="mob-section">Media</div>
+  <a href="news.html">News &amp; Updates</a>
+  <a href="gallery.html">Gallery</a>
+  <a href="careers.html">Careers</a>
+  <a href="contact.html">Contact Us</a>
+</div>
+
+<!-- Page Hero NCC -->
+<section class="page-hero-ncc">
+  <div class="container">
+    <div class="phn-breadcrumb"><a href="index.html">Home</a><i class="fa-solid fa-chevron-right"></i><span>Gallery</span></div>
+    <span class="phn-tag">PROJECT GALLERY</span>
+    <h1 class="phn-title">Our Work in Pictures</h1>
+    <p class="phn-sub">A visual journey through our projects — from large-scale water treatment plants across India to internationally funded environmental infrastructure.</p>
+  </div>
+</section>
+
+<!-- GALLERY SECTION -->
+<section style="padding:80px 0;background:#F4F6F9;">
+  <div class="container">
+
+    <!-- Filter Tabs -->
+    <div data-aos="fade-up" class="gallery-filter-tabs">
+      <button class="filter-btn active" data-filter="all">All Photos</button>
+      <button class="filter-btn" data-filter="projects">Projects</button>
+      <button class="filter-btn" data-filter="team">Team</button>
+      <button class="filter-btn" data-filter="events">Events</button>
+      <button class="filter-btn" data-filter="international">International</button>
+    </div>
+
+    <!-- Gallery Grid -->
+    <div class="gallery-grid" id="galleryGrid">
+
+      <div class="gallery-item tall" data-category="projects" onclick="openLightbox(this)">
+        <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=900&auto=format&fit=crop&q=90" alt="Water Treatment Plant - Hyderabad" loading="lazy" />
+        <div class="gallery-overlay">
+          <span class="tag">Projects</span>
+          <h4>Water Treatment Plant</h4>
+          <p>Hyderabad, Telangana — HMWSSB</p>
+        </div>
+      </div>
+
+      <div class="gallery-item" data-category="projects" onclick="openLightbox(this)">
+        <img src="https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?w=900&auto=format&fit=crop&q=90" alt="STP Construction - Delhi" loading="lazy" />
+        <div class="gallery-overlay">
+          <span class="tag">Projects</span>
+          <h4>Sewage Treatment Plant</h4>
+          <p>Delhi Jal Board — Pre-bid Consultancy</p>
+        </div>
+      </div>
+
+      <div class="gallery-item" data-category="projects" onclick="openLightbox(this)">
+        <img src="https://images.unsplash.com/photo-1565193566173-7a0ee3dbe261?w=900&auto=format&fit=crop&q=90" alt="Industrial ETP - Jamshedpur" loading="lazy" />
+        <div class="gallery-overlay">
+          <span class="tag">Projects</span>
+          <h4>Industrial ETP Design</h4>
+          <p>TATA Steel, Jamshedpur — ETP Consultancy</p>
+        </div>
+      </div>
+
+      <div class="gallery-item wide" data-category="team" onclick="openLightbox(this)">
+        <img src="https://images.unsplash.com/photo-1580927752452-89d86da3fa0a?w=900&auto=format&fit=crop&q=90" alt="Engineering Team on Site" loading="lazy" />
+        <div class="gallery-overlay">
+          <span class="tag">Team</span>
+          <h4>Engineering Team Review</h4>
+          <p>Design Coordination Meeting — Hyderabad Office</p>
+        </div>
+      </div>
+
+      <div class="gallery-item tall" data-category="international" onclick="openLightbox(this)">
+        <img src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=900&auto=format&fit=crop&q=90" alt="Environmental Survey - Sri Lanka" loading="lazy" />
+        <div class="gallery-overlay">
+          <span class="tag">International</span>
+          <h4>Environmental Site Survey</h4>
+          <p>Sri Lanka — ADB/AFD Assisted WTP Project</p>
+        </div>
+      </div>
+
+      <div class="gallery-item" data-category="projects" onclick="openLightbox(this)">
+        <img src="https://images.unsplash.com/photo-1585771724684-38269d6639fd?w=900&auto=format&fit=crop&q=90" alt="Water Pipeline Infrastructure - Visakhapatnam" loading="lazy" />
+        <div class="gallery-overlay">
+          <span class="tag">Projects</span>
+          <h4>Water Supply Pipeline</h4>
+          <p>GVMC, Visakhapatnam — DPR Preparation</p>
+        </div>
+      </div>
+
+      <div class="gallery-item" data-category="projects" onclick="openLightbox(this)">
+        <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=900&auto=format&fit=crop&q=90" alt="Industrial Water Treatment - Reliance Industries" loading="lazy" />
+        <div class="gallery-overlay">
+          <span class="tag">Projects</span>
+          <h4>Industrial Water Treatment</h4>
+          <p>Reliance Industries, Jamnagar — ZLD System</p>
+        </div>
+      </div>
+
+      <div class="gallery-item wide" data-category="projects" onclick="openLightbox(this)">
+        <img src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?w=900&auto=format&fit=crop&q=90" alt="Reservoir & Dam - Source Water Infrastructure" loading="lazy" />
+        <div class="gallery-overlay">
+          <span class="tag">Projects</span>
+          <h4>Source Water Assessment</h4>
+          <p>Reservoir Survey — Kerala Water Authority</p>
+        </div>
+      </div>
+
+      <div class="gallery-item" data-category="team" onclick="openLightbox(this)">
+        <img src="https://images.unsplash.com/photo-1530026405186-ed1f139313f3?w=900&auto=format&fit=crop&q=90" alt="Water Quality Laboratory Testing" loading="lazy" />
+        <div class="gallery-overlay">
+          <span class="tag">Team</span>
+          <h4>Water Quality Testing</h4>
+          <p>Laboratory Analysis — Hyderabad Office</p>
+        </div>
+      </div>
+
+      <div class="gallery-item tall" data-category="international" onclick="openLightbox(this)">
+        <img src="https://images.unsplash.com/photo-1501854140801-50d01698950b?w=900&auto=format&fit=crop&q=90" alt="Kathmandu Water Project - Nepal (Aerial View)" loading="lazy" />
+        <div class="gallery-overlay">
+          <span class="tag">International</span>
+          <h4>Water Supply Project</h4>
+          <p>KUKL, Kathmandu, Nepal</p>
+        </div>
+      </div>
+
+      <div class="gallery-item" data-category="events" onclick="openLightbox(this)">
+        <img src="https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=900&auto=format&fit=crop&q=90" alt="International Water Summit - Singapore" loading="lazy" />
+        <div class="gallery-overlay">
+          <span class="tag">Events</span>
+          <h4>International Water Summit</h4>
+          <p>Singapore — Company Participation</p>
+        </div>
+      </div>
+
+      <div class="gallery-item" data-category="projects" onclick="openLightbox(this)">
+        <img src="https://images.unsplash.com/photo-1621905251189-08b45d6a269e?w=900&auto=format&fit=crop&q=90" alt="STP - Tirupati Smart City Project" loading="lazy" />
+        <div class="gallery-overlay">
+          <span class="tag">Projects</span>
+          <h4>Phytorid STP — Smart City</h4>
+          <p>Tirupati Smart City Mission Project</p>
+        </div>
+      </div>
+
+      <div class="gallery-item wide" data-category="team" onclick="openLightbox(this)">
+        <img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?w=900&auto=format&fit=crop&q=90" alt="Engineering Team Workshop" loading="lazy" />
+        <div class="gallery-overlay">
+          <span class="tag">Team</span>
+          <h4>Technical Workshop</h4>
+          <p>Advanced Water Treatment Training — ESCI Hyderabad</p>
+        </div>
+      </div>
+
+      <div class="gallery-item" data-category="international" onclick="openLightbox(this)">
+        <img src="https://images.unsplash.com/photo-1494522855154-9297ac14b55f?w=900&auto=format&fit=crop&q=90" alt="Singapore PUB Water Project" loading="lazy" />
+        <div class="gallery-overlay">
+          <span class="tag">International</span>
+          <h4>Water Infrastructure Study</h4>
+          <p>PUB Singapore — Capacity Building</p>
+        </div>
+      </div>
+
+      <div class="gallery-item" data-category="projects" onclick="openLightbox(this)">
+        <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?w=900&auto=format&fit=crop&q=90" alt="Project Design Office — Waves Envirotech" loading="lazy" />
+        <div class="gallery-overlay">
+          <span class="tag">Projects</span>
+          <h4>Project Design Office</h4>
+          <p>DPR & Drawing Preparation — Hyderabad</p>
+        </div>
+      </div>
+
+      <div class="gallery-item tall" data-category="events" onclick="openLightbox(this)">
+        <img src="https://images.unsplash.com/photo-1573164713988-8665fc963095?w=900&auto=format&fit=crop&q=90" alt="Environmental Engineering Conference" loading="lazy" />
+        <div class="gallery-overlay">
+          <span class="tag">Events</span>
+          <h4>Environmental Engineering Conference</h4>
+          <p>National Seminar — Water & Sanitation</p>
+        </div>
+      </div>
+
+      <div class="gallery-item" data-category="projects" onclick="openLightbox(this)">
+        <img src="https://images.unsplash.com/photo-1560523159-4a9692d222f8?w=900&auto=format&fit=crop&q=90" alt="Membrane Technology & RO Plant" loading="lazy" />
+        <div class="gallery-overlay">
+          <span class="tag">Projects</span>
+          <h4>RO Membrane System</h4>
+          <p>Desalination Plant — Coastal Maharashtra</p>
+        </div>
+      </div>
+
+      <div class="gallery-item" data-category="team" onclick="openLightbox(this)">
+        <img src="https://images.unsplash.com/photo-1503387837-b154d5074bd2?w=900&auto=format&fit=crop&q=90" alt="Site Inspection by Engineers" loading="lazy" />
+        <div class="gallery-overlay">
+          <span class="tag">Team</span>
+          <h4>Field Site Inspection</h4>
+          <p>Construction Supervision — Greater Noida STP</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- LIGHTBOX -->
+<div class="lightbox" id="lightbox" onclick="closeLightbox(event)">
+  <div class="lightbox-close" onclick="closeLightbox()"><i class="fa-solid fa-xmark"></i></div>
+  <img id="lightboxImg" src="" alt="" />
+  <div class="lightbox-caption" id="lightboxCaption"></div>
+</div>
+
+<!-- CTA SECTION -->
+<section style="padding:80px 0;background:var(--grad-hero);text-align:center;">
+  <div class="container">
+    <div data-aos="fade-up">
+      <h2 style="font-family:var(--font-display);font-size:2.2rem;font-weight:700;color:#fff;margin-bottom:16px;">Want to See Your Project Here?</h2>
+      <p style="color:rgba(255,255,255,0.8);max-width:560px;margin:0 auto 32px;font-size:1.05rem;">Partner with Waves Envirotech for your next water infrastructure project. Our team of experts is ready to deliver exceptional results.</p>
+      <a href="contact.html" class="btn btn-secondary" style="padding:14px 36px;font-size:1rem;border-radius:50px;text-decoration:none;">Start a Project <i class="fa-solid fa-arrow-right" style="margin-left:8px;"></i></a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="footer-logo"><img src="favicon.png" alt="Waves Envirotech Pvt. Ltd." class="footer-logo-img"><div class="footer-logo-text"><strong>Waves Envirotech</strong><span>Pvt. Ltd.</span></div></div>
+        <p>A leading environmental engineering consultancy specializing in water treatment, sewage treatment, effluent treatment, desalination, and pre-bid consultancy services — with 28+ years of proven excellence.</p>
+        <div class="footer-social"><a href="https://www.linkedin.com/company/wavesenvirotech/" target="_blank" rel="noopener"><i class="fa-brands fa-linkedin-in"></i></a><a href="https://www.linkedin.com/company/wavesenvirotech/" target="_blank" rel="noopener"><i class="fa-brands fa-x-twitter"></i></a><a href="https://www.linkedin.com/company/wavesenvirotech/" target="_blank" rel="noopener"><i class="fa-brands fa-facebook-f"></i></a><a href="https://www.linkedin.com/company/wavesenvirotech/" target="_blank" rel="noopener"><i class="fa-brands fa-youtube"></i></a></div>
+      </div>
+      <div class="footer-col"><h5>Quick Links</h5><ul><li><a href="index.html"><i class="fa-solid fa-chevron-right"></i> Home</a></li><li><a href="about.html"><i class="fa-solid fa-chevron-right"></i> About Us</a></li><li><a href="leadership.html"><i class="fa-solid fa-chevron-right"></i> Leadership</a></li><li><a href="projects.html"><i class="fa-solid fa-chevron-right"></i> Projects</a></li><li><a href="careers.html"><i class="fa-solid fa-chevron-right"></i> Careers</a></li><li><a href="contact.html"><i class="fa-solid fa-chevron-right"></i> Contact</a></li></ul></div>
+      <div class="footer-col"><h5>Our Services</h5><ul><li><a href="services.html#wtp"><i class="fa-solid fa-chevron-right"></i> Water Treatment Plants</a></li><li><a href="services.html#stp"><i class="fa-solid fa-chevron-right"></i> Sewage Treatment Plants</a></li><li><a href="services.html#etp"><i class="fa-solid fa-chevron-right"></i> Effluent Treatment Plants</a></li><li><a href="services.html#desalination"><i class="fa-solid fa-chevron-right"></i> Desalination Plants</a></li><li><a href="services.html#membrane"><i class="fa-solid fa-chevron-right"></i> Membrane Technologies</a></li><li><a href="services.html#consultancy"><i class="fa-solid fa-chevron-right"></i> Pre-bid Consultancy</a></li></ul></div>
+      <div class="footer-col"><h5>Contact</h5><div class="footer-contact"><div class="footer-contact-item"><i class="fa-solid fa-location-dot"></i><span>Hyderabad, Telangana, India</span></div><div class="footer-contact-item"><i class="fa-solid fa-envelope"></i><span>syreddy@wavesenviro.com</span></div></div><div class="footer-newsletter" style="margin-top:20px;"><p>Subscribe for updates:</p><form class="newsletter-form"><input type="email" placeholder="Your email" required><button type="submit">Subscribe</button></form></div></div>
+    </div>
+    <div class="footer-bottom"><p>© 2024 Waves Envirotech Pvt. Ltd. All rights reserved.</p><div class="footer-bottom-links"><a href="#">Privacy Policy</a><a href="#">Terms of Service</a></div></div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+<script>
+// Filter
+document.querySelectorAll('.filter-btn').forEach(btn => {
+  btn.addEventListener('click', function() {
+    document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+    this.classList.add('active');
+    const filter = this.dataset.filter;
+    document.querySelectorAll('.gallery-item').forEach(item => {
+      if (filter === 'all' || item.dataset.category === filter) {
+        item.style.display = 'block';
+      } else {
+        item.style.display = 'none';
+      }
+    });
+  });
+});
+
+// Lightbox
+function openLightbox(el) {
+  const img = el.querySelector('img');
+  const caption = el.querySelector('.gallery-overlay h4').textContent + ' — ' + el.querySelector('.gallery-overlay p').textContent;
+  document.getElementById('lightboxImg').src = img.src;
+  document.getElementById('lightboxImg').alt = img.alt;
+  document.getElementById('lightboxCaption').textContent = caption;
+  document.getElementById('lightbox').classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+function closeLightbox(e) {
+  if (!e || e.target === document.getElementById('lightbox') || e.currentTarget.classList.contains('lightbox-close')) {
+    document.getElementById('lightbox').classList.remove('open');
+    document.body.style.overflow = '';
+  }
+}
+document.addEventListener('keydown', e => { if (e.key === 'Escape') closeLightbox(); });
+</script>
+</body>
+</html>

@@ -1,0 +1,641 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Waves Envirotech Clientele &mdash; Trusted by 30+ government bodies, municipalities, industrial giants and international agencies across India and the world.">
+  <title>Clientele | Waves Envirotech Pvt. Ltd.</title>
+  <link rel="icon" type="image/png" href="favicon.png">
+  
+  
+  
+  
+  
+  
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    /* Clientele page specific */
+    .client-hero { background: var(--grad-hero); padding: 152px 0 72px; position: relative; overflow: hidden; }
+    .client-hero::before { content:''; position:absolute; inset:0; background:radial-gradient(ellipse at 70% 50%, rgba(0,184,148,.18) 0%, transparent 65%); }
+    .client-hero h1 { color: #fff; }
+    .client-hero p { color: rgba(255,255,255,.72); }
+
+    .client-category { margin-bottom: 72px; }
+    .category-header { display: flex; align-items: center; gap: 16px; margin-bottom: 32px; padding-bottom: 18px; border-bottom: 3px solid #F59E0B; }
+    .category-icon { width: 52px; height: 52px; border-radius: 14px; display: flex; align-items: center; justify-content: center; font-size: 1.3rem; flex-shrink: 0; background: #0E2558; color: #F59E0B; }
+    .cat-blue,.cat-teal,.cat-coral,.cat-purple,.cat-gold { background: #0E2558; color: #F59E0B; }
+    .category-header h3 { font-size: 1.3rem; margin: 0; color: #0E2558; font-family: var(--font-display); }
+    .category-count { margin-left: auto; padding: 4px 16px; border-radius: var(--radius-full); font-size: .78rem; font-weight: 700; background: rgba(14,37,88,.09); color: #0E2558; border: 1px solid rgba(14,37,88,.15); }
+    .count-blue,.count-teal,.count-coral,.count-purple,.count-gold { background: rgba(245,158,11,.1); color: #b45309; }
+
+    .clients-cards-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px; }
+    .client-card { background: #fff; border: 1.5px solid var(--border-light); border-radius: var(--radius-lg); padding: 22px 18px; text-align: center; transition: var(--transition); }
+    .client-card:hover { box-shadow: var(--shadow-hover); transform: translateY(-5px); }
+    .client-card-initial { width: 52px; height: 52px; border-radius: 12px; margin: 0 auto 12px; display: flex; align-items: center; justify-content: center; font-size: 1.1rem; font-weight: 800; color: #fff; font-family: var(--font-display); }
+    .client-card h4 { font-size: .9rem; margin-bottom: 5px; color: var(--dark); line-height: 1.4; }
+    .client-card p { font-size: .78rem; color: var(--text-muted); }
+    .client-card .project-type { display: inline-block; padding: 3px 10px; border-radius: var(--radius-full); font-size: .68rem; font-weight: 700; margin-top: 8px; }
+
+    .funding-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+    .funding-card { background: #fff; border-radius: var(--radius-xl); padding: 32px 28px; border: 1.5px solid var(--border-light); box-shadow: var(--shadow-card); transition: var(--transition); position: relative; overflow: hidden; }
+    .funding-card::before { content:''; position:absolute; top:0; left:0; right:0; height:4px; }
+    .funding-card.world-bank::before { background: var(--grad-primary); }
+    .funding-card.kfw::before        { background: var(--grad-teal); }
+    .funding-card.adb::before        { background: var(--grad-coral); }
+    .funding-card.afd::before        { background: var(--grad-purple); }
+    .funding-card.jnnurm::before     { background: var(--grad-gold); }
+    .funding-card.amrut::before      { background: var(--grad-sky); }
+    .funding-card:hover { transform: translateY(-5px); box-shadow: var(--shadow-hover); }
+    .funding-icon { font-size: 2.2rem; margin-bottom: 14px; color: var(--primary); }
+    .funding-card h4 { font-size: 1.02rem; margin-bottom: 8px; }
+    .funding-card p { font-size: .855rem; }
+
+    .trust-stats { background: var(--grad-primary); padding: 72px 0; }
+    .trust-stats-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; text-align: center; }
+    .trust-stat-value { font-size: 3rem; font-weight: 900; color: #fff; font-family: var(--font-display); line-height: 1; margin-bottom: 8px; }
+    .trust-stat-label { font-size: .8rem; color: rgba(255,255,255,.75); text-transform: uppercase; letter-spacing: 1px; }
+
+    .testimonial-quote { background: var(--light); border-radius: var(--radius-xl); padding: 40px; position: relative; }
+    .testimonial-quote::before { content:'\201C'; font-size: 6rem; color: rgba(0,184,148,.15); position: absolute; top: 10px; left: 24px; font-family: Georgia; line-height: 1; }
+
+    @media (max-width: 1024px) { .clients-cards-grid { grid-template-columns: repeat(3, 1fr); } .trust-stats-grid { grid-template-columns: repeat(2, 1fr); } .funding-grid { grid-template-columns: repeat(2, 1fr); } }
+    @media (max-width: 768px) { .clients-cards-grid { grid-template-columns: repeat(2, 1fr); } .funding-grid { grid-template-columns: 1fr; } }
+    @media (max-width: 480px) { .clients-cards-grid { grid-template-columns: 1fr; } .trust-stats-grid { grid-template-columns: 1fr; } }
+  </style>
+</head>
+<body>
+
+<!-- WHITE HEADER TOP BAR -->
+<div class="header-top" id="header-top">
+  <div class="container header-top-inner">
+    <a href="index.html" class="ht-logo">
+      <img src="images/logo.png" alt="Waves Envirotech Pvt. Ltd." class="ht-logo-img">
+      <div class="ht-logo-text"><strong>Waves Envirotech</strong><span>Pvt. Ltd.</span></div>
+    </a>
+    <div class="ht-right">
+      <a href="tel:+919030605226" class="ht-contact-item">
+        <div class="ht-ci-icon"><i class="fa-solid fa-phone"></i></div>
+        <div class="ht-ci-text"><span>Call Us</span><strong>+91 9030605226</strong><strong>+91 8374391966</strong></div>
+      </a>
+      <div class="ht-sep"></div>
+      <a href="mailto:syreddy@wavesenviro.com" class="ht-contact-item">
+        <div class="ht-ci-icon"><i class="fa-solid fa-envelope"></i></div>
+        <div class="ht-ci-text"><span>Email Us</span><strong>syreddy@wavesenviro.com</strong></div>
+      </a>
+      <div class="ht-sep"></div>
+      <a href="careers.html" class="ht-contact-item ht-careers">
+        <div class="ht-ci-icon"><i class="fa-solid fa-briefcase"></i></div>
+        <div class="ht-ci-text"><span>Join Our Team</span><strong>Careers</strong></div>
+      </a>
+    </div>
+  </div>
+</div>
+<nav id="navbar">
+  <div class="container nav-inner">
+    <a href="index.html" class="nav-logo nav-logo-scroll">
+      <img src="images/logo.png" alt="Waves Envirotech" class="nav-logo-img">
+      <div class="nav-logo-text"><strong>Waves Envirotech</strong><span>Pvt. Ltd.</span></div>
+    </a>
+    <div class="nav-links">
+      <div class="nav-item"><a href="index.html" class="nav-link">HOME</a></div>
+      <div class="nav-item">
+        <a href="about.html" class="nav-link">ABOUT US <i class="fa-solid fa-chevron-down"></i></a>
+        <div class="nav-dropdown">
+          <a href="about.html#company"><i class="fa-solid fa-building"></i> Company Profile</a>
+          <a href="about.html#vision"><i class="fa-solid fa-eye"></i> Vision &amp; Mission</a>
+          <a href="about.html#values"><i class="fa-solid fa-gem"></i> Core Values</a>
+          <a href="leadership.html"><i class="fa-solid fa-user-tie"></i> Leadership</a>
+          <a href="about.html#certifications"><i class="fa-solid fa-certificate"></i> Certifications</a>
+        </div>
+      </div>
+      <div class="nav-item">
+        <a href="services.html" class="nav-link">EXPERTISE <i class="fa-solid fa-chevron-down"></i></a>
+        <div class="nav-dropdown">
+          <a href="services.html#wtp"><i class="fa-solid fa-droplet"></i> Water Treatment (WTP)</a>
+          <a href="services.html#stp"><i class="fa-solid fa-water"></i> Sewage Treatment (STP)</a>
+          <a href="services.html#etp"><i class="fa-solid fa-industry"></i> Effluent Treatment (ETP)</a>
+          <a href="services.html#desalination"><i class="fa-solid fa-wave-square"></i> Desalination Plants</a>
+          <a href="services.html#consultancy"><i class="fa-solid fa-file-contract"></i> Pre-bid Consultancy</a>
+          <a href="services.html#membrane"><i class="fa-solid fa-filter"></i> Membrane Technologies</a>
+        </div>
+      </div>
+      <div class="nav-item">
+        <a href="projects.html" class="nav-link active">LANDMARKS <i class="fa-solid fa-chevron-down"></i></a>
+        <div class="nav-dropdown">
+          <a href="projects.html"><i class="fa-solid fa-diagram-project"></i> All Projects</a>
+          <a href="clientele.html"><i class="fa-solid fa-users"></i> Our Clientele</a>
+        </div>
+      </div>
+      <div class="nav-item"><a href="sustainability.html" class="nav-link">COMMITMENT</a></div>
+      <div class="nav-item"><a href="leadership.html" class="nav-link">LEADERSHIP</a></div>
+      <div class="nav-item">
+        <a href="news.html" class="nav-link">MEDIA <i class="fa-solid fa-chevron-down"></i></a>
+        <div class="nav-dropdown">
+          <a href="news.html"><i class="fa-solid fa-newspaper"></i> News &amp; Updates</a>
+          <a href="gallery.html"><i class="fa-solid fa-images"></i> Gallery</a>
+        </div>
+      </div>
+      <div class="nav-item"><a href="contact.html" class="nav-link">CONTACT</a></div>
+    </div>
+    <a href="contact.html" class="nav-cta-btn"><i class="fa-solid fa-phone"></i> Get in Touch</a>
+    <div class="hamburger" aria-label="Toggle menu" role="button" tabindex="0"><span></span><span></span><span></span></div>
+  </div>
+</nav>
+<div class="mobile-menu">
+  <a href="index.html"><i class="fa-solid fa-house"></i> Home</a>
+  <div class="mob-section">Company</div>
+  <a href="about.html">About Us</a>
+  <a href="leadership.html">Leadership</a>
+  <a href="sustainability.html">Commitment</a>
+  <div class="mob-section">Expertise</div>
+  <a href="services.html">All Services</a>
+  <div class="mob-section">Projects</div>
+  <a href="projects.html">All Projects</a>
+  <a href="clientele.html">Clientele</a>
+  <div class="mob-section">Media</div>
+  <a href="news.html">News &amp; Updates</a>
+  <a href="gallery.html">Gallery</a>
+  <a href="careers.html">Careers</a>
+  <a href="contact.html">Contact Us</a>
+</div>
+
+<!-- Back to Top -->
+<button id="back-to-top" aria-label="Back to top"><i class="fa-solid fa-arrow-up"></i></button>
+
+<!-- â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• HERO â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• -->
+<!-- HERO -->
+<section class="page-hero-ncc">
+  <div class="container">
+    <div class="phn-breadcrumb"><a href="index.html">Home</a><i class="fa-solid fa-chevron-right"></i><span>Clientele</span></div>
+    <span class="phn-tag">OUR CLIENTS</span>
+    <h1 class="phn-title">Trusted by Industry Leaders Across India &amp; Beyond</h1>
+    <p class="phn-sub">From India's largest water utilities to international agencies, Waves Envirotech has earned the trust of 30+ premier organisations through 28+ years of consistent, high-quality engineering and consultancy work.</p>
+  </div>
+</section>
+
+<!-- â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• TRUST STATS BAND â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• -->
+<div class="ncc-stat-row">
+  <div class="container">
+    <div class="nsr-grid">
+      <div data-aos="fade-up" data-aos-delay="0">
+        <div class="nsr-num" data-counter data-target="28" data-suffix="+">28+</div>
+        <div class="nsr-label">Years of Client Trust</div>
+      </div>
+      <div data-aos="fade-up" data-aos-delay="80">
+        <div class="nsr-num" data-counter data-target="150" data-suffix="+">150+</div>
+        <div class="nsr-label">Projects Delivered</div>
+      </div>
+      <div data-aos="fade-up" data-aos-delay="160">
+        <div class="nsr-num" data-counter data-target="30" data-suffix="+">30+</div>
+        <div class="nsr-label">Active Client Partners</div>
+      </div>
+      <div data-aos="fade-up" data-aos-delay="240">
+        <div class="nsr-num" data-counter data-target="100" data-suffix="%">100%</div>
+        <div class="nsr-label">On-time Delivery Rate</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• GOVERNMENT & MUNICIPAL CLIENTS â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• -->
+<section style="padding:80px 0;background:#F4F6F9;">
+  <div class="container">
+
+    <!-- Water Utilities & Urban Bodies -->
+    <div class="client-category">
+      <div class="category-header" data-aos="fade-up">
+        <div class="category-icon cat-blue"><i class="fa-solid fa-city"></i></div>
+        <div>
+          <h3>Water Utilities &amp; Urban Local Bodies</h3>
+          <p style="font-size:.84rem;color:var(--text-muted);margin:0;">India's major municipal water and sewerage authorities</p>
+        </div>
+        <span class="category-count count-blue">14 Clients</span>
+      </div>
+      <div class="clients-cards-grid">
+
+        <div class="client-card" data-aos="fade-up">
+          <div class="client-card-initial" style="background:var(--grad-primary);">HM</div>
+          <h4>HMWSSB</h4>
+          <p>Hyderabad Metropolitan Water Supply &amp; Sewerage Board</p>
+          <span class="project-type" style="background:rgba(0,82,204,.09);color:var(--primary);">WTP &middot; STP &middot; PMC</span>
+        </div>
+
+        <div class="client-card" data-aos="fade-up" data-aos-delay="100">
+          <div class="client-card-initial" style="background:var(--grad-teal);">DJ</div>
+          <h4>Delhi Jal Board (DJB)</h4>
+          <p>Delhi Water &amp; Sewerage Authority</p>
+          <span class="project-type" style="background:rgba(0,184,148,.09);color:var(--secondary-dark);">WTP &middot; STP &middot; DPR</span>
+        </div>
+
+        <div class="client-card" data-aos="fade-up" data-aos-delay="200">
+          <div class="client-card-initial" style="background:var(--grad-coral);">BW</div>
+          <h4>BWSSB</h4>
+          <p>Bangalore Water Supply &amp; Sewerage Board</p>
+          <span class="project-type" style="background:rgba(225,112,85,.09);color:#C0392B;">WTP &middot; STP</span>
+        </div>
+
+        <div class="client-card" data-aos="fade-up" data-aos-delay="300">
+          <div class="client-card-initial" style="background:var(--grad-purple);">GM</div>
+          <h4>GVMC</h4>
+          <p>Greater Visakhapatnam Municipal Corporation</p>
+          <span class="project-type" style="background:rgba(108,92,231,.09);color:#6C5CE7;">WTP &middot; PMC</span>
+        </div>
+
+        <div class="client-card" data-aos="fade-up">
+          <div class="client-card-initial" style="background:var(--grad-gold);">AM</div>
+          <h4>AMC</h4>
+          <p>Ahmedabad Municipal Corporation</p>
+          <span class="project-type" style="background:rgba(243,156,18,.09);color:#E67E22;">WTP &middot; STP</span>
+        </div>
+
+        <div class="client-card" data-aos="fade-up" data-aos-delay="100">
+          <div class="client-card-initial" style="background:var(--grad-sky);">KM</div>
+          <h4>KMC</h4>
+          <p>Kolkata Municipal Corporation</p>
+          <span class="project-type" style="background:rgba(0,206,201,.09);color:var(--accent);">WTP &middot; Consultancy</span>
+        </div>
+
+        <div class="client-card" data-aos="fade-up" data-aos-delay="200">
+          <div class="client-card-initial" style="background:var(--grad-primary);">MC</div>
+          <h4>MCGM</h4>
+          <p>Municipal Corporation of Greater Mumbai</p>
+          <span class="project-type" style="background:rgba(0,82,204,.09);color:var(--primary);">STP &middot; ETP</span>
+        </div>
+
+        <div class="client-card" data-aos="fade-up" data-aos-delay="300">
+          <div class="client-card-initial" style="background:var(--grad-teal);">KW</div>
+          <h4>KWA</h4>
+          <p>Kerala Water Authority</p>
+          <span class="project-type" style="background:rgba(0,184,148,.09);color:var(--secondary-dark);">WTP &middot; Pre-bid</span>
+        </div>
+
+        <div class="client-card" data-aos="fade-up">
+          <div class="client-card-initial" style="background:var(--grad-coral);">GN</div>
+          <h4>GNIDA</h4>
+          <p>Greater Noida Industrial Development Authority</p>
+          <span class="project-type" style="background:rgba(225,112,85,.09);color:#C0392B;">STP &middot; ETP</span>
+        </div>
+
+        <div class="client-card" data-aos="fade-up" data-aos-delay="100">
+          <div class="client-card-initial" style="background:var(--grad-purple);">LM</div>
+          <h4>LSGD</h4>
+          <p>Local Self Government Dept., Kerala</p>
+          <span class="project-type" style="background:rgba(108,92,231,.09);color:#6C5CE7;">STP &middot; Planning</span>
+        </div>
+
+        <div class="client-card" data-aos="fade-up" data-aos-delay="200">
+          <div class="client-card-initial" style="background:var(--grad-gold);">PN</div>
+          <h4>PHED</h4>
+          <p>Public Health Engineering Dept. &mdash; Multiple States</p>
+          <span class="project-type" style="background:rgba(243,156,18,.09);color:#E67E22;">WTP &middot; DPR</span>
+        </div>
+
+        <div class="client-card" data-aos="fade-up" data-aos-delay="300">
+          <div class="client-card-initial" style="background:var(--grad-teal);">NW</div>
+          <h4>NWDA</h4>
+          <p>National Water Development Agency</p>
+          <span class="project-type" style="background:rgba(0,184,148,.09);color:var(--secondary-dark);">Feasibility &middot; DPR</span>
+        </div>
+
+        <div class="client-card" data-aos="fade-up">
+          <div class="client-card-initial" style="background:var(--grad-sky);">HU</div>
+          <h4>HMDA</h4>
+          <p>Hyderabad Metropolitan Development Authority</p>
+          <span class="project-type" style="background:rgba(0,206,201,.09);color:var(--accent);">Planning &middot; DPR</span>
+        </div>
+
+        <div class="client-card" data-aos="fade-up" data-aos-delay="100">
+          <div class="client-card-initial" style="background:var(--grad-primary);">TS</div>
+          <h4>TSRDCL</h4>
+          <p>TS Road Dev. Corp. Ltd. &mdash; Smart City Projects</p>
+          <span class="project-type" style="background:rgba(0,82,204,.09);color:var(--primary);">Smart City</span>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Industrial Clients -->
+    <div class="client-category">
+      <div class="category-header" data-aos="fade-up">
+        <div class="category-icon cat-coral"><i class="fa-solid fa-industry"></i></div>
+        <div>
+          <h3>Industrial &amp; Corporate Clients</h3>
+          <p style="font-size:.84rem;color:var(--text-muted);margin:0;">Large industrial conglomerates and manufacturing companies</p>
+        </div>
+        <span class="category-count count-coral">8 Clients</span>
+      </div>
+      <div class="clients-cards-grid">
+
+        <div class="client-card" data-aos="fade-up">
+          <div class="client-card-initial" style="background:linear-gradient(135deg,#1565C0,#0D47A1);">TS</div>
+          <h4>TATA Steel Ltd.</h4>
+          <p>Integrated Steel Plant &mdash; Jamshedpur, Odisha</p>
+          <span class="project-type" style="background:rgba(225,112,85,.09);color:#C0392B;">ETP &middot; ZLD</span>
+        </div>
+
+        <div class="client-card" data-aos="fade-up" data-aos-delay="100">
+          <div class="client-card-initial" style="background:linear-gradient(135deg,#E65100,#BF360C);">RI</div>
+          <h4>Reliance Industries</h4>
+          <p>Petrochemical &amp; Refinery Complex</p>
+          <span class="project-type" style="background:rgba(225,112,85,.09);color:#C0392B;">ETP &middot; Membrane</span>
+        </div>
+
+        <div class="client-card" data-aos="fade-up" data-aos-delay="200">
+          <div class="client-card-initial" style="background:linear-gradient(135deg,#00695C,#00897B);">IO</div>
+          <h4>IOCL</h4>
+          <p>Indian Oil Corporation Ltd.</p>
+          <span class="project-type" style="background:rgba(0,184,148,.09);color:var(--secondary-dark);">ETP &middot; DPR</span>
+        </div>
+
+        <div class="client-card" data-aos="fade-up" data-aos-delay="300">
+          <div class="client-card-initial" style="background:linear-gradient(135deg,#4527A0,#6A1B9A);">CP</div>
+          <h4>CPCL</h4>
+          <p>Chennai Petroleum Corp. Ltd.</p>
+          <span class="project-type" style="background:rgba(108,92,231,.09);color:#6C5CE7;">ETP &middot; Consult</span>
+        </div>
+
+        <div class="client-card" data-aos="fade-up">
+          <div class="client-card-initial" style="background:linear-gradient(135deg,#F57F17,#E65100);">NP</div>
+          <h4>NALCO</h4>
+          <p>National Aluminium Company Ltd.</p>
+          <span class="project-type" style="background:rgba(243,156,18,.09);color:#E67E22;">ETP &middot; ZLD</span>
+        </div>
+
+        <div class="client-card" data-aos="fade-up" data-aos-delay="100">
+          <div class="client-card-initial" style="background:linear-gradient(135deg,#1B5E20,#2E7D32);">SA</div>
+          <h4>SAIL</h4>
+          <p>Steel Authority of India Ltd.</p>
+          <span class="project-type" style="background:rgba(0,184,148,.09);color:var(--secondary-dark);">ETP &middot; Treatment</span>
+        </div>
+
+        <div class="client-card" data-aos="fade-up" data-aos-delay="200">
+          <div class="client-card-initial" style="background:linear-gradient(135deg,#0052CC,#003A99);">BH</div>
+          <h4>BHEL</h4>
+          <p>Bharat Heavy Electricals Ltd.</p>
+          <span class="project-type" style="background:rgba(0,82,204,.09);color:var(--primary);">STP &middot; PMC</span>
+        </div>
+
+        <div class="client-card" data-aos="fade-up" data-aos-delay="300">
+          <div class="client-card-initial" style="background:linear-gradient(135deg,#880E4F,#C2185B);">HA</div>
+          <h4>HAL</h4>
+          <p>Hindustan Aeronautics Ltd.</p>
+          <span class="project-type" style="background:rgba(225,112,85,.09);color:#C0392B;">STP &middot; ETP</span>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- International Clients -->
+    <div class="client-category">
+      <div class="category-header" data-aos="fade-up">
+        <div class="category-icon cat-purple"><i class="fa-solid fa-earth-asia"></i></div>
+        <div>
+          <h3>International Clients</h3>
+          <p style="font-size:.84rem;color:var(--text-muted);margin:0;">Global organisations across Singapore, Malaysia, Thailand, Nigeria, UAE, Bahrain and more</p>
+        </div>
+        <span class="category-count count-purple">7+ Clients</span>
+      </div>
+      <div class="clients-cards-grid">
+
+        <div class="client-card" data-aos="fade-up">
+          <div style="font-size:2.2rem;margin-bottom:8px;">&#x1F1F8;&#x1F1EC;</div>
+          <h4>PUB Singapore</h4>
+          <p>Public Utilities Board &mdash; Singapore</p>
+          <span class="project-type" style="background:rgba(108,92,231,.09);color:#6C5CE7;">400 MLD STP</span>
+        </div>
+
+        <div class="client-card" data-aos="fade-up" data-aos-delay="200">
+          <div style="font-size:2.2rem;margin-bottom:8px;">&#x1F1F2;&#x1F1FE;</div>
+          <h4>JBA Malaysia</h4>
+          <p>Jabatan Bekalan Air &mdash; Malaysia</p>
+          <span class="project-type" style="background:rgba(0,184,148,.09);color:var(--secondary-dark);">WTP &middot; DPR</span>
+        </div>
+
+        <div class="client-card" data-aos="fade-up" data-aos-delay="300">
+          <div style="font-size:2.2rem;margin-bottom:8px;">&#x1F1F3;&#x1F1EC;</div>
+          <h4>Lagos SWMA</h4>
+          <p>Lagos State Water Ministry &mdash; Nigeria</p>
+          <span class="project-type" style="background:rgba(225,112,85,.09);color:#C0392B;">Desalination</span>
+        </div>
+
+        <div class="client-card" data-aos="fade-up">
+          <div style="font-size:2.2rem;margin-bottom:8px;">&#x1F1E6;&#x1F1EA;</div>
+          <h4>UAE DEWA</h4>
+          <p>Dubai Electricity &amp; Water Authority</p>
+          <span class="project-type" style="background:rgba(108,92,231,.09);color:#6C5CE7;">Consultancy</span>
+        </div>
+
+        <div class="client-card" data-aos="fade-up" data-aos-delay="100">
+          <div style="font-size:2.2rem;margin-bottom:8px;">&#x1F1E7;&#x1F1ED;</div>
+          <h4>EWA Bahrain</h4>
+          <p>Electricity &amp; Water Authority &mdash; Bahrain</p>
+          <span class="project-type" style="background:rgba(243,156,18,.09);color:#E67E22;">Desalination</span>
+        </div>
+
+        <div class="client-card" data-aos="fade-up" data-aos-delay="200">
+          <div style="font-size:2.2rem;margin-bottom:8px;">&#x1F1F9;&#x1F1ED;</div>
+          <h4>MWA Thailand</h4>
+          <p>Metropolitan Waterworks Authority &mdash; Thailand</p>
+          <span class="project-type" style="background:rgba(0,206,201,.09);color:var(--accent);">WTP &middot; Planning</span>
+        </div>
+
+        <div class="client-card" data-aos="fade-up" data-aos-delay="300">
+          <div style="font-size:2.2rem;margin-bottom:8px;"><i class="fa-solid fa-earth-asia" style="color:var(--primary);"></i></div>
+          <h4>Other International</h4>
+          <p>Projects across Tanzania, Sri Lanka, Bangladesh &amp; more</p>
+          <span class="project-type" style="background:rgba(0,82,204,.09);color:var(--primary);">Multi-domain</span>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• FUNDING AGENCIES â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• -->
+<section class="section bg-light-blue">
+  <div class="container">
+    <div class="section-header text-center" data-aos="fade-up">
+      <span class="section-tag gold"><i class="fa-solid fa-landmark"></i> Funding Agencies</span>
+      <h2 class="section-title">International &amp; National <span>Funding Agencies</span></h2>
+      <div class="divider divider-teal"></div>
+      <p class="section-subtitle">Waves Envirotech has successfully delivered projects financed by the world's leading multilateral development banks and national mission programmes.</p>
+    </div>
+    <div class="funding-grid">
+      <div class="funding-card world-bank" data-aos="fade-up">
+        <div class="funding-icon"><i class="fa-solid fa-globe"></i></div>
+        <h4>World Bank</h4>
+        <p>Multiple urban water infrastructure projects across India financed under World Bank assistance &mdash; including HMWSSB, AMC and GVMC schemes.</p>
+      </div>
+      <div class="funding-card kfw" data-aos="fade-up" data-aos-delay="100">
+        <div class="funding-icon">&#x1F1E9;&#x1F1EA;</div>
+        <h4>KfW (Germany)</h4>
+        <p>German development bank funded projects in Hyderabad and Bangalore including sewerage systems and wastewater management.</p>
+      </div>
+      <div class="funding-card adb" data-aos="fade-up" data-aos-delay="200">
+        <div class="funding-icon"><i class="fa-solid fa-building-columns"></i></div>
+        <h4>Asian Development Bank (ADB)</h4>
+        <p>ADB-funded projects for urban water supply and sanitation improvements in several Indian cities and towns.</p>
+      </div>
+      <div class="funding-card afd" data-aos="fade-up" data-aos-delay="300">
+        <div class="funding-icon">&#x1F1EB;&#x1F1F7;</div>
+        <h4>AFD (France)</h4>
+        <p>French Development Agency funded urban infrastructure projects including comprehensive STP and WTP consultancy assignments.</p>
+      </div>
+      <div class="funding-card jnnurm" data-aos="fade-up">
+        <div class="funding-icon"><i class="fa-solid fa-city"></i></div>
+        <h4>JNNURM</h4>
+        <p>Jawaharlal Nehru National Urban Renewal Mission &mdash; Government of India's flagship urban infrastructure programme supporting multiple Waves Envirotech projects.</p>
+      </div>
+      <div class="funding-card amrut" data-aos="fade-up" data-aos-delay="100">
+        <div class="funding-icon"><i class="fa-solid fa-droplet"></i></div>
+        <h4>AMRUT</h4>
+        <p>Atal Mission for Rejuvenation and Urban Transformation &mdash; Smart city and urban water infrastructure projects across India's rapidly growing cities.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• TESTIMONIAL â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• -->
+<section class="section bg-white">
+  <div class="container-sm">
+    <div class="section-header text-center" data-aos="fade-up">
+      <span class="section-tag green"><i class="fa-solid fa-quote-left"></i> What Clients Say</span>
+      <h2 class="section-title">Trusted by the Best in the <span>Industry</span></h2>
+      <div class="divider divider-teal"></div>
+    </div>
+    <div class="testimonials-slider">
+      <div class="testimonial-slide active" data-aos="fade-up">
+        <div class="testimonial-card">
+          <div class="testimonial-stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+          <p class="testimonial-text">"Waves Envirotech demonstrated exceptional technical competence and project management skills throughout our 410 MLD WTP project in Hyderabad. Their team's ability to handle complex challenges while meeting strict timelines was remarkable."</p>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">HM</div>
+            <div class="testimonial-info">
+              <strong>Senior Engineer, HMWSSB</strong>
+              <span>Hyderabad Metropolitan Water Supply &amp; Sewerage Board</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="testimonial-slide" data-aos="fade-up">
+        <div class="testimonial-card">
+          <div class="testimonial-stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+          <p class="testimonial-text">"The quality of DPR preparation and pre-bid consultancy services provided by Waves Envirotech is world-class. Their reports are detailed, accurate, and have proven invaluable for project planning and tender evaluation."</p>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">DJ</div>
+            <div class="testimonial-info">
+              <strong>Project Director, DJB</strong>
+              <span>Delhi Jal Board, Government of Delhi</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="testimonial-slide" data-aos="fade-up">
+        <div class="testimonial-card">
+          <div class="testimonial-stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+          <p class="testimonial-text">"Waves Envirotech's expertise in Zero Liquid Discharge systems is outstanding. They delivered a technically superior ZLD solution for our facility within budget and ahead of schedule, ensuring full regulatory compliance."</p>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">TS</div>
+            <div class="testimonial-info">
+              <strong>VP &mdash; Utilities, TATA Steel</strong>
+              <span>Tata Steel Limited, Jamshedpur</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="slider-controls" style="margin-top:32px;">
+      <button class="slider-prev"><i class="fa-solid fa-arrow-left"></i></button>
+      <button class="slider-dot active"></button>
+      <button class="slider-dot"></button>
+      <button class="slider-dot"></button>
+      <button class="slider-next"><i class="fa-solid fa-arrow-right"></i></button>
+    </div>
+  </div>
+</section>
+
+<!-- â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• CTA â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• -->
+<section class="cta-section blue-cta">
+  <div class="container">
+    <h2>Ready to Partner with Waves Envirotech?</h2>
+    <p>Join 30+ leading organisations who trust us to deliver exceptional water and environmental engineering solutions.</p>
+    <div class="cta-actions">
+      <a href="contact.html" class="btn btn-gold btn-lg"><i class="fa-solid fa-envelope"></i> Get in Touch</a>
+      <a href="projects.html" class="btn btn-outline btn-lg"><i class="fa-solid fa-diagram-project"></i> View Projects</a>
+    </div>
+  </div>
+</section>
+
+<!-- â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• FOOTER â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="footer-logo">
+          <img src="images/logo.png" alt="Waves Envirotech" class="footer-logo-img">
+          <div class="footer-logo-text"><strong>Waves Envirotech</strong><span>Pvt. Ltd.</span></div>
+        </div>
+        <p>Leading environmental engineering consultancy delivering innovative water treatment, sewage treatment, effluent treatment and desalination solutions across India and internationally since 1996.</p>
+        <div class="footer-social">
+          <a href="https://www.linkedin.com/company/wavesenvirotech/" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+          <a href="https://www.linkedin.com/company/wavesenvirotech/" target="_blank" rel="noopener" aria-label="Twitter"><i class="fa-brands fa-twitter"></i></a>
+          <a href="https://www.linkedin.com/company/wavesenvirotech/" target="_blank" rel="noopener" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="https://www.linkedin.com/company/wavesenvirotech/" target="_blank" rel="noopener" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h5>Services</h5>
+        <ul>
+          <li><a href="services.html#wtp"><i class="fa-solid fa-chevron-right"></i> Water Treatment (WTP)</a></li>
+          <li><a href="services.html#stp"><i class="fa-solid fa-chevron-right"></i> Sewage Treatment (STP)</a></li>
+          <li><a href="services.html#etp"><i class="fa-solid fa-chevron-right"></i> Effluent Treatment (ETP)</a></li>
+          <li><a href="services.html#desalination"><i class="fa-solid fa-chevron-right"></i> Desalination</a></li>
+          <li><a href="services.html#consultancy"><i class="fa-solid fa-chevron-right"></i> Pre-bid Consultancy</a></li>
+          <li><a href="services.html#membrane"><i class="fa-solid fa-chevron-right"></i> Membrane Technologies</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Quick Links</h5>
+        <ul>
+          <li><a href="about.html"><i class="fa-solid fa-chevron-right"></i> About Us</a></li>
+          <li><a href="projects.html"><i class="fa-solid fa-chevron-right"></i> Projects</a></li>
+          <li><a href="clientele.html"><i class="fa-solid fa-chevron-right"></i> Clientele</a></li>
+          <li><a href="leadership.html"><i class="fa-solid fa-chevron-right"></i> Leadership</a></li>
+          <li><a href="sustainability.html"><i class="fa-solid fa-chevron-right"></i> Sustainability</a></li>
+          <li><a href="careers.html"><i class="fa-solid fa-chevron-right"></i> Careers</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Contact Us</h5>
+        <div class="footer-contact">
+          <div class="footer-contact-item"><i class="fa-solid fa-location-dot"></i><span>Waves Envirotech Pvt. Ltd., Hyderabad, Telangana &mdash; 500 081, India</span></div>
+          <div class="footer-contact-item"><i class="fa-solid fa-phone"></i><span>+91 40 2323 XXXX</span></div>
+          <div class="footer-contact-item"><i class="fa-solid fa-envelope"></i><span>syreddy@wavesenviro.com</span></div>
+        </div>
+        <div style="margin-top:20px;">
+          <h5 style="margin-bottom:10px;">Newsletter</h5>
+          <form class="newsletter-form">
+            <input type="email" placeholder="Your email" required>
+            <button type="submit">Subscribe</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="container" style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:14px;">
+      <p>&copy; 2024 Waves Envirotech Pvt. Ltd. All rights reserved.</p>
+      <div class="footer-bottom-links">
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms of Use</a>
+        <a href="contact.html#location">Sitemap</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>
